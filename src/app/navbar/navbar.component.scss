@@ -1,0 +1,57 @@
+div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+
+    & a {
+        z-index: 1;
+        text-decoration: none;
+        color: white;
+        font-family: 'Bricolage Grotesque';
+        font-weight: 700;
+        font-size: 18px;
+        text-align: end;
+
+    }
+}
+
+
+.logo {
+    height: 40px;
+    width: 40px;
+}
+
+.hoverImg {
+    position: absolute;
+    overflow: hidden;
+    height: 0px;
+    top: 0px;
+    width: 0px;
+    & img {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 110px;
+        height: 50px;
+    }
+}
+
+.hoverEffectHight {
+    height: 80px;
+}
+
+.hoverEffectWidth {
+    width: 100px;
+    height: 80px;
+}
+
+.transitionWidth {
+    transition: width 175ms ease-in;
+    height: 80px;
+}
+
+.diplay {
+    display: flex;
+    justify-content: start;
+}
