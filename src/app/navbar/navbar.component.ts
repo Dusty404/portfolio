@@ -10,10 +10,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  aboutMeHover = false;
-  skillsHover = false;
-  projectsHover = false;
-  contactHover = false;
-  hoverHeight = 'height: 80px;'
-  hoverWidth = 'width: 110px;'
+  aboutMeHover:boolean = false;
+  skillsHover:boolean = false;
+  projectsHover:boolean = false;
+  contactHover:boolean = false;
+  hoverHeight:string = 'height: 80px;'
+  hoverWidth:string = 'width: 110px;'
 }
