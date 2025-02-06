@@ -1,7 +1,7 @@
 <div class="TitleContainer">
     
      <div class="helloWorldContainer">
-        <!-- rolling hand --> <img class="wavingHand" src="../../assets/img/waving_hand.png">
+        <!-- rolling hand --> <img [ngClass]="{ 'wavingHandEffect': textHover, 'rollInEffect': !textHover }" class="wavingHand" src="../../assets/img/waving_hand.png">
          <div class="animationContainer" (mouseover)="textHover=true" (mouseout)="textHover=false">
             <span [class.opacityEffect]="!textHover" class="helloWorldText" >Hello world</span>
             <span [class.opacityEffect]="textHover"  class="greating">I'M JUSTIN KOLL</span>

@@ -3,8 +3,63 @@ p {
 }
 
 .wavingHand {
+    position: relative;
     height: 40px;
     width: 40px;
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    rotate: -180deg;
+}
+
+.wavingHandEffect {
+    opacity: 1;
+    animation: rollOut 700ms alternate forwards ease-out;
+    rotate: 0deg;
+}
+
+.rollInEffect {
+    animation: rollIn 300ms alternate forwards ease-out;
+}
+
+@keyframes rollOut {
+    0% {
+        rotate: -180deg;
+    }
+
+    50% {
+        rotate: 30deg;
+        left: 8px;
+    }
+
+    60% {
+        rotate: 10deg;
+        left: 4px;
+    }
+
+    70% {
+        rotate: 0deg;
+        left: 0; 
+    }
+
+    80% {
+        rotate: -4deg;
+        left: -2px; 
+    }
+
+    100% {
+        rotate: 0deg;
+        left: 0;
+    }
+}
+
+@keyframes rollIn {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: -180deg;
+    }
 }
 
 .helloWorldContainer {
@@ -45,10 +100,9 @@ p {
     height: 40px;
     width: 80px;
     background-color: #3355FF;
-    transition: width 300ms ease;
     border-radius: 0;
     opacity: 0;
-    transition: all 300ms ease;
+    transition: all 400ms ease;
 }
 
 .increasBackground {
@@ -77,19 +131,6 @@ p {
 .opacityEffect {
     opacity: 1 !important;
 }
-
-@keyframes changeBoxSize {
-    0% {
-        transform:opacity(1)
-    }
-
-    100% {
-        transform:opacity(0)
-    }
-}
-
-
-
 
 .TitleContainer {
     width: 80vw;

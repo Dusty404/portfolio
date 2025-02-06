@@ -7,19 +7,11 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './title-and-foto.component.html',
-  styleUrl: './title-and-foto.component.scss'
+  styleUrl: './title-and-foto.component.scss',
 })
 export class TitleAndFotoComponent {
+  textHover: boolean = false;
+  setNewRotateStyle: number = -180;
 
-  helloWorld:string = "Hello world";
-  textHover:boolean = false;
-
-  changeText() {
-    this.helloWorld = "I'M JUSTIN KOLL";
-  }
-
-  changeTextBack() {
-    this.helloWorld = "Hello world";
-  }
-
+  
 }
