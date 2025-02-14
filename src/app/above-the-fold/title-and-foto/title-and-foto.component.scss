@@ -78,15 +78,15 @@ p {
         align-items: center;
         justify-content: center;
         cursor: default;
-        text-wrap: nowrap;
-
-        
+        text-wrap: nowrap;        
         transition: all 300ms ease-in;
-
         color: white;
         margin: 0;
         text-align: center;
         float: right;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Bricolage Grotesque';
 
         &:hover {
             width: 180px;    
@@ -99,7 +99,8 @@ p {
     position: absolute;
     height: 40px;
     width: 80px;
-    background-color: #3355FF;
+    background-color: #7E4AE7;
+    ;
     border-radius: 0;
     opacity: 0;
     transition: all 400ms ease;
@@ -113,15 +114,14 @@ p {
 
 .helloWorldText {
     position: absolute;
-    left: 30px;
+    left: 22px;
     transition: opacity 300ms ease-in;
     opacity: 0;
     z-index: 1;
 }
 
 .greating {
-    position: absolute;
-    left: 30px;
+    left: 22px;
     transition: opacity 300ms ease-in;
     position: absolute;
     opacity: 0;
@@ -129,13 +129,139 @@ p {
 }
 
 .opacityEffect {
-    opacity: 1 !important;
+    opacity: 1
 }
 
 .TitleContainer {
     width: 80vw;
+    height: 65vh;
+    gap: 24px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+
+h1 {
+    color: white;
+}
+
+.titleFirstLine {
+    display: flex;
+    align-items: center;
+    height: 128px;
+    & p {
+        font-size: 128px;
+        font-weight: 700;
+        font-family: 'Bricolage Grotesque';
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+.secondHalf {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: end;
+    gap: 24px;
+    & span {
+        color: white;
+        font-family: 'Bricolage Grotesque';
+        font-weight: 500;
+        font-size: 18px;
+        position: relative;
+    }
+}
+
+.getInTouchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: solid 1px white;
+    border-radius: 100px;
+    padding: 12px 24px;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    box-shadow: 4px 4px white;
+    transition: all 175ms ease-in-out;
+    &:hover {
+        bottom: -8px;
+        right: -8px;
+        box-shadow: 0px 0px white;
+        background-color: #E08C05;
+        ;
+    }
+}
+
+.titleSecondLine {
+    display: flex;
+    align-items: center;
+    height: 128px;
+    & p {
+        font-size: 128px;
+        font-weight: 700;
+        font-family: 'Bricolage Grotesque';
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+.uperCase {
+    animation: changeToLowerCase 300ms forwards ease-in;
+
+    &:hover {
+        animation: changeToUperCase 300ms forwards ease-in;
+        color: #BAE011;
+    }
+}
+
+.lowerCase {
+    animation: changeToLowerCase 300ms forwards ease-in;
+}
+
+.uperCaseLetter {
+    animation: changeToUperCase 300ms forwards ease-in;
+    &:hover {
+        animation: changeToLowerCase 300ms forwards ease-in;
+        color: #BAE011;
+    }
+}
+
+@keyframes changeToUperCase {
+    0% {
+        text-transform: lowercase;
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+        text-transform: uppercase;
+    }
+
+    100% {
+        opacity: 1;
+        text-transform: uppercase;
+    }
+}
+
+@keyframes changeToLowerCase {
+    0% {
+        opacity: 1;
+        text-transform: uppercase;
+    }
+
+    50% {
+        opacity: 0.5;
+        text-transform: lowercase;
+    }
+
+    100% {
+        text-transform: lowercase;
+        opacity: 1;
+    }
 }
