@@ -132,14 +132,24 @@ p {
     opacity: 1
 }
 
-.TitleContainer {
-    width: 80vw;
-    height: 65vh;
+.content {
+    width: 100vw;
     gap: 24px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    height: calc(100vh - 80px);
+    padding: 0 72px;
+}
+
+.titleContainer {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    max-width: 900px;
+    justify-self: center;
+    align-self: center;
 }
 
 h1 {
@@ -156,6 +166,14 @@ h1 {
         font-family: 'Bricolage Grotesque';
         &:hover {
             cursor: default;
+        }
+    }
+    & div {
+        padding-left: 60px;
+
+        & img {
+            position: relative;
+            bottom: 60px;
         }
     }
 }
@@ -263,5 +281,68 @@ h1 {
     100% {
         text-transform: lowercase;
         opacity: 1;
+    }
+}
+
+.socialsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.socials {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: solid 1px white;
+    border-radius: 100px;
+    border-width: 1px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    & a {
+        z-index: 1;
+        display: flex;
+        height: 32px;
+        width: 32px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.socialsBackgroundcolor {
+    height: 0px;
+    width: 0px;
+    background-color: #7E4AE7;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 0;
+    transition: all 175ms;
+}
+
+.Backgroundcolor {
+    height: 40px;
+    width: 40px;
+}
+
+.linkedIn {
+    background-image: url(../../../assets/img/socials/linkedin.png);
+}
+
+.github {
+    background-image: url(../../../assets/img/socials/github.png);
+}
+
+.email {
+    background-image: url(../../../assets/img/socials/mail.png);
+}
+
+.fotoTitle {
+    rotate: 8deg;
+    position: relative;
+    bottom: 117px;
+    & span {
+        
     }
 }
