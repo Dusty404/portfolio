@@ -11,7 +11,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class TitleAndFotoComponent {
   textHover: boolean = false;
-  setNewRotateStyle: number = -180;
-
-  
+  linkedInHover: boolean = false;
+  githubHover: boolean = false;
+  emailHover:boolean = false;
+  titleFirstLine = ['r','o','n','t','e','n','d'];
+  titleSecondLine = ['D','E','V','E','L','O','P','E','R']
+  fotoTitle: string = "Justin :)"
 }

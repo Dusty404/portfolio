@@ -1,11 +1,51 @@
-<div class="TitleContainer">
-    
-     <div class="helloWorldContainer">
-        <!-- rolling hand --> <img [ngClass]="{ 'wavingHandEffect': textHover, 'rollInEffect': !textHover }" class="wavingHand" src="../../assets/img/waving_hand.png">
+<div class="content">
+   <div class="titleContainer">
+
+      <div class="helloWorldContainer">
+         <img [ngClass]="{ 'wavingHandEffect': textHover, 'rollInEffect': !textHover }" class="wavingHand"
+            src="../../assets/img/waving_hand.png">
          <div class="animationContainer" (mouseover)="textHover=true" (mouseout)="textHover=false">
-            <span [class.opacityEffect]="!textHover" class="helloWorldText" >Hello world</span>
-            <span [class.opacityEffect]="textHover"  class="greating">I'M JUSTIN KOLL</span>
+            <span [class.opacityEffect]="!textHover" class="helloWorldText">Hello world</span>
+            <span [class.opacityEffect]="textHover" class="greating">I'M JUSTIN KOLL</span>
             <div [class.increasBackground]="textHover" class="backgroundColorContainer"></div>
          </div>
-     </div>
- </div>
+      </div>
+      <div class="titleFirstLine">
+         <p class="uperCaseLetter">F</p>
+         @for (letter of titleFirstLine; track $index) {
+         <p class="uperCase">{{letter}}</p>
+         }
+         <div>
+            <img src="../../../assets/img/Polaroid-Frame.png">
+            <div class="fotoTitle">
+               <span [(ngModel)]="fotoTitle">Justin</span>
+            </div>
+            
+         </div>
+      </div>
+      <div class="secondHalf">
+         <div class="titleSecondLine">
+            @for (letter of titleSecondLine; track $index) {
+            <p class="uperCaseLetter">{{letter}}</p>
+            }
+         </div>
+         <div class="getInTouchButton">
+            <span>Get in Touch</span>
+         </div>
+      </div>
+   </div>
+   <div class="socialsContainer">
+      <div class="socials" (mouseover)="linkedInHover=true" (mouseleave)="linkedInHover=false">
+         <div class="socialsBackgroundcolor" [class.Backgroundcolor]="linkedInHover"></div>
+         <a href="" class="linkedIn"></a>
+      </div>
+      <div class="socials" (mouseover)="githubHover=true" (mouseleave)="githubHover=false">
+         <div class="socialsBackgroundcolor" [class.Backgroundcolor]="githubHover"></div>
+         <a href="" class="github"></a>
+      </div>
+      <div class="socials" (mouseover)="emailHover=true" (mouseleave)="emailHover=false">
+         <div class="socialsBackgroundcolor" [class.Backgroundcolor]="emailHover"></div>
+         <a href="" class="email"></a>
+      </div>
+   </div>
+</div>
