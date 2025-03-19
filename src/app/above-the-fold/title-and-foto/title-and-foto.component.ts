@@ -16,5 +16,14 @@ export class TitleAndFotoComponent {
   emailHover:boolean = false;
   titleFirstLine = ['r','o','n','t','e','n','d'];
   titleSecondLine = ['D','E','V','E','L','O','P','E','R']
-  fotoTitle: string = "Justin :)"
+  fotoTitle: string = "Justin :)";
+  photoHover: boolean = false;
+
+
+  changePhotoTextMouseIn() {
+    this.fotoTitle = "Justin :D"
+  }
+  changePhotoTextMouseOut() {
+    this.fotoTitle = "Justin :)"
+  }
 }

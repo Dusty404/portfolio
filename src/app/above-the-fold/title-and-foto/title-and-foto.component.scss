@@ -168,13 +168,17 @@ h1 {
             cursor: default;
         }
     }
-    & div {
-        padding-left: 60px;
+}
 
-        & img {
-            position: relative;
-            bottom: 60px;
-        }
+.polaroid {
+    padding-left: 60px;
+    &:hover {
+        filter: grayscale(100%);
+    }
+
+    & img {
+        position: relative;
+        bottom: 60px;
     }
 }
 
@@ -207,11 +211,11 @@ h1 {
     box-shadow: 4px 4px white;
     transition: all 175ms ease-in-out;
     &:hover {
-        bottom: -8px;
-        right: -8px;
+        bottom: -4px;
+        right: -4px;
         box-shadow: 0px 0px white;
         background-color: #E08C05;
-        ;
+        cursor: pointer;
     }
 }
 
@@ -342,7 +346,51 @@ h1 {
     rotate: 8deg;
     position: relative;
     bottom: 117px;
+    width: fit-content;
+    left: 50px;
     & span {
-        
+        cursor: default;
+        position: relative;
+        transition: all 300ms;
+        font-family: 'Kalam';
+        font-weight: 700;
+        font-size: 24px;
+        right: 0;
+    }
+}
+
+.fotoTitleBounceAnimationReverse {
+    animation: fotoTitleBounceReverse 300ms forwards ease-in-out;
+}
+
+.fotoTitleBounceAnimation {
+    animation: fotoTitleBounce 300ms forwards ease-in-out;
+}
+
+@keyframes fotoTitleBounce {
+    0% {
+        right: 0px;
+    }
+
+    50% {
+        right: 2px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes fotoTitleBounceReverse {
+    0% {
+        right: 1px;
+    }
+
+    50% {
+        right: 2px;
+    }
+
+    100% {
+        left: 0px;
     }
 }

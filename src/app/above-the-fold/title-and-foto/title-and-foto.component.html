@@ -15,10 +15,10 @@
          @for (letter of titleFirstLine; track $index) {
          <p class="uperCase">{{letter}}</p>
          }
-         <div>
-            <img src="../../../assets/img/Polaroid-Frame.png">
-            <div class="fotoTitle">
-               <span [(ngModel)]="fotoTitle">Justin</span>
+         <div class="polaroid">
+            <img  (mouseenter)="changePhotoTextMouseIn(); photoHover=true" (mouseleave)="changePhotoTextMouseOut(); photoHover=false" src="../../../assets/img/Polaroid-Frame.png">
+            <div class="fotoTitle" (mouseenter)="changePhotoTextMouseIn(); photoHover=true">
+               <span [ngClass]="{ 'fotoTitleBounceAnimation': photoHover, 'fotoTitleBounceAnimationReverse': !photoHover }">{{fotoTitle}}</span>
             </div>
             
          </div>
