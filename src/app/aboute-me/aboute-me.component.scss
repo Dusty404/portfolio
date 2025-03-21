@@ -1,0 +1,161 @@
+.body {
+    width: 100vw;
+    height: 720px;
+    display: flex;
+}
+
+.rippedPaper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.paperSnippedYellow {
+    background-image: url(../../assets/img/aboute-me-section/Ripped-paper-yellow.png);
+    background-repeat: no-repeat;
+    z-index: 3;
+    position: relative;
+    top: 40px;
+    & div {
+        rotate: -4deg;
+    }
+}
+
+.paperSnippedBlue {
+    background-image: url(../../assets/img/aboute-me-section/Ripped-paper-blue.png);
+    background-repeat: no-repeat;
+    z-index: 2;
+    & div {
+        position: relative;
+        bottom: 16px;
+    }
+}
+
+.paperSnippedOrange {
+    background-image: url(../../assets/img/aboute-me-section/Ripped-paper-orange.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
+    bottom: 80px;
+    & div {
+        rotate: 4deg;
+        position: relative;
+        top: 8px;
+    }
+}
+
+.paperSnipped {
+    height: 168px;
+    width: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        & p {
+            margin: 0;
+            color: white;
+            font-family: 'Bricolage Grotesque';
+            font-size: 24px;
+            font-weight: 400;
+        }
+    }
+}
+
+.paperSnippedText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.paperYellow {
+    display: flex;
+}
+
+.textSection {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutMeTextArea {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 64px;
+    & span {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 400;
+        font-size: 20px;
+    }
+}
+
+.title {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    & p {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 500;
+        font-size: 20px;
+    }
+    & h1 {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 700;
+        font-size: 64px;
+    }
+}
+
+.abouteMeUnderlineContainer {
+    width: 0px;
+    overflow: hidden;
+    animation: underlineAnimation 3s alternate infinite;
+}
+
+@keyframes underlineAnimation {
+    0%, 10% {
+        width: 0px;
+    }
+
+    20%, 100% {
+        width: 305px;
+    }
+}
+
+.letsTalkButton {
+    width: fit-content;
+    align-items: center;
+    border: solid 1px black;
+    border-radius: 100px;
+    padding: 12px 24px;
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    box-shadow: 4px 4px black;
+    transition: all 175ms ease-in-out;
+    align-self: flex-end;
+    &:hover {
+        bottom: -4px;
+        right: -4px;
+        box-shadow: 0px 0px white;
+        background-color: #E08C05;
+        cursor: pointer;
+        color: white;
+    }
+}
