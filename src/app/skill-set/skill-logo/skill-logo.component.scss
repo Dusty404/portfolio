@@ -1,0 +1,33 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 96px;
+    height: 98px;
+    gap: 4px;
+    filter: grayscale(100%);
+    transition: all 300ms;
+    & img {
+        transition: all 300ms;
+        width: 72px;
+        height: 72px;
+    }
+    & p {
+        margin: 0;
+        height: 22px;
+        width: 96px;
+        color: white;
+        font-family: Bricolage Grotesque;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    &:hover {
+        filter: grayscale(0%);
+        & img {
+            width: 56px;
+            height: 56px;
+        }
+    }
+}
