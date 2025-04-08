@@ -4,6 +4,18 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   scrollbar-width: none;
+  width: 100vw;
+  background-color: black;
+}
+app-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appSize {
+  max-width: 1440px;
+  width: 100%;
 }
 
 body { 
