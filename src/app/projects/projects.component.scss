@@ -1,0 +1,117 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 144px 120px 0 120px;
+}
+
+.topContainer {
+    display: flex;
+    gap: 60px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+
+    & p {
+        font-family: Bricolage Grotesque;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    & h1 {
+        font-family: Bricolage Grotesque;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 100%;
+        margin: 0;
+    }
+
+    & span {
+        font-family: Bricolage Grotesque;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        text-align: justify;
+        margin-top: 48px;
+    }
+}
+
+.titleUnderlineContainer {
+    display: flex;
+    position: relative;
+    height: 20px;
+    width: 260px;
+    justify-content: end;
+
+    & div {
+        position: absolute;
+        height: 20px;
+        animation: titleUnderlineAnimation 3s alternate infinite;
+        z-index: 1;
+        background-color: white;
+        justify-self: end;
+        width: 260px;
+    }
+
+    & img {
+        position: absolute;
+        width: 260px;
+        height: 20px;
+    }
+}
+
+@keyframes titleUnderlineAnimation {
+
+    0%,
+    10% {
+        width: 100%;
+    }
+
+    20%,
+    100% {
+        width: 0%;
+    }
+}
+
+.joinProject {
+
+}
+
+.joinImgs {
+    display: flex;
+    position: relative;
+    align-items: end;
+}
+
+.checkDetailsSticker {
+    width: 168px;
+    height: 168px;
+    position: absolute;
+    z-index: 1;
+}
+
+.movingLaptop {
+    position: relative;
+    bottom: 80px;
+    width: 560px;
+    height: 338px;
+    border-radius: 30px;
+    animation: movingLaptopAnimation 3s alternate infinite ease-in-out;
+    &:hover {
+        box-shadow: inset 0em -1em 0.5em -0.5em black;
+    }
+}
+
+@keyframes movingLaptopAnimation {
+    0% {
+        bottom: 80px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}

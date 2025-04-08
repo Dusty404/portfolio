@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { AboveTheFoldComponent } from "./above-the-fold/above-the-fold.component";
 import { AbouteMeComponent } from "./aboute-me/aboute-me.component";
 import { SkillSetComponent } from "./skill-set/skill-set.component";
+import { ProjectsComponent } from "./projects/projects.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AboveTheFoldComponent, AbouteMeComponent, SkillSetComponent],
+  imports: [CommonModule, RouterOutlet, AboveTheFoldComponent, AbouteMeComponent, SkillSetComponent, ProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

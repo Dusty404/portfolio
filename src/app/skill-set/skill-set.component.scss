@@ -60,10 +60,10 @@
 
 @keyframes titleBackgroundAnimation {
     0%, 10% {
-        width: 0px;
-        height: 0px;
-        rotate: -180deg;
-        left: 261px;
+        width: 0;
+        height: 0;
+        rotate: -90deg;
+        left: -20px;
     }
 
     20%, 100% {
