@@ -12,12 +12,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProjectsComponent {
 
-  animationStop:boolean = false
+  animationStop:boolean = false;
+  imgZoom:boolean = false;
 
   projectsArray = [
     {
       title: "El Pollo Loco",
-      imgSrc: "../../assets/img/projects-section/Pollo.png",
+      imgSrc: "../../assets/img/projects-section/pollo.png",
       discription: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
     },
     {
