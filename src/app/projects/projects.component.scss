@@ -174,14 +174,14 @@
     border-radius: 100px;
     padding: 12px 24px;
     position: absolute;
-    bottom: 16px;
+    bottom: 24px;
     right: 40px;
     box-shadow: 4px 4px white;
     transition: all 175ms ease-in-out;
     align-self: flex-end;
     color: white;
     &:hover {
-        bottom: 12px;
+        bottom: 20px;
         right: 36px;
         box-shadow: 0px 0px white;
         background-color: #E08C05;
@@ -238,6 +238,14 @@
         -o-transition: all 0.3s linear;
         transition: all 0.3s linear;
     }
+}
+
+.shadow {
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    box-shadow: inset 0em -10em 130px -3.5em black;
+    transition: all 300ms;
 }
 
 .projecTitleContainer {

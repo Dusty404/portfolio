@@ -5,11 +5,12 @@ import { AboveTheFoldComponent } from "./above-the-fold/above-the-fold.component
 import { AbouteMeComponent } from "./aboute-me/aboute-me.component";
 import { SkillSetComponent } from "./skill-set/skill-set.component";
 import { ProjectsComponent } from "./projects/projects.component";
+import { ContactMeComponent } from "./contact-me/contact-me.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AboveTheFoldComponent, AbouteMeComponent, SkillSetComponent, ProjectsComponent],
+  imports: [CommonModule, RouterOutlet, AboveTheFoldComponent, AbouteMeComponent, SkillSetComponent, ProjectsComponent, ContactMeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

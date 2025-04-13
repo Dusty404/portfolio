@@ -1,0 +1,99 @@
+.body {
+    background-image: url(../../assets/img/contact-me/contact-me-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    padding: 144px 120px 56px 120px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+p,
+h1,
+h2,
+h3,
+span {
+    color: white;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    gap: 48px;
+
+    & div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    & p {
+        font-family: Bricolage Grotesque;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    & h1 {
+        font-family: Bricolage Grotesque;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        margin: 0;
+    }
+
+    & span {
+        font-family: Bricolage Grotesque;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: justify;
+
+    }
+}
+
+.arrowContainer {
+    align-self: flex-end;
+    width: 280px;
+}
+
+.arrow {
+    width: 280px;
+    height: 44px;
+}
+
+.arrowShrinkContainer {
+    width: 0px;
+    overflow: hidden;
+    animation: arrowShrink 3s infinite alternate-reverse;
+}
+
+@keyframes arrowShrink {
+    0%, 10% {
+        width: 0px;
+    }
+
+    20%, 100% {
+        width: 280px;
+    }
+}
+
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    align-items: end;
+}
+
+.nameSticker {
+    height: 166px;
+    width: 168px;
+}
