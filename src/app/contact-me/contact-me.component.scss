@@ -77,11 +77,14 @@ span {
 }
 
 @keyframes arrowShrink {
-    0%, 10% {
+
+    0%,
+    10% {
         width: 0px;
     }
 
-    20%, 100% {
+    20%,
+    100% {
         width: 280px;
     }
 }
@@ -96,4 +99,39 @@ span {
 .nameSticker {
     height: 166px;
     width: 168px;
+}
+
+form {
+    p {
+        font-family: Bricolage Grotesque;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+        width: 100%;
+    }
+
+    div {
+        border-bottom: solid 1px #E08C05;
+        border-top: solid 1px #E08C05;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px;
+    }
+
+    input {
+        background: none;
+        border: none;
+        font-family: Bricolage Grotesque;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: white;
+        &:focus {
+            outline-color: #E08C05;
+        }
+        &::placeholder {
+            color: white;
+        }
+    }
 }
