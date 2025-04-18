@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     gap: 88px;
+    position: relative;
 }
 
 p,
@@ -88,7 +89,7 @@ span {
     }
 }
 
-.rightContainer {
+.contactMe {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -98,112 +99,9 @@ span {
 
 .nameSticker {
     position: absolute;
-    top: 0;
+    top: 150px;
+    right: 132px;
     height: 166px;
     width: 168px;
-}
-
-form {
-    width: 100%;
-    padding-top: 128px;
-    p {
-        font-family: Bricolage Grotesque;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 120%;
-        width: 100%;
-    }
-
-    div {
-        border-top: solid transparent 1px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding: 16px;
-        &:hover {
-            border-color: blue;
-        }
-    }
-}
-
-.checkbox {
-    color: skyblue;
-    margin: 8px;
-    background-color: none;
-    cursor: pointer;
-}
-
-.textInput {
-    background: none;
-        border: none;
-        font-family: Bricolage Grotesque;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 120%;
-        color: white;
-        &:focus {
-            outline-color: #E08C05;
-        }
-        &::placeholder {
-            color: white;
-        }
-}
-
-.ppLabel {
-    color: white;
-}
-
-section {
-    padding-top: 16px;
-    display: flex;
-    & a {
-        color: skyblue;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-.border {
-    border-bottom: solid 1px;
-    border-color: #E08C05;
-}
-
-.borderOff {
-    border-bottom: solid transparent 1px;
-}
-
-.letsTalkButton {
-    width: fit-content !important;
-    align-items: center;
-    border: solid 1px gray;
-    border-radius: 100px;
-    padding: 4px 24px !important;
-    box-shadow: 2px 2px gray;
-    justify-self: end;
-    border-color: gray !important;
-    position: relative;
-    bottom: 2px;
-    right: 2px;
-    transition: all 175ms;
-    & span {
-        padding: 0px 16px;
-        color: gray;
-    }
-    &:hover {
-        bottom: 0px;
-        right: 0px;
-        box-shadow: 0px 0px white;
-        background-color: #E08C05;
-        cursor: pointer;
-        color: white;
-        & span {
-            color: black;
-        }
-    }
-}
-
-.footer {
-    background-color: unset;
+    z-index: 1;
 }

@@ -1,0 +1,21 @@
+<div class="formContainer">
+    <form (ngSubmit)="sendEmail(contactForm)" autocomplete="off" #contactForm="ngForm">
+        <div [ngClass]="{'borderOff' : hoverMid, 'border' : !hoverMid}">
+            <label [ngClass]="{'invalidValue': !nameValid}" for="name">What's your Name?</label>
+            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.name" id="name" [placeholder]="placeholderName" type="name" name="name" class="textInput" required>
+        </div>
+        <div class="border" (mouseenter)="hoverMid=true" (mouseleave)="hoverMid=false" [ngClass]="{'borderOff' : hoverBot, 'border' : !hoverBot}">
+            <label [ngClass]="{'invalidValue': !emailValid}" for="email">What's your email?</label>
+            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.email" id="email" [placeholder]="placeholderEmail" type="email" name="email" class="textInput" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+        </div>
+        <div class="border" (mouseenter)="hoverBot=true" (mouseleave)="hoverBot=false">
+            <label [ngClass]="{'invalidValue': !messageValid}" for="wdyw">How can i help you?</label>
+            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.message" id="wdyw" [placeholder]="placeholderMessage"type="text" name="message" class="textInput" required>
+        </div>
+        <section>
+            <input class="checkbox" type="checkbox" id="privacyPolicy">
+            <span class="ppLabel" for="privacyPolicy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</span>
+        </section>
+            <input class="letsTalkButton" type="submit" value="send">
+    </form>
+</div>
