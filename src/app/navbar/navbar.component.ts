@@ -16,4 +16,5 @@ export class NavbarComponent {
   contactHover:boolean = false;
   hoverHeight:string = 'height: 80px;'
   hoverWidth:string = 'width: 110px;'
+  color = "white"
 }

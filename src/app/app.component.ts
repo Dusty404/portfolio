@@ -6,11 +6,12 @@ import { AbouteMeComponent } from "./aboute-me/aboute-me.component";
 import { SkillSetComponent } from "./skill-set/skill-set.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { ContactMeComponent } from "./contact-me/contact-me.component";
+import { ProjectViewComponent } from "./projects/project-view/project-view.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, AboveTheFoldComponent, AbouteMeComponent, SkillSetComponent, ProjectsComponent, ContactMeComponent],
+  imports: [CommonModule, RouterOutlet, AboveTheFoldComponent, AbouteMeComponent, SkillSetComponent, ProjectsComponent, ContactMeComponent, ProjectViewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
