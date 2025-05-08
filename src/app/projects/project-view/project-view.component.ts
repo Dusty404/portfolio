@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from "../../navbar/navbar.component";
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ProjectsDataService } from '../../projects-data.service';
 
 @Component({
   selector: 'app-project-view',
   standalone: true,
-  imports: [NavbarComponent, CommonModule],
+  imports: [NavbarComponent, CommonModule, RouterModule],
   templateUrl: './project-view.component.html',
   styleUrl: './project-view.component.scss'
 })

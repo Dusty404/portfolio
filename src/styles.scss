@@ -1,8 +1,9 @@
 html, body { 
   height: 100%;
+  max-width: 1440px;
+  width: 100%;
   overflow-x: hidden;
   scrollbar-width: none;
-  width: 100vw;
   background-color: black;
   scroll-behavior: smooth;
 }
@@ -21,6 +22,11 @@ app-root {
 body { 
   margin: 0; 
   font-family: Roboto, "Helvetica Neue", sans-serif;
+ }
+
+ app-project-view {
+  max-width: 1440px;
+  width: 100%;
  }
 
 @font-face {

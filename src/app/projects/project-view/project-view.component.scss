@@ -5,18 +5,20 @@
     gap: 48px;
     display: flex;
     flex-direction: column;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .content {
-    margin: 0 120px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .goBackButton {
     display: flex;
     gap: 8px;
     padding: 0px 72px;
+    width: fit-content;
 
     & a {
         display: flex;

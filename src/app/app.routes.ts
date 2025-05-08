@@ -4,7 +4,6 @@ import { ProjectViewComponent } from './projects/project-view/project-view.compo
 
 export const routes: Routes = [
     { path: '', component: MainContentComponent },
-    { path: 'goBack', component: MainContentComponent },
+    { path: 'home', component: MainContentComponent },
     { path: 'project/:id', component: ProjectViewComponent },
-    { path: 'projects', component: MainContentComponent },
 ];

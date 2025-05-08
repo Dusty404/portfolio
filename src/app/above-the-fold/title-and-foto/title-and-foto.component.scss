@@ -357,15 +357,9 @@ h1 {
     align-items: center;
     position: relative;
     cursor: pointer;
-
-    & a {
-        z-index: 1;
-        display: flex;
-        height: 32px;
-        width: 32px;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
 }
 
 .socialsBackgroundcolor {
@@ -464,4 +458,10 @@ h1 {
     height: 175px;
     width: 175px;
     rotate: 8deg;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    border-radius: 100px;
 }
