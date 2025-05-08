@@ -1,37 +1,40 @@
 <div class="body">
     <app-navbar></app-navbar>
-    <div class="goBackButton">
-        <img src="../../../assets/img/projects-section/back-arrow.png">
-        <p>Go Back</p>
+    <div class="goBackButton" (click)="goBack()">
+            <img src="../../../assets/img/projects-section/back-arrow.png">
+            <p>Go Back</p>
     </div>
     <div class="content">
         <div class="projectText">
             <div class="projectDescription">
                 <div class="titleContainer">
-                    <h1 class="projectTitle">{{projectsData.projectsArray[0].title}}</h1>
-                    <div class="titleUnderlineContainer">
-                        <img src="../../../assets/img/aboute-me-section/Blue line.png" alt="Aboute me underline">
+                    <h1 class="projectTitle" #title>{{projectsData.projectsArray[projectIndex].title}}</h1>
+                    <div>
+                        <div class="titleUnderlineContainer">
+                            <img src="../../../assets/img/aboute-me-section/Blue line.png" alt="Aboute me underline" [ngStyle]="{'width.px': title.offsetWidth }">
+                        </div>
                     </div>
+
                 </div>
                 <div class="textBox">
                     <p>Description</p>
                     <span>
-                        {{projectsData.projectsArray[0].discription}}
+                        {{projectsData.projectsArray[projectIndex].discription}}
                     </span>
                 </div>
                 <div class="textBox">
                     <p>Implementation Details</p>
                     <span>
-                        {{projectsData.projectsArray[0].implementationDetails}}
+                        {{projectsData.projectsArray[projectIndex].implementationDetails}}
                     </span>
                 </div>
                 <div class="durationBox">
                     <span class="durTitle">Duration:</span>
-                    <span class="durValue">{{projectsData.projectsArray[0].duration}}</span>
+                    <span class="durValue">{{projectsData.projectsArray[projectIndex].duration}}</span>
                 </div>
 
                 <div class="usedTec">
-                    @for (technologie of projectsData.projectsArray[0].usedTechnologies; track $index) {
+                    @for (technologie of projectsData.projectsArray[projectIndex].usedTechnologies; track $index) {
                     <div>
                         <img src="../../../{{technologie.technologieIcon}}">
                         <span>{{technologie.technologieName}}</span>
@@ -41,7 +44,7 @@
             </div>
         </div>
         <div class="projectImg">
-            <img src="../../../{{projectsData.projectsArray[0].imgSrc}}">
+            <img src="../../../{{projectsData.projectsArray[projectIndex].imgSrc}}">
             <div class="projectButtons">
                 <div class="button">
                     <span>GitHub</span>

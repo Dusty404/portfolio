@@ -38,12 +38,12 @@ p {
 
     70% {
         rotate: 0deg;
-        left: 0; 
+        left: 0;
     }
 
     80% {
         rotate: -4deg;
-        left: -2px; 
+        left: -2px;
     }
 
     100% {
@@ -78,7 +78,7 @@ p {
         align-items: center;
         justify-content: center;
         cursor: default;
-        text-wrap: nowrap;        
+        text-wrap: nowrap;
         transition: all 300ms ease-in;
         color: white;
         margin: 0;
@@ -89,7 +89,7 @@ p {
         font-family: 'Bricolage Grotesque';
 
         &:hover {
-            width: 180px;    
+            width: 180px;
         }
     }
 }
@@ -140,6 +140,8 @@ p {
     justify-content: center;
     height: calc(100vh - 80px);
     padding: 0 72px;
+    max-width: 900px;
+    width: 100%;
 }
 
 .titleContainer {
@@ -147,6 +149,7 @@ p {
     gap: 24px;
     flex-direction: column;
     max-width: 900px;
+    width: 100%;
     justify-self: center;
     align-self: center;
 }
@@ -159,10 +162,13 @@ h1 {
     display: flex;
     align-items: center;
     height: 128px;
+    justify-content: space-between;
+
     & p {
         font-size: 128px;
         font-weight: 700;
         font-family: 'Bricolage Grotesque';
+
         &:hover {
             cursor: default;
         }
@@ -170,14 +176,52 @@ h1 {
 }
 
 .polaroid {
-    padding-left: 60px;
-    &:hover {
-        filter: grayscale(100%);
+    display: flex;
+    position: relative;
+    filter: saturate(0%);
+}
+
+.polaroidFilterIn {
+    animation: polaroidColorIn 300ms forwards ease-in-out;
+}
+
+.polaroidFilterOut {
+    animation: polaroidColorOut 200ms forwards ease-in-out;
+}
+
+@keyframes polaroidColorIn {
+    0% {
+        filter: saturate(0%);
     }
 
-    & img {
-        position: relative;
-        bottom: 60px;
+    60% {
+        filter: saturate(180%);
+    }
+
+    70% {
+        filter: saturate(180%);
+    }
+
+    80% {
+        filter: saturate(120%);
+    }
+
+    90% {
+        filter: saturate(100%);
+    }
+
+    100% {
+        filter: saturate(120%);
+    }
+}
+
+@keyframes polaroidColorOut {
+    0% {
+        filter: saturate(120%);
+    }
+
+    100% {
+        filter: saturate(0%);
     }
 }
 
@@ -187,6 +231,7 @@ h1 {
     flex-direction: column;
     align-items: end;
     gap: 24px;
+
     & span {
         color: white;
         font-family: 'Bricolage Grotesque';
@@ -209,6 +254,7 @@ h1 {
     right: 0px;
     box-shadow: 4px 4px white;
     transition: all 175ms ease-in-out;
+
     &:hover {
         bottom: -4px;
         right: -4px;
@@ -218,14 +264,20 @@ h1 {
     }
 }
 
+.letterBox {
+    display: flex;
+}
+
 .titleSecondLine {
     display: flex;
     align-items: center;
     height: 128px;
+
     & p {
         font-size: 128px;
         font-weight: 700;
         font-family: 'Bricolage Grotesque';
+
         &:hover {
             cursor: default;
         }
@@ -247,6 +299,7 @@ h1 {
 
 .uperCaseLetter {
     animation: changeToUperCase 300ms forwards ease-in;
+
     &:hover {
         animation: changeToLowerCase 300ms forwards ease-in;
         color: #BAE011;
@@ -304,6 +357,7 @@ h1 {
     align-items: center;
     position: relative;
     cursor: pointer;
+
     & a {
         z-index: 1;
         display: flex;
@@ -343,10 +397,12 @@ h1 {
 
 .fotoTitle {
     rotate: 8deg;
-    position: relative;
-    bottom: 117px;
-    width: fit-content;
-    left: 50px;
+    position: absolute;
+    bottom: -20px;
+    width: max-content;
+    right: 85px;
+    z-index: 2;
+
     & span {
         cursor: default;
         position: relative;
@@ -392,4 +448,20 @@ h1 {
     100% {
         left: 0px;
     }
+}
+
+.polaroidFrame {
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
+    z-index: 1;
+}
+
+.polaroidInnerPicture {
+    position: absolute;
+    bottom: 17px;
+    right: 28px;
+    height: 175px;
+    width: 175px;
+    rotate: 8deg;
 }

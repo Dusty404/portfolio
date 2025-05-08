@@ -16,10 +16,18 @@ div {
     }
 }
 
+.content {
+    box-shadow: inset -3em 5em 62px -3.5em #000000d6;
+}
+
 
 .logo {
     height: 40px;
     width: 40px;
+}
+
+.transitionheight {
+    position: relative;
 }
 
 .hoverImg {

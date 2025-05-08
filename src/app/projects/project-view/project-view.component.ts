@@ -1,6 +1,7 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from "../../navbar/navbar.component";
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProjectsDataService } from '../../projects-data.service';
 
 @Component({
@@ -10,7 +11,23 @@ import { ProjectsDataService } from '../../projects-data.service';
   templateUrl: './project-view.component.html',
   styleUrl: './project-view.component.scss'
 })
-export class ProjectViewComponent {
+export class ProjectViewComponent implements OnInit {
 
-  projectsData = inject(ProjectsDataService);
+  projectIndex: number = 0;
+
+  constructor(
+    public projectsData: ProjectsDataService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.projectIndex = +params['id'];
+    });
+  }
+
+  goBack() {
+    this.router.navigate(['/projects']);
+  }
 }

@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProjectsDataService } from '../projects-data.service';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -17,4 +18,9 @@ export class ProjectsComponent {
   imgZoom:boolean = false;
 
   projectsData = inject(ProjectsDataService);
+  projectNummber:number = 0;
+
+  changeProjectNumber(index:number) {
+    this.projectsData.changeProjectNumber(index);
+  }
 }

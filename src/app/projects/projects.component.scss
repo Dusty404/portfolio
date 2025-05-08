@@ -92,15 +92,6 @@
         line-height: 100%;
         letter-spacing: 0%;
     }
-    & span {
-        font-family: Bricolage Grotesque;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        text-align: justify;
-
-    }
 }
 
 .joinImgs {
@@ -254,5 +245,18 @@
     gap: 16px;
     & h2 {
         margin: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    & span {
+        font-family: Bricolage Grotesque;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: justify;
+        color: white;
     }
 }

@@ -1,12 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
-
 html, body { 
   height: 100%;
   overflow-x: hidden;
   scrollbar-width: none;
   width: 100vw;
   background-color: black;
+  scroll-behavior: smooth;
 }
+
 app-root {
   display: flex;
   flex-direction: column;
@@ -62,5 +62,3 @@ body {
   font-weight: 700;
   src: url('../src/assets/fonts/kalam-v17-latin-700.woff2') format('woff2');
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,30 +1,31 @@
-<div>
+<div class="content">
     <img class="logo" src="../../assets/img/test-pattern-152459_640.png">
-    <div>
+
+    <div class="transitionheight">
         <div [ngStyle]="{width: '110px', transition: 'height 300ms ease-in'}" class="hoverImg" [class.hoverEffectHight]="aboutMeHover">
             <img src="../../assets/img/header/1.png">
         </div>
-        <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" href="">About me</a>
+        <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" href="#abouteMe">About me</a>
     </div>
 
     <div class="diplay">
         <div class="hoverImg transitionWidth " [class.hoverEffectWidth]="skillsHover">
             <img src="../../assets/img/header/2.png">
         </div>
-        <a [ngStyle]="{width:'80px'}" (mouseover)="skillsHover=true" (mouseout)="skillsHover=false" href="">Skills</a>
+        <a [ngStyle]="{width:'80px'}" (mouseover)="skillsHover=true" (mouseout)="skillsHover=false" href="#skills">Skills</a>
     </div>
 
     <div class="diplay"> 
         <div class="hoverImg transitionWidth" [class.hoverEffectWidth]="projectsHover">
             <img src="../../assets/img/header/4.png">
         </div>
-        <a [ngStyle]="{width:'90px'}" (mouseover)="projectsHover=true" (mouseout)="projectsHover=false" href="">Projects</a>
+        <a [ngStyle]="{width:'90px'}" (mouseover)="projectsHover=true" (mouseout)="projectsHover=false" href="#projects">Projects</a>
     </div>
 
     <div class="diplay">
         <div class="hoverImg transitionWidth" [class.hoverEffectWidth]="contactHover">
             <img src="../../assets/img/header/3.png">
         </div>
-        <a [ngStyle]="{width:'90px'}" (mouseover)="contactHover=true" (mouseout)="contactHover=false" href="">Contact</a>
+        <a [ngStyle]="{width:'90px'}" (mouseover)="contactHover=true" (mouseout)="contactHover=false" href="#contact">Contact</a>
     </div>
 </div>

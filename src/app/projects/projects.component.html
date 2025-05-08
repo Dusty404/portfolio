@@ -15,44 +15,50 @@
         </div>
         <div class="joinProject">
             <div class="joinImgs" (mouseover)="animationStop=true" (mouseout)="animationStop=false">
-                <img class="checkDetailsSticker" src="../../assets/img/projects-section/check-details-sticker.png" alt="">
-                <img [ngClass]="{'pauseAnimation': animationStop==true}" class="movingLaptop" src="../../assets/img/projects-section/laptop.png" alt=""> 
-                <div [ngClass]="{'showLaptopZoom': animationStop==true}" class="laptopZoom">  
+                <img class="checkDetailsSticker" src="../../assets/img/projects-section/check-details-sticker.png"
+                    alt="">
+                <img [ngClass]="{'pauseAnimation': animationStop==true}" class="movingLaptop"
+                    src="../../assets/img/projects-section/laptop.png" alt="">
+                <div [ngClass]="{'showLaptopZoom': animationStop==true}" class="laptopZoom">
                     <div class="letsTalkButton">
                         <span>Project details</span>
                     </div>
                 </div>
-                 
+
             </div>
             <div>
-              <h2>
-                Join
-              </h2>
-            <span>
-                Task manager inspired by the Kanban System. 
-                Create and organize tasks using drag and drop functions, assign users and categories. 
-            </span>
+                <h2>
+                    Join
+                </h2>
+                <span>
+                    Task manager inspired by the Kanban System.
+                    Create and organize tasks using drag and drop functions, assign users and categories.
+                </span>
             </div>
         </div>
-        
+
     </div>
     <div class="projectsContainer">
         @for (project of projectsData.projectsArray; track $index) {
-            <div>
-                <div class="projectImgContainer">
-                    <img src="{{project.imgSrc}}"> 
-                    <div class="shadow"></div>
+        <div>
+            <div class="projectImgContainer">
+                <img src="{{project.imgSrc}}">
+                <div class="shadow"></div>
+                <a [routerLink]="['/project', $index]">
                     <div class="letsTalkButton">
+
                         <span>Project details</span>
+
                     </div>
-                </div>
-                <div class="projecTitleContainer">
-                   <h2>{{project.title}}</h2>
-                <span>{{project.discription}}</span> 
-                </div>
-                
+                </a>
             </div>
+            <div class="projecTitleContainer">
+                <h2>{{project.title}}</h2>
+                <span>{{project.discription}}</span>
+            </div>
+
+        </div>
         }
     </div>
-    
+
 </div>

@@ -11,12 +11,16 @@
          </div>
       </div>
       <div class="titleFirstLine">
-         <p class="uperCaseLetter">F</p>
+         <div class="letterBox">
+            <p class="uperCaseLetter">F</p>
          @for (letter of titleFirstLine; track $index) {
          <p class="uperCase">{{letter}}</p>
          }
-         <div class="polaroid">
-            <img  (mouseenter)="changePhotoTextMouseIn(); photoHover=true" (mouseleave)="changePhotoTextMouseOut(); photoHover=false" src="../../../assets/img/Polaroid-Frame.png">
+         </div>
+         
+         <div class="polaroid" [ngClass]="{ 'polaroidFilterIn': photoHover, 'polaroidFilterOut': !photoHover }">          
+               <img class="polaroidFrame"  (mouseenter)="changePhotoTextMouseIn(); photoHover=true" (mouseleave)="changePhotoTextMouseOut(); photoHover=false" src="../../../assets/img/polaroid-Frame.png">
+               <img class="polaroidInnerPicture" src="../../../assets/img/Justin.jpg">            
             <div class="fotoTitle" (mouseenter)="changePhotoTextMouseIn(); photoHover=true">
                <span [ngClass]="{ 'fotoTitleBounceAnimation': photoHover, 'fotoTitleBounceAnimationReverse': !photoHover }">{{fotoTitle}}</span>
             </div>
