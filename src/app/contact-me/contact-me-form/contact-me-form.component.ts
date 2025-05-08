@@ -31,11 +31,11 @@ export class ContactMeFormComponent {
     if(ngForm.valid && ngForm.submitted) {
       console.log(this.data)
     } else {
-      this.checkNameInput()
+      this.checkInputs()
     }
   }
 
-  checkNameInput() {
+  checkInputs() {
     if(!this.data.name) {
       this.nameValid = false;
       this.placeholderName = "Oops! it seems your name is missing"
