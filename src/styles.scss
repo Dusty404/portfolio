@@ -1,4 +1,5 @@
-html, body { 
+html,
+body {
   height: 100%;
   max-width: 1440px;
   width: 100%;
@@ -19,39 +20,52 @@ app-root {
   width: 100%;
 }
 
-body { 
-  margin: 0; 
+body {
+  margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
- }
+}
 
- app-project-view {
+app-project-view {
   max-width: 1440px;
   width: 100%;
- }
+}
+
+app-navbar {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+}
+
+app-main-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+}
 
 @font-face {
-    font-display: swap; 
-    font-family: 'Bricolage Grotesque';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../src/assets/fonts/bricolage-grotesque-v7-latin-regular.woff2') format('woff2'); 
-  }
+  font-display: swap;
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/assets/fonts/bricolage-grotesque-v7-latin-regular.woff2') format('woff2');
+}
 
-  @font-face {
-    font-display: swap; 
-    font-family: 'Bricolage Grotesque';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../src/assets/fonts/bricolage-grotesque-v7-latin-500.woff2') format('woff2'); 
-  }
- 
-  @font-face {
-    font-display: swap; 
-    font-family: 'Bricolage Grotesque';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../src/assets/fonts/bricolage-grotesque-v7-latin-700.woff2') format('woff2'); 
-  }
+@font-face {
+  font-display: swap;
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../src/assets/fonts/bricolage-grotesque-v7-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../src/assets/fonts/bricolage-grotesque-v7-latin-700.woff2') format('woff2');
+}
 
 @font-face {
   font-display: swap;
