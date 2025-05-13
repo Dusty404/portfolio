@@ -2,30 +2,71 @@
     <img class="logo" src="../../assets/img/test-pattern-152459_640.png">
 
     <div class="transitionheight">
-        <div [ngStyle]="{width: '110px', transition: 'height 300ms ease-in'}" class="hoverImg" [class.hoverEffectHight]="aboutMeHover">
+        <div [ngStyle]="{width: '110px', transition: 'height 300ms ease-in'}" class="hoverImg"
+            [class.hoverEffectHight]="aboutMeHover">
             <img src="../../assets/img/header/1.png">
         </div>
         <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" href="#abouteMe">About me</a>
     </div>
 
-    <div class="diplay">
+    <div class="display">
         <div class="hoverImg transitionWidth " [class.hoverEffectWidth]="skillsHover">
             <img src="../../assets/img/header/2.png">
         </div>
-        <a [ngStyle]="{width:'80px'}" (mouseover)="skillsHover=true" (mouseout)="skillsHover=false" href="#skills">Skills</a>
+        <a [ngStyle]="{width:'80px'}" (mouseover)="skillsHover=true" (mouseout)="skillsHover=false"
+            href="#skills">Skills</a>
     </div>
 
-    <div class="diplay"> 
+    <div class="display">
         <div class="hoverImg transitionWidth" [class.hoverEffectWidth]="projectsHover">
             <img src="../../assets/img/header/4.png">
         </div>
-        <a [ngStyle]="{width:'90px'}" (mouseover)="projectsHover=true" (mouseout)="projectsHover=false" href="#projects">Projects</a>
+        <a [ngStyle]="{width:'90px'}" (mouseover)="projectsHover=true" (mouseout)="projectsHover=false"
+            href="#projects">Projects</a>
     </div>
 
-    <div class="diplay">
+    <div class="display">
         <div class="hoverImg transitionWidth" [class.hoverEffectWidth]="contactHover">
             <img src="../../assets/img/header/3.png">
         </div>
-        <a [ngStyle]="{width:'90px'}" (mouseover)="contactHover=true" (mouseout)="contactHover=false" href="#contact">Contact</a>
+        <a [ngStyle]="{width:'90px'}" (mouseover)="contactHover=true" (mouseout)="contactHover=false"
+            href="#contact">Contact</a>
+    </div>
+</div>
+<div class="mobileNavbar">
+    <div>
+        <img class="logo" src="../../assets/img/test-pattern-152459_640.png">
+    </div>
+    <div>
+        <div class="menuIcon" (click)="showMenu()">
+            <div class="menuBar menuBarTop" [class.menuBarTopRot]="openMenu"></div>
+            <div class="menuBar menuBarMid" [class.bc-none]="openMenu"></div>
+            <div class="menuBar menuBarBot" [class.menuBarBotRot]="openMenu"></div>
+        </div>
+    </div>
+    <div class="mobileNavbarMenu" [style.top]="openMenu ? '0' : (!openMenu ? '-100vh' : null)">
+        <div class="navMobile">
+            <a href="#abouteMe" (click)="showMenu()">About me</a>
+            <a href="#skills" (click)="showMenu()">Skills</a>
+            <a href="#projects" (click)="showMenu()">Projects</a>
+            <a href="#contact" (click)="showMenu()">Contact</a>
+        </div>
+        <div class="socialsMobile">
+            <a href="">
+                <div class="socials">
+                    <div class="socials linkedIn"></div>
+                </div>
+            </a>
+            <a href="">
+                <div class="socials">
+                    <div class="socials github"></div>
+                </div>
+            </a>
+            <a href="#contact">
+                <div class="socials">
+                    <div class="socials email" (click)="showMenu()"></div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>

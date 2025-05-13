@@ -17,4 +17,13 @@ export class NavbarComponent {
   hoverHeight:string = 'height: 80px;'
   hoverWidth:string = 'width: 110px;'
   color = "white"
+  openMenu:boolean = false;
+
+  showMenu() {
+    if(!this.openMenu) {
+      this.openMenu = true;
+    } else {
+      this.openMenu = false;
+    }
+  }
 }

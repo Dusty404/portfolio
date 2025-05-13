@@ -465,3 +465,44 @@ a {
     color: white;
     border-radius: 100px;
 }
+
+.polaroidMobile {
+    display: none;
+    position: relative;
+    filter: saturate(0%);
+    width: 100%;
+    height: 280px;
+}
+
+@media (max-width: 376px) {
+    .socialsContainer {
+        display: none;
+    }
+
+    .uperCase {
+        font-size: 64px;
+    }
+
+    .titleFirstLine,
+    .titleSecondLine {
+        & p {
+            font-size: 64px;
+        }
+    }
+
+    .titleContainer {
+        gap: 16px;
+    }
+
+    .content {
+        justify-content: normal;
+    }
+
+    .polaroid {
+        display: none;
+    }
+
+    .polaroidMobile {
+        display: flex;
+    }
+}
