@@ -100,7 +100,6 @@ p {
     height: 40px;
     width: 80px;
     background-color: #7E4AE7;
-    ;
     border-radius: 0;
     opacity: 0;
     transition: all 400ms ease;
@@ -161,7 +160,7 @@ h1 {
 .titleFirstLine {
     display: flex;
     align-items: center;
-    height: 128px;
+    line-height: 1;
     justify-content: space-between;
 
     & p {
@@ -271,7 +270,7 @@ h1 {
 .titleSecondLine {
     display: flex;
     align-items: center;
-    height: 128px;
+    line-height: 1;
 
     & p {
         font-size: 128px;
@@ -456,7 +455,7 @@ h1 {
     bottom: 17px;
     right: 28px;
     height: 175px;
-    width: 175px;
+    width: 180px;
     rotate: 8deg;
 }
 
@@ -470,8 +469,6 @@ a {
     display: none;
     position: relative;
     filter: saturate(0%);
-    width: 100%;
-    height: 280px;
 }
 
 @media (max-width: 376px) {
@@ -486,8 +483,13 @@ a {
     .titleFirstLine,
     .titleSecondLine {
         & p {
-            font-size: 64px;
+            font-size: 56px;
+            margin: 0;
         }
+    }
+
+    .titleSecondLine {
+        align-self: flex-start;
     }
 
     .titleContainer {
@@ -495,7 +497,10 @@ a {
     }
 
     .content {
+        gap: 32px;
         justify-content: normal;
+        align-items: center;
+        padding: 0 16px;
     }
 
     .polaroid {
@@ -504,5 +509,21 @@ a {
 
     .polaroidMobile {
         display: flex;
+        justify-content: center;
+    }
+
+    .polaroidFrame {
+        position: relative;
+        bottom: unset;
+    }
+
+    .polaroidInnerPicture {
+        position: absolute;
+        bottom: 68px;
+        height: 175px;
+    }
+
+    .fotoTitle {
+        bottom: 30px;
     }
 }
