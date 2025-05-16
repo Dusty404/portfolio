@@ -1,5 +1,4 @@
 .body {
-    height: 720px;
     display: flex;
     background-color: white;
     width: 100%;
@@ -15,50 +14,59 @@
 }
 
 .paperSnippedYellow {
-    background-image: url(../../assets/img/aboute-me-section/Ripped-paper-yellow.png);
-    background-repeat: no-repeat;
-    z-index: 3;
-    position: relative;
-    top: 40px;
-    & div {
-        rotate: -4deg;
-    }
+    position: absolute;
+    z-index: 4;
+}
+
+.positionYellow {
+    top: 64px;
+}
+
+.paperSnippedTextYellow {
+    rotate: -4deg;
+    position: absolute;
+    bottom: 76px;
 }
 
 .paperSnippedBlue {
-    background-image: url(../../assets/img/aboute-me-section/Ripped-paper-blue.png);
-    background-repeat: no-repeat;
+    position: absolute;
     z-index: 2;
-    & div {
-        position: relative;
-        bottom: 16px;
-    }
+}
+
+.paperSnippedTextBlue {
+    position: absolute;
+    bottom: 70px;
 }
 
 .paperSnippedOrange {
-    background-image: url(../../assets/img/aboute-me-section/Ripped-paper-orange.png);
-    background-repeat: no-repeat;
     z-index: 1;
-    position: relative;
-    bottom: 80px;
-    & div {
-        rotate: 4deg;
-        position: relative;
-        top: 8px;
-    }
+    position: absolute;
+}
+
+.paperSnippedTextOrange {
+    rotate: 6deg;
+    bottom: 70px;
+    position: absolute;
+}
+
+.positionOrange {
+    bottom: 60px;
 }
 
 .paperSnipped {
+    position: relative;
     height: 168px;
     width: 560px;
     display: flex;
     align-items: center;
     justify-content: center;
+
     & div {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 16px;
+
         & p {
             margin: 0;
             color: white;
@@ -73,6 +81,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 4;
+
     & img {
         height: 40px;
         width: 40px;
@@ -98,6 +108,7 @@
     justify-content: center;
     text-align: left;
     gap: 64px;
+
     & span {
         font-family: 'Bricolage Grotesque';
         font-weight: 400;
@@ -111,11 +122,13 @@
     flex-direction: column;
     justify-content: center;
     gap: 16px;
+
     & p {
         font-family: 'Bricolage Grotesque';
         font-weight: 500;
         font-size: 20px;
     }
+
     & h1 {
         font-family: 'Bricolage Grotesque';
         font-weight: 700;
@@ -130,11 +143,14 @@
 }
 
 @keyframes underlineAnimation {
-    0%, 10% {
+
+    0%,
+    10% {
         width: 0px;
     }
 
-    20%, 100% {
+    20%,
+    100% {
         width: 305px;
     }
 }
@@ -151,6 +167,7 @@
     box-shadow: 4px 4px black;
     transition: all 175ms ease-in-out;
     align-self: flex-end;
+
     &:hover {
         bottom: -4px;
         right: -4px;
@@ -164,4 +181,33 @@
 a {
     text-decoration: none;
     color: black;
+}
+
+@media (max-width: 376px) {
+    .body {
+        flex-direction: column-reverse;
+    }
+
+    .textSection {
+        width: 100%;
+    }
+
+    .aboutMeTextArea {
+        gap: 40px;
+    }
+
+    .title {
+        gap: 0px;
+
+        & h1 {
+            font-size: 48px;
+        }
+    }
+
+    .rippedPaper {
+        width: 100%;
+    }
+
+
+
 }
