@@ -6,7 +6,7 @@
             [class.hoverEffectHight]="aboutMeHover">
             <img src="../../assets/img/header/1.png">
         </div>
-        <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" href="#abouteMe">About me</a>
+        <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" href="#aboutMe">About me</a>
     </div>
 
     <div class="display">
@@ -46,7 +46,7 @@
     </div>
     <div class="mobileNavbarMenu" [style.top]="openMenu ? '0' : (!openMenu ? '-100vh' : null)">
         <div class="navMobile">
-            <a href="#abouteMe" (click)="showMenu()">About me</a>
+            <a href="#aboutMe" (click)="showMenu()">About me</a>
             <a href="#skills" (click)="showMenu()">Skills</a>
             <a href="#projects" (click)="showMenu()">Projects</a>
             <a href="#contact" (click)="showMenu()">Contact</a>
