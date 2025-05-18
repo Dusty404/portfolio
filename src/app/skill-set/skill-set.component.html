@@ -4,8 +4,8 @@
             <div class="title">
                 <span>My stack</span>
                 <div>
-                    <h1>Skill set</h1>
-                    <img src="../../assets/img/skill-set-section/skillSetOutline.png" alt="Skillset animated outline">
+                    <h1 #skillTitle>Skill set</h1>
+                    <img src="../../assets/img/skill-set-section/skillSetOutline.png" alt="Skillset animated outline" [ngStyle]="{'width.px': skillTitle.offsetWidth }">
                 </div>
             </div>
             <div class="paperSnipped">
@@ -19,31 +19,7 @@
 
         </div>
         <div class="skillSetContainer">
-            <app-skill-logo class="skillLogoComponent"></app-skill-logo>
-            <div class="stickerContainer">
-                <img class="sticker" [ngStyle]="{'z-index':'1'}" [class.d-none]="stickerPeeled" src="{{stickerImgSrc}}" alt="">
-                <img class="sticker" [ngStyle]="{'z-index':'0'}" src="../../assets/img/skill-set-section/bottom.png" alt="">
-                <div class="stickerContent" (click)="peelSticker()">
-                    <div class="stickerTop sticker">
-                        <img class="stickerArrow" [class.d-none]="stickerPeel" src="../../assets/img/skill-set-section/pull-arrow.png">
-                        <span [class.d-none]="stickerPeel">Click to<br> peel</span>
-                    </div>
-                    <div class="stickerBottom" [class.d-none]="!stickerPeeled">
-                        <span>Also, I'm interested in diving into: </span>
-                        <div>
-                            <div>
-                                <img src="../../assets/img/skill-set-section/react-white.png">
-                                <span>React</span>
-                            </div>
-                            <div>
-                                <img src="../../assets/img/skill-set-section/vue-Js-white.png">
-                                <span>Vue Js</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <app-skill-logo></app-skill-logo>
         </div>
     </div>
 </div>

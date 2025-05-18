@@ -1,8 +1,30 @@
 @for (skill of skillList; track $index) {
-<div>
+<div class="singleSkill">
     <img src="../../../assets/img/icons-frontend/{{skill.imgSrc}}">
     <p>
         {{skill.name}}
     </p>
 </div>
 }
+<div class="stickerContent" (click)="peelSticker()">
+    <img class="sticker" [ngStyle]="{'z-index':'1'}" [class.d-none]="stickerPeeled" src="{{stickerImgSrc}}" alt="">
+    <img class="sticker" [ngStyle]="{'z-index':'0'}" src="../../assets/img/skill-set-section/bottom.png" alt="">
+    <div class="stickerTop sticker">
+        <img class="stickerArrow" [class.d-none]="stickerPeel"
+            src="../../../assets/img/skill-set-section/pull-arrow.png">
+        <span [class.d-none]="stickerPeel">Click to<br> peel</span>
+    </div>
+    <div class="stickerBottom" [class.d-none]="!stickerPeeled">
+        <span>Also, I'm interested in diving into: </span>
+        <div>
+            <div>
+                <img src="../../../assets/img/skill-set-section/react-white.png">
+                <span>React</span>
+            </div>
+            <div>
+                <img src="../../../assets/img/skill-set-section/vue-Js-white.png">
+                <span>Vue Js</span>
+            </div>
+        </div>
+    </div>
+</div>

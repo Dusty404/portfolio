@@ -1,4 +1,4 @@
-div {
+.singleSkill {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -30,4 +30,92 @@ div {
             height: 56px;
         }
     }
+}
+
+.d-none {
+    display: none !important;
+}
+
+.stickerContainer {
+    display: flex;
+    position: relative;
+}
+
+.stickerContent {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    gap: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+.stickerArrow {
+    height: 48px;
+    width: 57px;
+    rotate: -10deg;
+}
+
+.stickerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: Kalam;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 2;
+}
+
+.stickerBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 200px;
+    width: 200px;
+    rotate: 8deg;
+
+    & img {
+        height: 40px;
+        width: 40px;
+    }
+
+    & span {
+        font-family: Bricolage Grotesque;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        text-wrap-style: balance;
+    }
+
+    & div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        & div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}
+
+.sticker {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    rotate: 8deg;
 }

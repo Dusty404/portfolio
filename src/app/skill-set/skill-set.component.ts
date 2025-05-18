@@ -11,17 +11,4 @@ import { CommonModule } from '@angular/common';
   styleUrl: './skill-set.component.scss'
 })
 export class SkillSetComponent {
-
-  stickerImgSrc: string ="../../assets/img/skill-set-section/basic.png"
-  stickerPeel: boolean = false;
-  stickerPeeled: boolean = false;
-  stickerText: boolean = false;
-
-  peelSticker() {
-    this.stickerImgSrc="../../assets/img/skill-set-section/pull.png"
-    setTimeout(() => {
-      this.stickerPeel = true;
-      this.stickerPeeled = true;
-    }, 50);
-  }
 }

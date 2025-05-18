@@ -19,7 +19,7 @@
                     alt="">
                 <img [ngClass]="{'pauseAnimation': animationStop==true}" class="movingLaptop"
                     src="../../assets/img/projects-section/laptop.png" alt="">
-                <div [ngClass]="{'showLaptopZoom': animationStop==true}" class="laptopZoom">
+                <div [ngClass]="{'showLaptopZoom': animationStop==true}" class="laptopZoom" [routerLink]="['/project', 0]">
                     <div class="letsTalkButton">
                         <span>Project details</span>
                     </div>
