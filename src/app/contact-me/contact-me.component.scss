@@ -9,9 +9,9 @@
     background-repeat: no-repeat;
     background-color: white;
     padding: 144px 120px 56px 120px;
-    display: flex;
+    display: grid;
     justify-content: space-between;
-    gap: 88px;
+    gap: 0 88px;
     position: relative;
 }
 
@@ -26,7 +26,8 @@ span {
 .leftContainer {
     display: flex;
     flex-direction: column;
-    width: 560px;
+    max-width: 560px;
+    width: 100%;
     gap: 48px;
 
     & div {
@@ -66,7 +67,7 @@ span {
 }
 
 .arrowContainer {
-    align-self: flex-end;
+    justify-self: flex-end;
     width: 280px;
 }
 
@@ -104,9 +105,73 @@ span {
 
 .nameSticker {
     position: absolute;
-    top: 150px;
+    top: 100px;
     right: 132px;
     height: 166px;
     width: 168px;
     z-index: 1;
+}
+
+app-contact-me-form {
+    display: flex;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+@media (max-width: 376px) {
+    .body {
+        padding: 40px 16px 0;
+        gap: 0;
+    }
+
+    .nameSticker {
+        position: unset;
+        height: 120px;
+        width: 120px;
+        align-self: end;
+        padding-bottom: 88px;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .arrowContainer {
+        width: 152px;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        justify-self: normal;
+    }
+
+    @keyframes arrowShrink {
+
+    0%,
+    10% {
+        width: 0px;
+    }
+
+    20%,
+    100% {
+        width: 152px;
+    }
+}
+
+    .arrow {
+        width: 152px;
+    }
+
+    .leftContainer {
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+
+    app-contact-me-form {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
 }

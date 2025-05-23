@@ -2,13 +2,14 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    width: 560px;
+    max-width: 560px;
+    width: 100%;
     align-items: end;
 }
 
 form {
     width: 100%;
-    padding-top: 128px;
+    padding-top: 90px;
 
     label {
         font-family: Bricolage Grotesque;
@@ -121,5 +122,18 @@ section {
 .invalidValuePlaceholder {
     &::placeholder {
         color: red !important;
+    }
+}
+
+@media (max-width:376px) {
+
+    form {
+        padding-top: 60px;
+    }
+
+    .letsTalkButton {
+        height: 40px;
+        width: 152px;
+        
     }
 }
