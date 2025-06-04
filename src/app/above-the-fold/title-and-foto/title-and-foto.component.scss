@@ -193,30 +193,30 @@ h1 {
         filter: saturate(0%);
     }
 
+    40% {
+        filter: saturate(180%);
+    }
+
     60% {
         filter: saturate(180%);
     }
 
     70% {
-        filter: saturate(180%);
-    }
-
-    80% {
-        filter: saturate(120%);
+        filter: saturate(140%);
     }
 
     90% {
-        filter: saturate(100%);
+        filter: saturate(140%);
     }
 
     100% {
-        filter: saturate(120%);
+        filter: saturate(180%);
     }
 }
 
 @keyframes polaroidColorOut {
     0% {
-        filter: saturate(120%);
+        filter: saturate(180%);
     }
 
     100% {

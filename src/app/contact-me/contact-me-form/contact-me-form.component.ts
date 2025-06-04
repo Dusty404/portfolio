@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-contact-me-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MatCheckboxModule],
   templateUrl: './contact-me-form.component.html',
   styleUrl: './contact-me-form.component.scss'
 })
@@ -13,18 +14,19 @@ export class ContactMeFormComponent {
 
   hoverMid:boolean = false;
   hoverBot:boolean = false;
-  isChecked:boolean = false;
   placeholderName:string = "Your name goes here";
   placeholderEmail:string = "youremail@email.com";
   placeholderMessage:string = "Hello Justin, I am interested in...";
   nameValid:boolean = true;
   emailValid:boolean = true;
   messageValid:boolean = true;
+  privacyPolicyValid:boolean = true;
 
   data = {
     name: "",
     email: "",
-    message: ""
+    message: "",
+    isChecked: false
   }
 
    sendEmail(ngForm:NgForm ) {
@@ -47,6 +49,9 @@ export class ContactMeFormComponent {
     if(!this.data.message) {
       this.messageValid = false;
       this.placeholderMessage = "What do you need to develop?"
+    }
+    if(!this.data.isChecked) {
+      this.privacyPolicyValid = false;
     }
   }
 

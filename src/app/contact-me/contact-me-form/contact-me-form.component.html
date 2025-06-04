@@ -13,8 +13,8 @@
             <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.message" id="wdyw" [placeholder]="placeholderMessage"type="text" name="message" class="textInput" required>
         </div>
         <section>
-            <input class="checkbox" type="checkbox" id="privacyPolicy">
-            <span class="ppLabel" for="privacyPolicy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</span>
+            <mat-checkbox class="ppLabel" id="privacyPolicy" [(ngModel)]="data.isChecked" required>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
+            <span [style.display]="privacyPolicyValid ? 'none' : 'block'" class="privacyPolicyWarning">Please accept the privacy policy.</span>
         </section>
             <input class="letsTalkButton" type="submit" value="send">
     </form>

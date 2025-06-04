@@ -122,7 +122,7 @@ app-contact-me-form {
 
 @media (max-width: 376px) {
     .body {
-        padding: 40px 16px 0;
+        padding: 80px 16px 0;
         gap: 0;
     }
 
@@ -130,8 +130,8 @@ app-contact-me-form {
         position: unset;
         height: 120px;
         width: 120px;
-        align-self: end;
-        padding-bottom: 88px;
+        justify-self: end;
+        padding: 0px;
         grid-row-start: 1;
         grid-row-end: 2;
         grid-column-start: 1;
