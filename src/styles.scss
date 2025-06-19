@@ -47,6 +47,13 @@ app-main-content {
   width: 100%;
 }
 
+app-footer {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  flex-direction: column;
+}
+
 @font-face {
   font-display: swap;
   font-family: 'Bricolage Grotesque';

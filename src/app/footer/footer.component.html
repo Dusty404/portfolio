@@ -1,1 +1,47 @@
-<p>footer works!</p>
+<div class="content">
+    <div class="logoAndName">
+        <img class="logo" src="../../assets/img/header/logo_blue.png">
+        <span>© Justin Koll 2025</span>
+    </div>
+    <div class="links">
+        <a href="" class="legalNotice">
+            <div class="hoverImg transitionWidth" [class.hoverEffectWidth]="hover"
+                [ngStyle]="hover ? {'width.px': title.offsetWidth } : {}">
+                <img src="../../assets/img/header/3.png">
+            </div>
+            <span (mouseover)="hover=true" (mouseout)="hover=false" href="" #title>
+                Legal Notice
+            </span>
+        </a>
+        <a href="" class="git">
+            <div class="buttonContainer">
+                <img [ngClass]="{ 'wavingIconEffect': gitHover, 'rollInEffect': !gitHover }" class="icon"
+                    src="../../assets/img/socials/github.png">
+                <div class="animationContainer" (mouseenter)="gitHover=true" (mouseleave)="gitHover=false">
+                    <span class="buttonText">GitHub</span>
+                    <div [class.increasBackground]="gitHover" class="backgroundColorContainer"></div>
+                </div>
+            </div>
+        </a>
+        <a href="" class="linkedIn">
+            <div class="buttonContainer">
+                <img [ngClass]="{ 'wavingIconEffect': linkeInHover, 'rollInEffect': !linkeInHover }" class="icon"
+                    src="../../assets/img/socials/linkedin.png">
+                <div class="animationContainer" (mouseenter)="linkeInHover=true" (mouseleave)="linkeInHover=false">
+                    <span class="buttonText">LinkedIn</span>
+                    <div [class.increasBackground]="linkeInHover" class="backgroundColorContainer"></div>
+                </div>
+            </div>
+        </a>
+        <a href="" class="email">
+            <div class="buttonContainer">
+                <img [ngClass]="{ 'wavingIconEffect': mailHover, 'rollInEffect': !mailHover }" class="icon"
+                    src="../../assets/img/socials/mail.png">
+                <div class="animationContainer" (mouseenter)="mailHover=true" (mouseleave)="mailHover=false">
+                    <span class="buttonText">Email</span>
+                    <div [class.increasBackground]="mailHover" class="backgroundColorContainer"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
