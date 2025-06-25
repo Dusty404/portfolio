@@ -7,7 +7,7 @@ import { ContactMeFormComponent } from "./contact-me-form/contact-me-form.compon
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [CommonModule, FormsModule, ContactMeFormComponent],
+  imports: [CommonModule, FormsModule, ContactMeFormComponent, FooterComponent],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })

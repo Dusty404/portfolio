@@ -1,0 +1,267 @@
+.content {
+    padding-bottom: 24px;
+}
+
+.logoAndName {
+    font-family: Bricolage Grotesque;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    color: white;
+    padding: 0 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    transition: all 300ms;
+    &:hover {
+        filter: hue-rotate(45deg);
+    }
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    padding: 0 120px;
+    align-items: center;
+    position: relative;
+    bottom: 25px;
+}
+
+.buttonContainer {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    cursor: default;
+    gap: 8px;
+
+    & .animationContainer {
+        position: relative;
+        max-width: 145px;
+        max-height: 40px;
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-wrap: nowrap;
+        transition: all 300ms ease-in;
+        color: white;
+        margin: 0;
+        text-align: center;
+        float: right;
+        z-index: 1;
+    }
+}
+
+.icon {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    rotate: -180deg;
+}
+
+.wavingIconEffect {
+    opacity: 1;
+    animation: rollOut 700ms alternate forwards ease-out;
+    rotate: 0deg;
+    left: 70px;
+}
+
+.rollInEffect {
+    animation: rollIn 300ms alternate forwards ease-out;
+}
+
+@keyframes rollOut {
+    0% {
+        rotate: -180deg;
+        left: 30px;
+    }
+
+    50% {
+        rotate: 30deg;
+        left: 74px;
+    }
+
+    60% {
+        rotate: 10deg;
+        left: 73px;
+    }
+
+    70% {
+        rotate: 0deg;
+        left: 70px;
+    }
+
+    80% {
+        rotate: -10deg;
+        left: 68px;
+    }
+
+    100% {
+        rotate: 0deg;
+        left: 70px;
+    }
+}
+
+@keyframes rollIn {
+    0% {
+        rotate: 0deg;
+        left: 70px;
+    }
+
+    100% {
+        rotate: -180deg;
+        left: 30px;
+    }
+}
+
+.buttonText {
+    font-family: Bricolage Grotesque;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: justify;
+    z-index: 1;
+}
+
+.backgroundColorContainer {
+    z-index: 0;
+    position: absolute;
+    height: 40px;
+    width: 80px;
+    background-color: #7E4AE7;
+    border-radius: 0;
+    opacity: 0;
+    transition: all 400ms ease;
+}
+
+.increasBackground {
+    width: 145px;
+    border-radius: 100px;
+    opacity: 1;
+}
+
+.legalNotice {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    text-decoration: none;
+    top: 23px;
+    & span {
+        z-index: 1;
+        text-decoration: none;
+        color: white;
+        font-family: 'Bricolage Grotesque';
+        font-weight: 700;
+        font-size: 18px;
+        text-align: end;
+
+    }
+}
+
+.hoverImg {
+    position: absolute;
+    overflow: hidden;
+    height: 0px;
+    top: 0px;
+    width: 0px;
+
+    & img {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 110px;
+        height: 50px;
+    }
+}
+
+.hoverEffectWidth {
+    width: 100px;
+    height: 80px;
+}
+
+.transitionWidth {
+    transition: width 175ms ease-in;
+    height: 80px;
+}
+
+@media (max-width: 820px) {
+
+    .content {
+        padding-top: 24px;
+    }
+
+    .logoAndName {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+    }
+
+    .links {
+        grid-template-rows: auto auto;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 50px;
+        padding: 0 50px;
+        & a {
+            grid-row-start: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        & span {
+            white-space: nowrap;
+        }
+    }
+
+    .legalNotice {
+        grid-row-start: 1 !important;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        justify-self: end;
+        height: 50px;
+        width: 110px;
+    }
+
+    .hoverImg {
+        top: -10px;
+    }
+
+    .buttonContainer {
+        & img {
+            display: none;
+        }
+    }
+
+    .backgroundColorContainer {
+        display: none;
+    }
+}
+
+@media (max-width:395px) {
+    .logoAndName {
+        padding: 0 20px;
+    }
+
+    .links {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 330px) {
+    .links {
+        grid-gap: 16px;
+    }
+}

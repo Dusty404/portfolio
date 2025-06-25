@@ -1,13 +1,13 @@
 .content {
     max-width: 1440px;
     width: 100%;
-}
-
-.body {
     background-image: url(../../assets/img/contact-me/contact-me-background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: white;
+}
+
+.body {
     padding: 144px 120px 56px 120px;
     display: grid;
     justify-content: space-between;
@@ -106,10 +106,11 @@ span {
 .nameSticker {
     position: absolute;
     top: 100px;
-    right: 132px;
-    height: 166px;
-    width: 168px;
+    right: 90px;
+    height: 180px;
+    width: 180px;
     z-index: 1;
+    rotate: 16deg;
 }
 
 app-contact-me-form {
