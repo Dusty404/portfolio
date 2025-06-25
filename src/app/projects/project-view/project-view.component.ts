@@ -30,4 +30,16 @@ export class ProjectViewComponent implements OnInit {
   goBack() {
     this.router.navigate(['/projects']);
   }
+
+  goToNextProject() {
+    console.log(this.projectIndex)
+    if(this.projectIndex == this.projectsData.projectsArray.length - 1) {
+      this.projectIndex = 0;
+    } else {
+      this.projectIndex = this.projectIndex +1;
+    }
+   this.router.navigate(['project/'+ this.projectIndex])
+   console.log(this.projectIndex)
+}
+
 }

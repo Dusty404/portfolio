@@ -1,59 +1,68 @@
 <div class="body">
     <app-navbar></app-navbar>
-    <div class="goBackButton" [routerLink]="['/home']">
-            <img src="../../../assets/img/projects-section/back-arrow.png">
-            <p>Go Back</p>
-    </div>
     <div class="content">
-        <div class="projectText">
-            <div class="projectDescription">
-                <div class="titleContainer">
-                    <h1 class="projectTitle" #title>{{projectsData.projectsArray[projectIndex].title}}</h1>
-                    <div>
-                        <div class="titleUnderlineContainer">
-                            <img src="../../../assets/img/about-me-section/Blue line.png" alt="About me underline" [ngStyle]="{'width.px': title.offsetWidth }">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="textBox">
-                    <p>Description</p>
-                    <span>
-                        {{projectsData.projectsArray[projectIndex].discription}}
-                    </span>
-                </div>
-                <div class="textBox">
-                    <p>Implementation Details</p>
-                    <span>
-                        {{projectsData.projectsArray[projectIndex].implementationDetails}}
-                    </span>
-                </div>
-                <div class="durationBox">
-                    <span class="durTitle">Duration:</span>
-                    <span class="durValue">{{projectsData.projectsArray[projectIndex].duration}}</span>
-                </div>
-
-                <div class="usedTec">
-                    @for (technologie of projectsData.projectsArray[projectIndex].usedTechnologies; track $index) {
-                    <div>
-                        <img src="../../../{{technologie.technologieIcon}}">
-                        <span>{{technologie.technologieName}}</span>
-                    </div>
-                    }
-                </div>
+        <div class="projectMenu">
+            <div class="goBackButton" [routerLink]="['/projects']">
+                <img src="../../../assets/img/projects-section/back-arrow.png">
+                <p>Go Back</p>
+            </div>
+            <div class="nextButton" (click)="goToNextProject()">
+                <p>Next Project</p>
+                <img src="../../../assets/img/projects-section/nextButton.png">
             </div>
         </div>
-        <div class="projectImg">
-            <img src="../../../{{projectsData.projectsArray[projectIndex].imgSrc}}">
-            <div class="projectButtons">
-                <div class="button">
-                    <span>GitHub</span>
-                </div>
-                <div class="button">
-                    <span>Live Test</span>
+        <div class="project">
+            <div class="projectText">
+                <div class="projectDescription">
+                    <div class="titleContainer">
+                        <h1 class="projectTitle" #title>{{projectsData.projectsArray[projectIndex].title}}</h1>
+                        <div>
+                            <div class="titleUnderlineContainer">
+                                <img src="../../../assets/img/about-me-section/Blue line.png" alt="About me underline"
+                                    [ngStyle]="{'width.px': title.offsetWidth }">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="textBox">
+                        <p>Description</p>
+                        <span>
+                            {{projectsData.projectsArray[projectIndex].discription}}
+                        </span>
+                    </div>
+                    <div class="textBox">
+                        <p>Implementation Details</p>
+                        <span>
+                            {{projectsData.projectsArray[projectIndex].implementationDetails}}
+                        </span>
+                    </div>
+                    <div class="durationBox">
+                        <span class="durTitle">Duration:</span>
+                        <span class="durValue">{{projectsData.projectsArray[projectIndex].duration}}</span>
+                    </div>
+
+                    <div class="usedTec">
+                        @for (technologie of projectsData.projectsArray[projectIndex].usedTechnologies; track $index) {
+                        <div>
+                            <img src="../../../{{technologie.technologieIcon}}">
+                            <span>{{technologie.technologieName}}</span>
+                        </div>
+                        }
+                    </div>
                 </div>
             </div>
+            <div class="projectImg">
+                <img src="../../../{{projectsData.projectsArray[projectIndex].imgSrc}}">
+                <div class="projectButtons">
+                    <div class="button">
+                        <span>GitHub</span>
+                    </div>
+                    <div class="button">
+                        <span>Live Test</span>
+                    </div>
+                </div>
 
+            </div>
         </div>
     </div>
 </div>

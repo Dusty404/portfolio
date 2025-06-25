@@ -12,25 +12,25 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 })
 export class ContactMeFormComponent {
 
-  hoverMid:boolean = false;
-  hoverBot:boolean = false;
-  placeholderName:string = "Your name goes here";
-  placeholderEmail:string = "youremail@email.com";
-  placeholderMessage:string = "Hello Justin, I am interested in...";
-  nameValid:boolean = true;
-  emailValid:boolean = true;
-  messageValid:boolean = true;
-  privacyPolicyValid:boolean = true;
+  hoverMid: boolean = false;
+  hoverBot: boolean = false;
+  placeholderName: string = "Your name goes here";
+  placeholderEmail: string = "youremail@email.com";
+  placeholderMessage: string = "Hello Justin, I am interested in...";
+  nameValid: boolean = true;
+  emailValid: boolean = true;
+  messageValid: boolean = true;
+  privacyPolicyValid: boolean = true;
 
   data = {
     name: "",
     email: "",
     message: "",
-    isChecked: false
+    isChecked: false,
   }
 
-   sendEmail(ngForm:NgForm ) {
-    if(ngForm.valid && ngForm.submitted) {
+  sendEmail(ngForm: NgForm) {
+    if (ngForm.valid && ngForm.submitted) {
       console.log(this.data)
     } else {
       this.checkInputs()
@@ -38,20 +38,23 @@ export class ContactMeFormComponent {
   }
 
   checkInputs() {
-    if(!this.data.name) {
+    if (!this.data.name) {
       this.nameValid = false;
       this.placeholderName = "Oops! it seems your name is missing"
+    } else {
+      this.nameValid = true;
     }
-    if(!this.data.email) {
+    if (!this.data.email) {
       this.emailValid = false;
       this.placeholderEmail = "Hoppla! your email is required"
+    } else {
+      this.emailValid = true;
     }
-    if(!this.data.message) {
+    if (!this.data.message) {
       this.messageValid = false;
       this.placeholderMessage = "What do you need to develop?"
-    }
-    if(!this.data.isChecked) {
-      this.privacyPolicyValid = false;
+    } else {
+      this.messageValid = true;
     }
   }
 

@@ -68,7 +68,7 @@ form {
   --mdc-checkbox-unselected-hover-state-layer-color: #E08C05;
   --mdc-checkbox-unselected-pressed-state-layer-color: #E08C05;
   --mdc-checkbox-selected-icon-color: #3355FF;
-  --mdc-checkbox-selected-pressed-icon-color: red;
+  --mdc-checkbox-selected-pressed-icon-color: #576bd0;
   --mdc-checkbox-selected-pressed-state-layer-color: #E08C05;
   --mdc-checkbox-selected-hover-icon-color: #3355FF;
   --mdc-checkbox-selected-hover-state-layer-color: #E08C05;
@@ -90,6 +90,12 @@ section {
             text-decoration: underline;
         }
     }
+}
+
+.privacyPolicyContainer {
+    min-height: 20px;
+    padding: 0 !important;
+    border: none !important;
 }
 
 .privacyPolicyWarning {
@@ -158,7 +164,7 @@ section {
     }
 
     section {
-        padding: 40px 0;
+        padding: 40px 0 20px;
         gap: 8px;
     }
 }

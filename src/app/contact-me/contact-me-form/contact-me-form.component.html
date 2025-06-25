@@ -1,21 +1,32 @@
 <div class="formContainer">
-    <form (ngSubmit)="sendEmail(contactForm)" autocomplete="off" #contactForm="ngForm">
+    <form #form="ngForm" (ngSubmit)="sendEmail(contactForm)" autocomplete="off" #contactForm="ngForm">
         <div [ngClass]="{'borderOff' : hoverMid, 'border' : !hoverMid}">
-            <label [ngClass]="{'invalidValue': !nameValid}" for="name">What's your Name?</label>
-            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.name" id="name" [placeholder]="placeholderName" type="name" name="name" class="textInput" required>
+            <label [ngClass]="{'invalidValue': nameInput.invalid && nameInput.touched}" for="name">What's your Name?</label>
+            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.name" id="name"
+                [placeholder]="placeholderName" type="name" name="name" #nameInput="ngModel" class="textInput" pattern="[a-zA-Z]{2,}" required>
+                <span *ngIf="nameInput.invalid && nameInput.touched" class="invalidValue">This field needs at least two letters</span>
         </div>
-        <div class="border" (mouseenter)="hoverMid=true" (mouseleave)="hoverMid=false" [ngClass]="{'borderOff' : hoverBot, 'border' : !hoverBot}">
-            <label [ngClass]="{'invalidValue': !emailValid}" for="email">What's your email?</label>
-            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.email" id="email" [placeholder]="placeholderEmail" type="email" name="email" class="textInput" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+        <div class="border" (mouseenter)="hoverMid=true" (mouseleave)="hoverMid=false"
+            [ngClass]="{'borderOff' : hoverBot, 'border' : !hoverBot}">
+            <label [ngClass]="{'invalidValue': emailInput.invalid && emailInput.touched}" for="email">What's your email?</label>
+            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.email" id="email"
+                [placeholder]="placeholderEmail" type="email" name="email" #emailInput="ngModel" class="textInput"
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+                <span *ngIf="emailInput.invalid && emailInput.touched" class="invalidValue">Please enter a valid email</span>
         </div>
         <div class="border" (mouseenter)="hoverBot=true" (mouseleave)="hoverBot=false">
             <label [ngClass]="{'invalidValue': !messageValid}" for="wdyw">How can i help you?</label>
-            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.message" id="wdyw" [placeholder]="placeholderMessage"type="text" name="message" class="textInput" required>
+            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.message" id="wdyw"
+                [placeholder]="placeholderMessage" type="text" name="message" class="textInput" required>
         </div>
         <section>
-            <mat-checkbox class="ppLabel" id="privacyPolicy" [(ngModel)]="data.isChecked" required>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</mat-checkbox>
-            <span [style.display]="privacyPolicyValid ? 'none' : 'block'" class="privacyPolicyWarning">Please accept the privacy policy.</span>
+            <mat-checkbox class="ppLabel" id="privacyPolicy" name="privacyPolicy" #privacyPolicy="ngModel" [(ngModel)]="data.isChecked"
+                required>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as
+                outlined.</mat-checkbox>
+            <div class="privacyPolicyContainer">
+                <span *ngIf="privacyPolicy.invalid && form.submitted || privacyPolicy.invalid && privacyPolicy.touched" class="privacyPolicyWarning">Please accept the privacy policy.</span>
+            </div>
         </section>
-            <input class="letsTalkButton" type="submit" value="send">
+        <input class="letsTalkButton" type="submit" value="send">
     </form>
 </div>

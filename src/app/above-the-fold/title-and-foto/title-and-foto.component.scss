@@ -471,36 +471,95 @@ a {
     filter: saturate(0%);
 }
 
-@media (max-width: 376px) {
-    .socialsContainer {
-        display: none;
+@media (max-width: 966px) {
+    .content {
+        padding: 0 32px;
     }
 
-    .uperCase {
-        font-size: 64px;
+    .polaroidFrame {
+        height: 200px;
     }
 
-    .titleFirstLine,
-    .titleSecondLine {
-        & p {
-            font-size: 56px;
-            margin: 0;
+    .polaroidInnerPicture {
+        bottom: 0px;
+        right: 20px;
+        height: 129px;
+        width: 130px;
+    }
+
+    .fotoTitle {
+        right: 50px;
+        bottom: -32px;
+
+        & span {
+            font-size: 20px;
         }
     }
+}
 
-    .titleSecondLine {
-        align-self: flex-start;
+@media (max-width: 830px) {
+    .titleFirstLine p {
+        font-size: 110px;
     }
 
-    .titleContainer {
-        gap: 16px;
+    .titleSecondLine p {
+        font-size: 110px;
+    }
+}
+
+@media (max-width: 750px) {
+    .titleFirstLine p {
+        font-size: 90px;
+    }
+
+    .titleSecondLine p {
+        font-size: 90px;
     }
 
     .content {
-        gap: 32px;
-        justify-content: normal;
-        align-items: center;
-        padding: 0 16px;
+        padding: 0 72px;
+    }
+
+    .polaroidFrame {
+        height: 170px;
+    }
+
+    .fotoTitle {
+
+        & span {
+            font-size: 17px;
+        }
+    }
+
+    .polaroidInnerPicture {
+        bottom: -8px;
+        right: 17px;
+        height: 111px;
+        width: 111px;
+    }
+}
+
+@media (max-width: 730px) {
+    .content {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width:690px) {
+    .content {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 645px) {
+
+    .content {
+        justify-content: start;
+        gap: 100px;
+    }
+
+    .socialsContainer {
+        display: none;
     }
 
     .polaroid {
@@ -510,20 +569,83 @@ a {
     .polaroidMobile {
         display: flex;
         justify-content: center;
+        height: 200px;
     }
 
     .polaroidFrame {
-        position: relative;
-        bottom: unset;
+        position: absolute;
+        bottom: 0px;
+        right: unset;
+        height: 250px;
     }
 
     .polaroidInnerPicture {
         position: absolute;
-        bottom: 68px;
-        height: 175px;
+        bottom: 63px;
+        height: 161px;
+        width: 166px;
+        right: unset;
     }
 
     .fotoTitle {
-        bottom: 30px;
+        bottom: 20px;
+        right: -30px;
+        & span {
+            font-size: 20px;
+        }
+    }
+
+    .polaroidMobileContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 545px) {
+    .uperCase {
+        font-size: 64px;
+    }
+
+    .titleFirstLine,
+    .titleSecondLine {
+        & p {
+            font-size: 64px;
+            margin: 0;
+        }
+    }
+
+    .titleContainer {
+        gap: 40px;
+    }
+
+    .content {
+        gap: 100px;
+        justify-content: start;
+        align-items: center;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .uperCase {
+        font-size: 64px;
+    }
+
+    .titleFirstLine,
+    .titleSecondLine {
+        & p {
+            font-size: 56px;
+        }
+    }
+
+    .titleContainer {
+        gap: 40px;
+    }
+
+    .content {
+        gap: 100px;
     }
 }

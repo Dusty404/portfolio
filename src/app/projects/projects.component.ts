@@ -18,9 +18,4 @@ export class ProjectsComponent {
   imgZoom:boolean = false;
 
   projectsData = inject(ProjectsDataService);
-  projectNummber:number = 0;
-
-  changeProjectNumber(index:number) {
-    this.projectsData.changeProjectNumber(index);
-  }
 }

@@ -1,15 +1,23 @@
 .body {
     background-image: url(../../../assets/img/projects-section/project-view-background.png);
     background-size: cover;
+    background-repeat: no-repeat;
     height: 900px;
     gap: 48px;
     display: flex;
     flex-direction: column;
     max-width: 1440px;
     width: 100%;
+    overflow-y: auto;
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.project {
     display: flex;
     justify-content: space-evenly;
 }
@@ -19,14 +27,6 @@
     gap: 8px;
     padding: 0px 72px;
     width: fit-content;
-
-    & a {
-        display: flex;
-        gap: 8px;
-        text-decoration: none;
-        color: black;
-        align-items: center;
-    }
 
     & img {
         height: 24px;
@@ -61,6 +61,8 @@
 }
 
 .textBox {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
 
     & p {
@@ -100,6 +102,7 @@
 .usedTec {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
 
     & div {
         display: flex;
@@ -161,6 +164,11 @@
     text-align: justify;
 }
 
+.projectMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
 .projectImg {
     display: flex;
     flex-direction: column;
@@ -207,5 +215,102 @@
         background-color: #E08C05;
         cursor: pointer;
         color: white;
+    }
+}
+
+.nextButton {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    padding: 0 72px;
+
+    & img {
+        height: 24px;
+        width: 24px;
+        rotate: 180deg;
+    }
+
+    & p {
+        font-family: Bricolage Grotesque;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 120%;
+        text-align: justify;
+        margin: 0;
+        color: white;
+
+        &:hover {
+            color: coral;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .content {
+        flex-direction: column-reverse;
+        padding: 0 16px;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .body {
+        background-image: url(../../../assets/img/projects-section/project-view-background-rotated.png);
+        background-size: 1100px;
+        height: unset;
+        padding-bottom: 20px;
+    }
+
+    .goBackButton {
+        padding: 0;
+
+        & p {
+            color: white;
+        }
+    }
+
+    .projectText {
+        padding-bottom: 40px;
+    }
+
+    .projectImg {
+        gap: 40px;
+    }
+
+    .projectButtons {
+        justify-content: center;
+    }
+
+    .button {
+        border: solid 1px white;
+        border-radius: 100px;
+        padding: 12px 24px;
+        position: relative;
+        bottom: 0px;
+        right: 0px;
+        box-shadow: 4px 4px white;
+        transition: all 175ms ease-in-out;
+        align-self: flex-end;
+        color: white;
+        font-family: Bricolage Grotesque;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        text-align: justify;
+
+        &:hover {
+            bottom: -4px;
+            right: -4px;
+            box-shadow: 0px 0px white;
+            background-color: #E08C05;
+            cursor: pointer;
+            color: white;
+        }
+    }
+
+    .nextButton {
+        padding: 0;
     }
 }

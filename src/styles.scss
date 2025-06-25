@@ -9,6 +9,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.d-none {
+  display: none;
+}
+
 app-root {
   display: flex;
   flex-direction: column;
@@ -85,4 +89,10 @@ app-main-content {
   font-style: normal;
   font-weight: 700;
   src: url('../src/assets/fonts/kalam-v17-latin-700.woff2') format('woff2');
+}
+
+@media (max-width: 376px) {
+  app-project-view {
+    height: unset;
+  }
 }
