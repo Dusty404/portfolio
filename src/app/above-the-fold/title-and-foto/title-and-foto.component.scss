@@ -139,7 +139,7 @@ p {
     justify-content: center;
     height: calc(100vh - 80px);
     padding: 0 72px;
-    max-width: 900px;
+    max-width: 1440px;
     width: 100%;
 }
 
@@ -471,6 +471,46 @@ a {
     filter: saturate(0%);
 }
 
+@media (hover: none) {
+    .animationContainer {
+        width: 180px !important;
+        background-color: #7E4AE7;
+    }
+
+    .helloWorldText {
+        left: 22px;
+        transition: opacity 300ms ease-in;
+        position: absolute;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .wavingHand {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        opacity: 1;
+        rotate: 0deg !important;
+        align-self: flex-start;
+    }
+
+    .greating {
+        opacity: 1;
+    }
+
+    .polaroid {
+        filter: saturate(140%);
+    }
+
+    .polaroidFilterOut {
+        animation: none;
+    }
+
+    .polaroidMobile {
+        filter: saturate(140%);
+    }
+}
+
 @media (max-width: 966px) {
     .content {
         padding: 0 32px;
@@ -590,6 +630,7 @@ a {
     .fotoTitle {
         bottom: 20px;
         right: -30px;
+
         & span {
             font-size: 20px;
         }
@@ -647,5 +688,26 @@ a {
 
     .content {
         gap: 100px;
+    }
+}
+
+@media (max-height: 800px) {
+
+    .titleContainer {
+        gap: 20px;
+    }
+
+    .content {
+        gap: 85px;
+    }
+}
+
+@media (max-height: 740px) {
+    .titleContainer {
+        gap: 8px;
+    }
+
+    .content {
+        gap: 60px;
     }
 }

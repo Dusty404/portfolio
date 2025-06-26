@@ -183,4 +183,11 @@ section {
         padding: 40px 0 20px;
         gap: 8px;
     }
+
+    .letsTalkButton {
+        bottom: unset;
+        &:hover {
+            bottom: unset;
+        }
+    }
 }

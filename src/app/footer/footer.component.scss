@@ -12,12 +12,17 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    & a {
+        width: fit-content;
+    }
 }
 
 .logo {
     height: 60px;
     width: 60px;
     transition: all 300ms;
+
     &:hover {
         filter: hue-rotate(45deg);
     }
@@ -159,6 +164,7 @@
     position: relative;
     text-decoration: none;
     top: 23px;
+
     & span {
         z-index: 1;
         text-decoration: none;
@@ -215,6 +221,7 @@
         grid-template-columns: repeat(3, auto);
         grid-gap: 50px;
         padding: 0 50px;
+
         & a {
             grid-row-start: 2;
             display: flex;
@@ -247,6 +254,18 @@
 
     .backgroundColorContainer {
         display: none;
+    }
+}
+
+@media (max-width: 1400px) {
+    .links, .logoAndName {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .links, .logoAndName {
+        padding: 0 40px;
     }
 }
 

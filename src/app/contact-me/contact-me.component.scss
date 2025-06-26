@@ -121,6 +121,18 @@ app-contact-me-form {
     grid-row-end: 3;
 }
 
+@media (max-width: 1400px) {
+    .body {
+        padding: 144px 80px 56px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .body {
+        padding: 144px 40px 56px;
+    }
+}
+
 @media (max-width: 376px) {
     .body {
         padding: 80px 16px 0;

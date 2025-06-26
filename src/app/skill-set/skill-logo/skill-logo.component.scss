@@ -125,6 +125,12 @@
     rotate: 8deg;
 }
 
+@media (hover: none) {
+    .singleSkill img {
+        filter: grayscale(0%);
+    }
+}
+
 @media (max-width: 950px) {
     .stickerContent {
         grid-column-start: 4;

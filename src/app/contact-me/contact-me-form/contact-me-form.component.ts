@@ -21,6 +21,7 @@ export class ContactMeFormComponent {
   emailValid: boolean = true;
   messageValid: boolean = true;
   privacyPolicyValid: boolean = true;
+  clickedSend:boolean = false;
 
   data = {
     name: "",
@@ -30,6 +31,7 @@ export class ContactMeFormComponent {
   }
 
   sendEmail(ngForm: NgForm) {
+    this.clickedSend = true;
     if (ngForm.valid && ngForm.submitted) {
       console.log(this.data)
     } else {

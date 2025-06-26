@@ -1,76 +1,74 @@
-<div class="content">
-    <div class="topContainer">
-        <div class="title">
-            <p>MY CRAFT</p>
-            <h1 #projectsTitle>Projects</h1>
-            <div class="titleUnderlineContainer" [ngStyle]="{'width.px': projectsTitle.offsetWidth}">
-                <div [ngStyle]="{'width.px': projectsTitle.offsetWidth}"></div>
-                <img src="../../assets/img/projects-section/title-underline.png"
-                    [ngStyle]="{'width.px': projectsTitle.offsetWidth}">
-            </div>
-            <span>
-                BEISPIELTEXT
-                Encourage people to take a look and interact with your projects.
-                Highlight your approach to creating responsive, user-friendly projects with efficient code.
-            </span>
-        </div>
-        <div class="joinProject">
-            <div class="joinImgs" (mouseover)="animationStop=true" (mouseout)="animationStop=false">
-                <img class="checkDetailsSticker" src="../../assets/img/projects-section/check-details-sticker.png"
-                    alt="">
-                <img [ngClass]="{'pauseAnimation': animationStop==true}" class="movingLaptop"
-                    src="../../assets/img/projects-section/laptop.png" alt="">
-                <div [ngClass]="{'showLaptopZoom': animationStop==true}" class="laptopZoom">
-                    <div class="projectDetails" [routerLink]="['/project', 0]">
-                        <span>Project details</span>
-                    </div>
+<div class="body">
+    <div class="content">
+        <div class="projectsContainer">
+            <div class="title">
+                <p>MY CRAFT</p>
+                <h1 #projectsTitle>Projects</h1>
+                <div class="titleUnderlineContainer" [ngStyle]="{'width.px': projectsTitle.offsetWidth}">
+                    <div [ngStyle]="{'width.px': projectsTitle.offsetWidth}"></div>
+                    <img src="../../assets/img/projects-section/title-underline.png"
+                        [ngStyle]="{'width.px': projectsTitle.offsetWidth}">
                 </div>
-
-            </div>
-            <div class="joinText">
-                <h2>
-                    Join
-                </h2>
                 <span>
-                    Task manager inspired by the Kanban System.
-                    Create and organize tasks using drag and drop functions, assign users and categories.
+                    BEISPIELTEXT
+                    Encourage people to take a look and interact with your projects.
+                    Highlight your approach to creating responsive, user-friendly projects with efficient code.
                 </span>
             </div>
-            <div class="projectDetailsMobile" [routerLink]="['/project', 0]">
-                <span>Project details</span>
-            </div>
-        </div>
+            <div class="joinProject">
+                <div class="joinImgs" (mouseover)="animationStop=true" (mouseout)="animationStop=false">
+                    <img class="checkDetailsSticker" src="../../assets/img/projects-section/check-details-sticker.png"
+                        alt="">
+                    <img [ngClass]="{'pauseAnimation': animationStop==true}" class="movingLaptop"
+                        src="../../assets/img/projects-section/laptop.png" alt="">
+                    <div [ngClass]="{'showLaptopZoom': animationStop==true}" class="laptopZoom">
+                        <div class="projectDetails" [routerLink]="['/project', 0]">
+                            <span>Project details</span>
+                        </div>
+                    </div>
 
-    </div>
-    <div class="projectsContainer">
-        @for (project of projectsData.projectsArray; track $index) {
-        @if($index > 0) {
-        <div class="singleProjectContainer">
-            <div class="projectImgContainer">
-                <img src="{{project.imgSrc}}">
-                <div class="shadow"></div>
+                </div>
+                <div class="joinText">
+                    <h2>
+                        Join
+                    </h2>
+                    <span>
+                        Task manager inspired by the Kanban System.
+                        Create and organize tasks using drag and drop functions, assign users and categories.
+                    </span>
+                </div>
+                <div class="projectDetailsMobile" [routerLink]="['/project', 0]">
+                    <span>Project details</span>
+                </div>
+            </div>
+            @for (project of projectsData.projectsArray; track $index) {
+            @if($index > 0) {
+            <div class="singleProjectContainer" [ngClass]="{'leftAlign': $index % 2 === 1, 'rightAlign': $index % 2 === 0}">
+                <div class="projectImgContainer">
+                    <img src="{{project.imgSrc}}">
+                    <div class="shadow"></div>
+                    <a [routerLink]="['/project', $index]">
+                        <div class="projectDetails">
+
+                            <span>Project details</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="projecTitleContainer">
+                    <h2>{{project.title}}</h2>
+                    <span>{{project.discription}}</span>
+                </div>
                 <a [routerLink]="['/project', $index]">
-                    <div class="projectDetails">
+                    <div class="projectDetailsMobile">
 
                         <span>Project details</span>
 
                     </div>
                 </a>
             </div>
-            <div class="projecTitleContainer">
-                <h2>{{project.title}}</h2>
-                <span>{{project.discription}}</span>
-            </div>
-            <a [routerLink]="['/project', $index]">
-                <div class="projectDetailsMobile">
-
-                    <span>Project details</span>
-
-                </div>
-            </a>
+            }
+            }
         </div>
-        }
-        }
     </div>
-
 </div>

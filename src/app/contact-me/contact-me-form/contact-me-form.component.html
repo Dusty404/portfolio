@@ -1,33 +1,41 @@
 <div class="formContainer">
     <form #form="ngForm" (ngSubmit)="sendEmail(contactForm)" autocomplete="off" #contactForm="ngForm">
         <div [ngClass]="{'borderOff' : hoverMid, 'border' : !hoverMid}">
-            <label [ngClass]="{'invalidValue': nameInput.invalid && nameInput.touched}" for="name">What's your Name?</label>
+            <label [ngClass]="{'invalidValue': nameInput.invalid && nameInput.touched || nameInput.invalid && clickedSend}" for="name">What's your
+                Name?</label>
             <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.name" id="name"
-                [placeholder]="placeholderName" type="name" name="name" #nameInput="ngModel" class="textInput" pattern="[a-zA-Z]{2,}" required>
-                <span *ngIf="nameInput.invalid && nameInput.touched" class="invalidValue">This field needs at least two letters</span>
+                [placeholder]="placeholderName" type="name" name="name" #nameInput="ngModel" class="textInput"
+                pattern="[a-zA-Z]{2,}" required>
+            <span *ngIf="nameInput.invalid && nameInput.touched" class="invalidValue">This field needs at least two
+                letters</span>
         </div>
         <div class="border" (mouseenter)="hoverMid=true" (mouseleave)="hoverMid=false"
             [ngClass]="{'borderOff' : hoverBot, 'border' : !hoverBot}">
-            <label [ngClass]="{'invalidValue': emailInput.invalid && emailInput.touched}" for="email">What's your email?</label>
-            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.email" id="email"
+            <label [ngClass]="{'invalidValue': emailInput.invalid && emailInput.touched || emailInput.invalid && clickedSend}" for="email">What's your
+                email?</label>
+            <input [ngClass]="{'invalidValuePlaceholder': !emailValid}" [(ngModel)]="data.email" id="email"
                 [placeholder]="placeholderEmail" type="email" name="email" #emailInput="ngModel" class="textInput"
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
-                <span *ngIf="emailInput.invalid && emailInput.touched" class="invalidValue">Please enter a valid email</span>
+            <span *ngIf="emailInput.invalid && emailInput.touched" class="invalidValue">Please enter a valid
+                email</span>
         </div>
         <div class="border" (mouseenter)="hoverBot=true" (mouseleave)="hoverBot=false">
-            <label [ngClass]="{'invalidValue': !messageValid}" for="wdyw">How can i help you?</label>
-            <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.message" id="wdyw"
-                [placeholder]="placeholderMessage" type="text" name="message" class="textInput" required>
+            <label [ngClass]="{'invalidValue': messageInput.invalid && messageInput.touched || messageInput.invalid && clickedSend}" for="wdyw">How can i help you?</label>
+            <input [ngClass]="{'invalidValuePlaceholder': !messageValid}" #messageInput="ngModel" [(ngModel)]="data.message" id="wdyw"
+                [placeholder]="placeholderMessage" type="text" name="message" class="textInput" pattern="[a-zA-Z0-9._%+\-]{10,}" required>
+                <span *ngIf="messageInput.invalid && messageInput.touched" class="invalidValue">Your message must be at least ten characters long</span>
         </div>
         <section>
-            <mat-checkbox class="ppLabel" id="privacyPolicy" name="privacyPolicy" #privacyPolicy="ngModel" [(ngModel)]="data.isChecked"
-                required>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as
+            <mat-checkbox class="ppLabel" id="privacyPolicy" name="privacyPolicy" #privacyPolicy="ngModel"
+                [(ngModel)]="data.isChecked" required>I've read the <a href="#">privacy policy</a> and agree to the
+                processing of my data as
                 outlined.</mat-checkbox>
             <div class="privacyPolicyContainer">
-                <span *ngIf="privacyPolicy.invalid && form.submitted || privacyPolicy.invalid && privacyPolicy.touched" class="privacyPolicyWarning">Please accept the privacy policy.</span>
+                <span *ngIf="privacyPolicy.invalid && form.submitted || privacyPolicy.invalid && privacyPolicy.touched"
+                    class="privacyPolicyWarning">Please accept the privacy policy.</span>
             </div>
         </section>
-        <input class="letsTalkButton" type="submit" value="send">
-            <button class="letsTalkButton" type="submit">Send</button>
+
+        <button class="letsTalkButton" type="submit">Send</button>
     </form>
 </div>
