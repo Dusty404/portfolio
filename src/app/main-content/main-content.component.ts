@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { AboveTheFoldComponent } from '../above-the-fold/above-the-fold.component';
 import { ContactMeComponent } from '../contact-me/contact-me.component';
-import { FooterComponent } from '../footer/footer.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { SkillSetComponent } from '../skill-set/skill-set.component';
 import { RouterModule } from '@angular/router';

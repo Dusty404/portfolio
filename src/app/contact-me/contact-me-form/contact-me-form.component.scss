@@ -133,7 +133,7 @@ section {
     padding: 4px 24px !important;
     box-shadow: 2px 4px gray;
     justify-self: end;
-    border-color: gray !important;
+    border-color: gray;
     position: absolute;
     right: 0px;
     bottom: -25px;
@@ -146,6 +146,13 @@ section {
     font-size: 18px;
     line-height: 100%;
     text-align: center;
+}
+
+.letsTalkAktive {
+    border-color: white !important;
+    border: solid 1px white !important;
+    color: white !important;
+    box-shadow: 2px 4px white;
 
     &:hover {
         right: -2px;

@@ -1,0 +1,21 @@
+{
+    "NAV": {
+        "ABOUT_ME": "About me",
+        "SKILLS": "Skills",
+        "PROJECTS": "Projects",
+        "CONTACT": "Contact"
+    },
+    "ABOVE_THE_FOLD": {
+        "JUSTIN": "Hello, I'm Justin",
+        "GET_IN_TOUCH": "Get in Touch"
+    },
+    "ABOUT_ME": {
+        "BASED": "Based in Mannheim",
+        "MOVE": "Open to Relocate",
+        "REMOTE": "Open to work Remote",
+        "WHO": "Who's Justin",
+        "ABOUT": "About me",
+        "TALK": "Let's Talk",
+        "TEXT": "BEISPIELTEXT Hey there, I'm Karl. Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills? Do you learn from each challenge as you search for the most efficient or elegant solution? <br><br> Let's collaborate and build something remarkable together!"
+    }    
+}

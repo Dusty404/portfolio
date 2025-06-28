@@ -58,6 +58,20 @@ app-footer {
   flex-direction: column;
 }
 
+app-privacy-policy {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  flex-direction: column;
+}
+
+app-legal-notice {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  flex-direction: column;
+}
+
 @font-face {
   font-display: swap;
   font-family: 'Bricolage Grotesque';

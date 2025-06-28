@@ -40,6 +40,16 @@
     }
 }
 
+.language {
+    display: flex;
+    height: 80px;
+    align-items: center;
+
+    & button {
+        height: 40px;
+    }
+}
+
 .transitionheight {
     position: relative;
 }
@@ -150,6 +160,21 @@
         line-height: 120%;
         text-align: justify;
 
+    }
+}
+
+.logoAndLanguageMobile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.languageMobile {
+    height: 40px;
+    display: flex;
+    gap: 16px;
+    & button {
+        height: 40px;
     }
 }
 

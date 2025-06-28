@@ -27,7 +27,7 @@
         </div>
         <section>
             <mat-checkbox class="ppLabel" id="privacyPolicy" name="privacyPolicy" #privacyPolicy="ngModel"
-                [(ngModel)]="data.isChecked" required>I've read the <a href="#">privacy policy</a> and agree to the
+                [(ngModel)]="data.isChecked" required>I've read the <a [routerLink]="['privacyPolicy']" target="_blank">privacy policy</a> and agree to the
                 processing of my data as
                 outlined.</mat-checkbox>
             <div class="privacyPolicyContainer">
@@ -36,6 +36,6 @@
             </div>
         </section>
 
-        <button class="letsTalkButton" type="submit">Send</button>
+        <button class="letsTalkButton" type="submit" [ngClass]="{'letsTalkAktive' : nameInput.valid && emailInput.valid && messageInput.valid && data.isChecked}">Send</button>
     </form>
 </div>

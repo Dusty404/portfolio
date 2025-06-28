@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatCheckboxModule],
+  imports: [CommonModule, FormsModule, MatCheckboxModule, RouterModule],
   templateUrl: './contact-me-form.component.html',
   styleUrl: './contact-me-form.component.scss'
 })
@@ -21,7 +22,10 @@ export class ContactMeFormComponent {
   emailValid: boolean = true;
   messageValid: boolean = true;
   privacyPolicyValid: boolean = true;
-  clickedSend:boolean = false;
+  clickedSend: boolean = false;
+  nameInput: string = '';
+  emailInput: string = '';
+  messageInput: string = '';
 
   data = {
     name: "",
@@ -34,6 +38,16 @@ export class ContactMeFormComponent {
     this.clickedSend = true;
     if (ngForm.valid && ngForm.submitted) {
       console.log(this.data)
+      this.nameValid = true;
+      this.emailValid = true;
+      this.messageValid = true;
+      this.clickedSend = false;
+      ngForm.resetForm({
+        name: '',
+        email: '',
+        message: '',
+        isChecked: false
+      });
     } else {
       this.checkInputs()
     }
