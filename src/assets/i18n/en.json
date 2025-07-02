@@ -17,5 +17,19 @@
         "ABOUT": "About me",
         "TALK": "Let's Talk",
         "TEXT": "BEISPIELTEXT Hey there, I'm Karl. Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills? Do you learn from each challenge as you search for the most efficient or elegant solution? <br><br> Let's collaborate and build something remarkable together!"
-    }    
+    },
+    "SKILL_SET": {
+        "STACK": "My stack",
+        "INTRODUCTION": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies."
+    },
+    "SKILL_LOGO": {
+        "CLICK": "Click to",
+        "PEEL": "peel",
+        "LEARN": "Also, I'm interested in diving into:"
+    },
+    "PROJECTS": {
+        "CRAFT": "MY CRAFT",
+        "PROJECTS": "Projects",
+        "DETAILS": "Project details"
+    }
 }

@@ -2,7 +2,7 @@
     <div class="content">
         <div class="titleContainer">
             <div class="title">
-                <span>My stack</span>
+                <span>{{ "SKILL_SET.STACK" | translate }}</span>
                 <div>
                     <h1 #skillTitle>Skill set</h1>
                     <img src="../../assets/img/skill-set-section/skillSetOutline.png" alt="Skillset animated outline" [ngStyle]="{'width.px': skillTitle.offsetWidth }">
@@ -11,9 +11,7 @@
             <div class="paperSnipped">
                 <img src="../../assets/img/skill-set-section/skill-set-paper-snipped.png">
                 <span>
-                    A short introduction of your skills.
-                    Highlight your experience of using different front-end technologies and emphasise your openness to
-                    learning and adapting to new technologies.
+                    {{ "SKILL_SET.INTRODUCTION" | translate}}
                 </span>
             </div>
 

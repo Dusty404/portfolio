@@ -15,7 +15,21 @@
         "REMOTE": "Bereitschaft zum Homeoffice",
         "WHO": "Wer ist Justin",
         "ABOUT": "Über mich",
-        "TALK": "Kommen wir in Kontakt",
+        "TALK": "Kommen wir in's Gespräch",
         "TEXT": "BEISPIELTEXT Hey there, I'm Karl. Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills? Do you learn from each challenge as you search for the most efficient or elegant solution? <br><br> Let's collaborate and build something remarkable together!"
+    },
+    "SKILL_SET": {
+        "STACK": "Meine Talente",
+        "INTRODUCTION": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies."
+    },
+    "SKILL_LOGO": {
+        "CLICK": "Klicken zum",
+        "PEEL": "abziehen",
+        "LEARN": "Ich bin ebenfalls interesiert an:"
+    },
+    "PROJECTS": {
+        "CRAFT": "Mein Handwerk",
+        "PROJECTS": "Projekte",
+        "DETAILS": "Projekt details"
     }
 }
