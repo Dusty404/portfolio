@@ -15,17 +15,18 @@
     display: flex;
     flex-direction: column;
     gap: 48px;
+    padding: 0 50px;
 }
 
 .project {
     display: flex;
     justify-content: space-evenly;
+    gap: 16px;
 }
 
 .goBackButton {
     display: flex;
     gap: 8px;
-    padding: 0px 72px;
     width: fit-content;
 
     & img {
@@ -222,7 +223,6 @@
     display: flex;
     gap: 8px;
     width: fit-content;
-    padding: 0 72px;
 
     & img {
         height: 24px;

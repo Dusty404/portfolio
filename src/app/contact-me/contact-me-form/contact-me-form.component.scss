@@ -174,11 +174,17 @@ section {
     }
 }
 
-@media (max-width:376px) {
+@media (max-width: 820px) {
+    .formContainer {
+        max-width: unset;
+    }
 
     form {
-        padding-top: 60px;
+        padding-top: 0;
     }
+}
+@media (max-width:376px) {
+
 
     .letsTalkButton {
         height: 40px;

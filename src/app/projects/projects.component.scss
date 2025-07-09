@@ -199,6 +199,9 @@
     transition: all 175ms ease-in-out;
     align-self: flex-end;
     color: white;
+    font-family: Bricolage Grotesque;
+    font-weight: 500;
+    font-size: 18px;
 
     &:hover {
         bottom: 20px;
@@ -478,6 +481,9 @@ a {
         display: flex;
         justify-self: end;
         cursor: pointer;
+        &:hover span {
+            color: white;
+        }
     }
 
     .projectsContainer {
@@ -494,9 +500,8 @@ a {
     }
 
     a {
-        &:hover span {
-            color: white;
-        }
+        width: fit-content;
+        align-self: end;
 
         & span {
             color: black;

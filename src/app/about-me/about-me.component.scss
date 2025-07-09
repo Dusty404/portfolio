@@ -257,6 +257,11 @@ a {
 
     .paperSnipped {
         gap: 8px;
+
+        & div p {
+            font-size: 20px;
+        }
+
     }
 
     .paperSnippedOrange img,
@@ -276,6 +281,12 @@ a {
 
     .positionOrange {
         bottom: 60px;
+    }
+}
+
+@media (max-width: 400px) {
+    .paperSnipped div p {
+        font-size: 16px;
     }
 }
 

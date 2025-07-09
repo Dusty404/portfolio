@@ -30,6 +30,8 @@
     "PROJECTS": {
         "CRAFT": "MY CRAFT",
         "PROJECTS": "Projects",
-        "DETAILS": "Project details"
+        "DETAILS": "Project details",
+        "JOIN_DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "WELCOME": "Explore my projects - interactive, responsive, and focused on clean, efficient code."
     }
 }

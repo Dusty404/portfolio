@@ -10,9 +10,7 @@
                         [ngStyle]="{'width.px': projectsTitle.offsetWidth}">
                 </div>
                 <span>
-                    BEISPIELTEXT
-                    Encourage people to take a look and interact with your projects.
-                    Highlight your approach to creating responsive, user-friendly projects with efficient code.
+                    {{ "PROJECTS.WELCOME" | translate}}
                 </span>
             </div>
             <div class="joinProject">
@@ -33,8 +31,7 @@
                         Join
                     </h2>
                     <span>
-                        Task manager inspired by the Kanban System.
-                        Create and organize tasks using drag and drop functions, assign users and categories.
+                        {{"PROJECTS.JOIN_DESCRIPTION" | translate}}
                     </span>
                 </div>
                 <div class="projectDetailsMobile" [routerLink]="['/project', 0]">
