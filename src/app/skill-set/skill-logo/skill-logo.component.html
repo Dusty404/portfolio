@@ -12,10 +12,10 @@
     <div class="stickerTop sticker">
         <img class="stickerArrow" [class.d-none]="stickerPeel"
             src="../../../assets/img/skill-set-section/pull-arrow.png">
-        <span [class.d-none]="stickerPeel">Click to<br> peel</span>
+        <span [class.d-none]="stickerPeel">{{ "SKILL_LOGO.CLICK" | translate }} <br> {{ "SKILL_LOGO.PEEL" | translate}}</span>
     </div>
     <div class="stickerBottom" [class.d-none]="!stickerPeeled">
-        <span>Also, I'm interested in diving into: </span>
+        <span>{{ "SKILL_LOGO.LEARN" | translate}} </span>
         <div>
             <div>
                 <img src="../../../assets/img/skill-set-section/react-white.png">

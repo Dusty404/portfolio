@@ -1,11 +1,34 @@
 import { Injectable } from '@angular/core';
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
 })
+@Injectable({
+  providedIn: 'root'
+})
 export class ProjectsDataService {
+  currentLang: 'de' | 'en' = 'de'; // Standard
 
-  constructor() { }
+  constructor(private translate: TranslateService) {
+    // Beim Start festlegen
+    const lang = (this.translate.currentLang || 'de') as 'de' | 'en';
+
+    // Änderungen überwachen
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.currentLang = event.lang as 'de' | 'en';
+    });
+  }
+
+ getProjects(lang: 'de' | 'en') {
+  return this.projectsArray.map(project => ({
+    ...project,
+    title: typeof project.title === 'object' ? project.title[lang] : project.title,
+    discription: typeof project.discription === 'object' ? project.discription[lang] : project.discription,
+    implementationDetails: typeof project.implementationDetails === 'object' ? project.implementationDetails[lang] : project.implementationDetails,
+    duration: typeof project.duration === 'object' ? project.duration[lang] : project.duration,
+  }));
+}
 
 
   js:string = "assets/img/icons-frontend/javascript.png";
@@ -21,11 +44,23 @@ export class ProjectsDataService {
 
   projectsArray = [
     {
-      title: "JOIN",
+      title: {
+        de: "JOIN",
+        en: "JOIN"
+      },
       imgSrc: "../../assets/img/test-pattern-152459_640.png",
-      discription: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      implementationDetails: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.",
-      duration: "5 weeks",
+      discription: {
+        de: "test",
+        en: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      implementationDetails: {
+        de: "test",
+        en: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way."
+      },
+      duration: {
+        de: "5 Wochen",
+        en: "5 weeks"
+      },
       usedTechnologies: [
         {
           technologieName: "HTML",
@@ -50,11 +85,23 @@ export class ProjectsDataService {
       ]
     },
     {
-      title: "El Pollo Loco",
+      title: {
+        de: "El Polo Loco",
+        en: "El Polo Loco"
+      },
       imgSrc: "../../assets/img/projects-section/pollo.png",
-      discription: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      implementationDetails: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.",
-      duration: "3 weeks",
+      discription: {
+        de: "test",
+        en: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      },
+      implementationDetails: {
+        de: "test",
+        en: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way."
+      },
+      duration: {
+        de: "3 Wochen",
+        en: "3 weeks"
+      },
       usedTechnologies: [
         {
           technologieName: "HTML",
