@@ -82,6 +82,13 @@
     left: 70px;
 }
 
+.emailEffect {
+    opacity: 1;
+    animation: rollOutEmail 700ms alternate forwards ease-out;
+    rotate: 0deg;
+    left: 70px;
+}
+
 .rollInEffect {
     animation: rollIn 300ms alternate forwards ease-out;
 }
@@ -115,6 +122,38 @@
     100% {
         rotate: 0deg;
         left: 70px;
+    }
+}
+
+@keyframes rollOutEmail {
+    0% {
+        rotate: -180deg;
+        left: 30px;
+    }
+
+    50% {
+        rotate: 30deg;
+        left: 64px;
+    }
+
+    60% {
+        rotate: 10deg;
+        left: 63px;
+    }
+
+    70% {
+        rotate: 0deg;
+        left: 60px;
+    }
+
+    80% {
+        rotate: -10deg;
+        left: 58px;
+    }
+
+    100% {
+        rotate: 0deg;
+        left: 60px;
     }
 }
 
@@ -203,6 +242,19 @@
     height: 80px;
 }
 
+
+@media (max-width: 1400px) {
+    .links, .logoAndName {
+        padding: 0 130px 0 80px; 
+    }
+}
+
+@media (max-width: 1320px) {
+    .links, .logoAndName {
+        padding: 0 90px 0 40px;
+    }
+}
+
 @media (max-width: 820px) {
 
     .content {
@@ -254,18 +306,6 @@
 
     .backgroundColorContainer {
         display: none;
-    }
-}
-
-@media (max-width: 1400px) {
-    .links, .logoAndName {
-        padding: 0 80px;
-    }
-}
-
-@media (max-width: 1320px) {
-    .links, .logoAndName {
-        padding: 0 40px;
     }
 }
 

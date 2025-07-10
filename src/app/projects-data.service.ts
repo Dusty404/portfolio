@@ -38,7 +38,7 @@ export class ProjectsDataService {
   angular:string = "assets/img/icons-frontend/angular.png";
   firebase:string = "assets/img/icons-frontend/firebase.png";
   git:string = "assets/img/icons-frontend/git.png";
-  rest:string = "assets/img/icons-frontend/api.png";
+  api:string = "assets/img/icons-frontend/api.png";
   scrum:string = "assets/img/icons-frontend/scrum.png";
   materialDesign:string = "assets/img/icons-frontend/materialDesign.png";
 
@@ -50,7 +50,7 @@ export class ProjectsDataService {
       },
       imgSrc: "../../assets/img/test-pattern-152459_640.png",
       discription: {
-        de: "test",
+        de: "Auf dem Kanban-System basierender Aufgabenmanager. Erstellen und organisieren Sie Aufgaben per Drag-and-Drop, weisen Sie Benutzern und Kategorien zu.",
         en: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
       },
       implementationDetails: {
@@ -71,8 +71,8 @@ export class ProjectsDataService {
           technologieIcon:  this.css,
         },
         {
-          technologieName: "JavaScript",
-          technologieIcon:  this.js,
+          technologieName: "TypeScript",
+          technologieIcon:  this.ts,
         },
         {
           technologieName: "GitHub",
@@ -81,7 +81,15 @@ export class ProjectsDataService {
         {
           technologieName: "Firebase",
           technologieIcon:  this.firebase,
-        }
+        },
+        {
+          technologieName: "Angular",
+          technologieIcon:  this.angular,
+        },
+        {
+          technologieName: "MaterialDesign",
+          technologieIcon:  this.materialDesign,
+        },
       ]
     },
     {
@@ -91,12 +99,12 @@ export class ProjectsDataService {
       },
       imgSrc: "../../assets/img/projects-section/pollo.png",
       discription: {
-        de: "test",
-        en: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+        de: "Plattformspiel mit Lauf-, Sprung- und Wurfmechaniken auf Basis objektorientierter Programmierung. Ziel ist es, mit der Spielfigur Pepe sammelbare Objekte wie Münzen und Tabasco-Salsa zu finden, um im Kampf gegen eine Gegnerin - die verrückte Henne - zu bestehen.",
+        en: "Platformer featuring running, jumping, and throwing mechanics, developed using an object-oriented programming approach. The player controls Pepe to collect items such as coins and tabasco salsa in order to face an enemy - the crazy hen.",
       },
       implementationDetails: {
-        de: "test",
-        en: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way."
+        de: "Bei diesem Projekt lag der Schwerpunkt auf dem Einsatz von JavaScript-Klassen. Das gesamte Spiel - von der Objektstruktur über die Spiellogik bis hin zu den Animationen - entstand in einem klar strukturierten, objektorientierten Workflow, den ich eigenständig geplant und umgesetzt habe.",
+        en: "This project focused on the use of JavaScript classes. The entire game - from the object structure and game logic to the animations - was developed following a clearly structured, object-oriented workflow that I independently planned and implemented."
       },
       duration: {
         de: "3 Wochen",
@@ -118,19 +126,41 @@ export class ProjectsDataService {
       ]
     },
     {
-      title: "Pokedex 1",
-      imgSrc: "../../assets/img/test-pattern-152459_640.png",
-      discription:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+      title: {
+        de: "Pokedex",
+        en: "pokedex"
+      },
+      imgSrc: "../../assets/img/projects-section/pokedex.png",
+      discription: {
+        de: "Eine interaktive Webanwendung, die wie ein digitaler Pokédex funktioniert. Über die PokéAPI werden Daten zu verschiedenen Pokémon abgerufen. Nutzer können gezielt nach Pokémon suchen und sich Detailinformationen wie Statuswerte, Fähigkeiten und erlernbare Attacken anzeigen lassen.",
+        en: "An interactive web app designed to function like a digital Pokédex. It uses the PokéAPI to retrieve data on various Pokémon. Users can search for specific Pokémon and view detailed information such as stats, abilities, and available moves.",
+      },
+      implementationDetails: {
+        de: "Ich habe dieses Projekt eigenständig umgesetzt, mit dem Fokus auf der Anbindung externer APIs und der dynamischen Darstellung von Inhalten. Die Anwendung demonstriert meine Fähigkeiten im Umgang mit RESTful APIs, im State-Management sowie in der strukturierten Darstellung komplexer Daten.",
+        en: "I developed this project independently, focusing on integrating external APIs and dynamically displaying content. The app demonstrates my ability to work with RESTful APIs, manage state, and present complex data in a clear and structured way."
+      },
+      duration: {
+        de: "2 Wochen",
+        en: "2 weeks"
+      },
+      usedTechnologies: [
+        {
+          technologieName: "HTML",
+          technologieIcon:  this.html,
+        },
+        {
+          technologieName: "CSS",
+          technologieIcon:  this.css,
+        },
+        {
+          technologieName: "JavaScript",
+          technologieIcon:  this.js,
+        },
+        {
+          technologieName: "Rest-API",
+          technologieIcon:  this.api,
+        }
+      ]
     },
-    {
-      title: "Pokedex 2",
-      imgSrc: "../../assets/img/test-pattern-152459_640.png",
-      discription:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-    },
-    {
-      title: "Pokedex 3",
-      imgSrc: "../../assets/img/test-pattern-152459_640.png",
-      discription:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-    }
   ]
 }

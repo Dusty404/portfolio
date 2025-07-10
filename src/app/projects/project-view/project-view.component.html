@@ -15,7 +15,7 @@
             <div class="projectText">
                 <div class="projectDescription">
                     <div class="titleContainer">
-                        <h1 class="projectTitle" #title>{{projectsData.projectsArray[projectIndex].title}}</h1>
+                        <h1 class="projectTitle" #title>{{projects[projectIndex].title}}</h1>
                         <div>
                             <div class="titleUnderlineContainer">
                                 <img src="../../../assets/img/about-me-section/Blue line.png" alt="About me underline"
@@ -27,18 +27,18 @@
                     <div class="textBox">
                         <p>Description</p>
                         <span>
-                            {{projectsData.projectsArray[projectIndex].discription}}
+                            {{projects[projectIndex].discription}}
                         </span>
                     </div>
                     <div class="textBox">
                         <p>Implementation Details</p>
                         <span>
-                            {{projectsData.projectsArray[projectIndex].implementationDetails}}
+                            {{projects[projectIndex].implementationDetails}}
                         </span>
                     </div>
                     <div class="durationBox">
                         <span class="durTitle">Duration:</span>
-                        <span class="durValue">{{projectsData.projectsArray[projectIndex].duration}}</span>
+                        <span class="durValue">{{projects[projectIndex].duration}}</span>
                     </div>
 
                     <div class="usedTec">
@@ -52,9 +52,9 @@
                 </div>
             </div>
             <div class="projectImg">
-                <img src="../../../{{projectsData.projectsArray[projectIndex].imgSrc}}">
+                <img src="../../../{{projects[projectIndex].imgSrc}}">
                 <div class="projectButtons">
-                    <div class="button">
+                    <div class="button button1">
                         <span>GitHub</span>
                     </div>
                     <div class="button">

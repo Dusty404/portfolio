@@ -7,7 +7,7 @@
     },
     "ABOVE_THE_FOLD": {
         "JUSTIN": "Hallo, ich bin Justin",
-        "GET_IN_TOUCH": "In Kontakt kommen"
+        "GET_IN_TOUCH": "Kontaktieren"
     },
     "ABOUT_ME": {
         "BASED": "Wohnhaft in Mannheim",
@@ -30,6 +30,8 @@
     "PROJECTS": {
         "CRAFT": "Mein Handwerk",
         "PROJECTS": "Projekte",
-        "DETAILS": "Projekt details"
+        "DETAILS": "Projekt details",
+        "JOIN_DESCRIPTION": "Auf dem Kanban-System basierender Aufgabenmanager. Erstelle und organisiere Aufgaben per Drag-and-Drop, weisen Sie Benutzern und Kategorien zu.",
+        "WELCOME": "Entdecken Sie meine Projekte - interaktiv, responsiv und mit einem klaren Fokus auf Benutzerfreundlichkeit und effizienten Code. Jedes Projekt spiegelt meinen Anspruch an saubere Umsetzung und moderne Frontend-Technologien wider."
     }
 }

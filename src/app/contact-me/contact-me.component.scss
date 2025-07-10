@@ -23,17 +23,20 @@ span {
     color: white;
 }
 
-.leftContainer {
+.titleText {
     display: flex;
     flex-direction: column;
     max-width: 560px;
     width: 100%;
-    gap: 48px;
+    gap: 32px;
 
-    & div {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+    & h1 {
+        font-family: Bricolage Grotesque;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        margin: 0;
     }
 
     & p {
@@ -45,25 +48,16 @@ span {
         text-transform: uppercase;
         margin: 0;
     }
+}
 
-    & h1 {
-        font-family: Bricolage Grotesque;
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        margin: 0;
-    }
+.text {
+    font-family: Bricolage Grotesque;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: justify;
 
-    & span {
-        font-family: Bricolage Grotesque;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        text-align: justify;
-
-    }
 }
 
 .arrowContainer {
@@ -133,22 +127,28 @@ app-contact-me-form {
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 1070px) {
+    .nameSticker {
+        right: 15px;
+    }
+}
+
+@media (max-width: 820px) {
     .body {
-        padding: 80px 16px 0;
-        gap: 0;
+        padding: 110px 16px 0;
+        gap: 42px;
     }
 
     .nameSticker {
-        position: unset;
-        height: 120px;
-        width: 120px;
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        top: 10px;
         justify-self: end;
         padding: 0px;
         grid-row-start: 1;
         grid-row-end: 2;
         grid-column-start: 1;
-        grid-column-end: 2;
     }
 
     .arrowContainer {
@@ -161,30 +161,67 @@ app-contact-me-form {
 
     @keyframes arrowShrink {
 
-    0%,
-    10% {
-        width: 0px;
+        0%,
+        10% {
+            width: 0px;
+        }
+
+        20%,
+        100% {
+            width: 152px;
+        }
     }
 
-    20%,
-    100% {
-        width: 152px;
-    }
-}
-
-    .arrow {
-        width: 152px;
+    .arrowContainer {
+        position: relative;
+        bottom: 50px;
     }
 
-    .leftContainer {
+    section {
+        padding-bottom: 24px;
+    }
+
+    .text {
         grid-row-start: 2;
+        grid-row-end: 3;
         grid-column-start: 1;
+        grid-column-end: 3;
     }
 
     app-contact-me-form {
         grid-column-start: 1;
-        grid-column-end: 2;
+        grid-column-end: 3;
         grid-row-start: 3;
         grid-row-end: 5;
+    }
+}
+
+@media (max-width: 760px) {
+    .nameSticker {
+        right: -20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .nameSticker {
+        position: unset;
+        grid-column-start: 2;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .nameSticker {
+        display: none;
+    }
+
+    .titleText {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .arrow {
+        width: 152px;
     }
 }
