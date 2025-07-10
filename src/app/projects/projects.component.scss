@@ -156,8 +156,10 @@
 .laptopZoom {
     position: absolute;
     bottom: unset;
-    width: 500px;
-    height: 320px;
+    width: 100%;
+    height: 100%;
+    max-width: 520px;
+    max-height: 320px;
     opacity: 0%;
     transition: all 300ms;
 }
@@ -178,12 +180,15 @@
 }
 
 .showLaptopZoom {
-    width: 500px;
-    height: 338px;
+    width: 100%;
+    height: 100%;
+    max-width: 520px;
+    max-height: 320px;
     transition: all 300ms;
     opacity: 100%;
     transform-origin: 0% 100%;
     background-image: url(../../assets/img/projects-section/laptop.png);
+    background-size: contain;
 }
 
 .projectDetails {
@@ -428,6 +433,11 @@ a {
         & img {
             height: 350px;
         }
+    }
+
+    .checkDetailsSticker {
+        height: 100px;
+        width: 100px;
     }
 }
 
