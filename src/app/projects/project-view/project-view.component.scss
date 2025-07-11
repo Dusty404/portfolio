@@ -2,19 +2,20 @@
     background-image: url(../../../assets/img/projects-section/project-view-background.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 900px;
-    gap: 48px;
+    height: 100%;
+    gap: 80px;
     display: flex;
     flex-direction: column;
     max-width: 1440px;
     width: 100%;
     overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 100px;
     padding: 0 50px;
 }
 
@@ -22,6 +23,7 @@
     display: flex;
     justify-content: space-evenly;
     gap: 16px;
+    padding-bottom: 50px;
 }
 
 .goBackButton {
@@ -253,9 +255,11 @@
 }
 
 @media (max-width: 920px) {
+    .content {
+        gap: 48px;
+    }
     .projectImg {
-        gap: 24px;
-        padding-bottom: 80px;
+        gap: 32px;
 
         & img {
             min-width: unset;
@@ -280,6 +284,7 @@
     .body {
         background-image: url(../../../assets/img/projects-section/project-view-background-rotated.png);
         background-size: 1100px;
+        height: 100%;
     }
 }
 
@@ -289,7 +294,7 @@
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 430px) {
     .content {
         flex-direction: column-reverse;
         padding: 0 16px;
