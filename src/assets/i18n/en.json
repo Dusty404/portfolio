@@ -20,7 +20,7 @@
     },
     "SKILL_SET": {
         "STACK": "My stack",
-        "INTRODUCTION": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies."
+        "INTRODUCTION": "Skilled in JavaScript, TypeScript, and Angular, I enjoy building dynamic front-end applications and continuously expanding my knowledge by exploring new technologies."
     },
     "SKILL_LOGO": {
         "CLICK": "Click to",
@@ -33,5 +33,17 @@
         "DETAILS": "Project details",
         "JOIN_DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
         "WELCOME": "Explore my projects - interactive, responsive, and focused on clean, efficient code."
+    },
+    "PROJECT_VIEW": {
+        "GO_BACK": "Go Back",
+        "NEXT_PROJECT": "Next project",
+        "DESCRIPTION": "Description",
+        "IMPLEMENTATION": "Implementation",
+        "DURATION": "Duration"
+    },
+    "CONTACT_ME": {
+        "CONTACT_ME": "Contact Me",
+        "READY": "Ready to work together?",
+        "MOTIVATION": "I'm always open to new opportunities and would love to connect with teams looking for a motivated front-end developer. I'm confident in my ability to contribute meaningfully through my technical skills, reliability, and enthusiasm for continuous learning."
     }
 }

@@ -20,31 +20,31 @@ export class ProjectViewComponent implements OnInit {
   constructor(public projectsData: ProjectsDataService,
     private route: ActivatedRoute,
     private router: Router, private projectService: ProjectsDataService,
-      private translate: TranslateService) { }
-    projects: {
-      title: string;
-      discription: string;
-      implementationDetails?: string;
-      duration?: string;
-      imgSrc: string;
-      usedTechnologies?: { technologieName: string; technologieIcon: string }[];
-    }[] = [];
-  
+    private translate: TranslateService) { }
+  projects: {
+    title: string;
+    discription: string;
+    implementationDetails?: string;
+    duration?: string;
+    imgSrc: string;
+    usedTechnologies?: { technologieName: string; technologieIcon: string }[];
+  }[] = [];
+
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.projectIndex = +params['id'];
     });
     const lang = (this.translate.currentLang || 'de') as 'de' | 'en';
     this.projects = this.projectService.getProjects(lang);
-  
+
     this.translate.onLangChange.subscribe((event) => {
       this.projects = this.projectService.getProjects(event.lang as 'de' | 'en');
     });
   }
-  
-    switchLanguage(lang: string) {
-      this.translate.use(lang);
-    }
+
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
+  }
 
   goBack() {
     this.router.navigate(['/projects']);
@@ -52,13 +52,13 @@ export class ProjectViewComponent implements OnInit {
 
   goToNextProject() {
     console.log(this.projectIndex)
-    if(this.projectIndex == this.projectsData.projectsArray.length - 1) {
+    if (this.projectIndex == this.projectsData.projectsArray.length - 1) {
       this.projectIndex = 0;
     } else {
-      this.projectIndex = this.projectIndex +1;
+      this.projectIndex = this.projectIndex + 1;
     }
-   this.router.navigate(['project/'+ this.projectIndex])
-   console.log(this.projectIndex)
-}
+    this.router.navigate(['project/' + this.projectIndex])
+    console.log(this.projectIndex)
+  }
 
 }
