@@ -1,41 +1,35 @@
 <div class="formContainer">
     <form #form="ngForm" (ngSubmit)="sendEmail(contactForm)" autocomplete="off" #contactForm="ngForm">
         <div [ngClass]="{'borderOff' : hoverMid, 'border' : !hoverMid}">
-            <label [ngClass]="{'invalidValue': nameInput.invalid && nameInput.touched || nameInput.invalid && clickedSend}" for="name">What's your
-                Name?</label>
+            <label [ngClass]="{'invalidValue': nameInput.invalid && nameInput.touched || nameInput.invalid && clickedSend}" for="name">{{ "CONTACT_FORM.NAME" | translate}}</label>
             <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.name" id="name"
                 [placeholder]="placeholderName" type="name" name="name" #nameInput="ngModel" class="textInput"
                 pattern="[a-zA-Z]{2,}" required>
-            <span *ngIf="nameInput.invalid && nameInput.touched" class="invalidValue">This field needs at least two
-                letters</span>
+            <span *ngIf="nameInput.invalid && nameInput.touched" class="invalidValue">{{ "CONTACT_FORM.NAME_TOUCHED_ERROR" | translate}}</span>
         </div>
         <div class="border" (mouseenter)="hoverMid=true" (mouseleave)="hoverMid=false"
             [ngClass]="{'borderOff' : hoverBot, 'border' : !hoverBot}">
-            <label [ngClass]="{'invalidValue': emailInput.invalid && emailInput.touched || emailInput.invalid && clickedSend}" for="email">What's your
-                email?</label>
+            <label [ngClass]="{'invalidValue': emailInput.invalid && emailInput.touched || emailInput.invalid && clickedSend}" for="email">{{ "CONTACT_FORM.EMAIL" | translate}}</label>
             <input [ngClass]="{'invalidValuePlaceholder': !emailValid}" [(ngModel)]="data.email" id="email"
                 [placeholder]="placeholderEmail" type="email" name="email" #emailInput="ngModel" class="textInput"
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
-            <span *ngIf="emailInput.invalid && emailInput.touched" class="invalidValue">Please enter a valid
-                email</span>
+            <span *ngIf="emailInput.invalid && emailInput.touched" class="invalidValue">{{ "CONTACT_FORM.EMAIL_TOUCHED_ERROR" | translate}}</span>
         </div>
         <div class="border" (mouseenter)="hoverBot=true" (mouseleave)="hoverBot=false">
-            <label [ngClass]="{'invalidValue': messageInput.invalid && messageInput.touched || messageInput.invalid && clickedSend}" for="wdyw">How can i help you?</label>
+            <label [ngClass]="{'invalidValue': messageInput.invalid && messageInput.touched || messageInput.invalid && clickedSend}" for="wdyw">{{ "CONTACT_FORM.WDYW" | translate}}</label>
             <input [ngClass]="{'invalidValuePlaceholder': !messageValid}" #messageInput="ngModel" [(ngModel)]="data.message" id="wdyw"
                 [placeholder]="placeholderMessage" type="text" name="message" class="textInput" pattern="[a-zA-Z0-9._%+\-]{10,}" required>
-                <span *ngIf="messageInput.invalid && messageInput.touched" class="invalidValue">Your message must be at least ten characters long</span>
+                <span *ngIf="messageInput.invalid && messageInput.touched" class="invalidValue">{{ "CONTACT_FORM.WDYW_TOUCHED_ERROR" | translate}}</span>
         </div>
         <section>
             <mat-checkbox class="ppLabel" id="privacyPolicy" name="privacyPolicy" #privacyPolicy="ngModel"
-                [(ngModel)]="data.isChecked" required>I've read the <a [routerLink]="['privacyPolicy']" target="_blank">privacy policy</a> and agree to the
-                processing of my data as
-                outlined.</mat-checkbox>
+                [(ngModel)]="data.isChecked" required>{{"CONTACT_FORM.PRIVACY_TEXT_FIRST" | translate}}<a [routerLink]="['privacyPolicy']" target="_blank">{{"CONTACT_FORM.PRIVACY_TEXT_LINK" | translate}}</a>{{"CONTACT_FORM.PRIVACY_TEXT_SECOND" | translate}}</mat-checkbox>
             <div class="privacyPolicyContainer">
                 <span *ngIf="privacyPolicy.invalid && form.submitted || privacyPolicy.invalid && privacyPolicy.touched"
                     class="privacyPolicyWarning">Please accept the privacy policy.</span>
             </div>
         </section>
 
-        <button class="letsTalkButton" type="submit" [ngClass]="{'letsTalkAktive' : nameInput.valid && emailInput.valid && messageInput.valid && data.isChecked}">Send</button>
+        <button class="letsTalkButton" type="submit" [ngClass]="{'letsTalkAktive' : nameInput.valid && emailInput.valid && messageInput.valid && data.isChecked}">{{"CONTACT_FORM.SEND" | translate}}</button>
     </form>
 </div>

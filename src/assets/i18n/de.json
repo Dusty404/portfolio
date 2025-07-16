@@ -45,5 +45,23 @@
         "CONTACT_ME": "Kontaktieren Sie mich",
         "READY": "Bereit zusammen zu Arbeitgen?",
         "MOTIVATION": "Ich bin offen für neue Herausforderungen und freue mich darauf, mit Teams in Kontakt zu treten, die nach einem engagierten Frontend-Entwickler suchen. Durch meine fachlichen Kenntnisse, meine Zuverlässigkeit und meine Lernbereitschaft bin ich überzeugt, einen wertvollen Beitrag leisten zu können."
+    },
+    "CONTACT_FORM": {
+        "NAME": "Wie ist Ihr Name?",
+        "EMAIL": "Wie lautet Ihre E-Mail?",
+        "WDYW": "Wie kann ich behilflich sein?",
+        "NAME_PLACEHOLDER": "Tragen Sie hier Ihren Namen ein",
+        "EMAIL_PLACEHOLDER": "IhreMail@email.de",
+        "WDYW_PLACEHOLDER": "Hallo Justin, ich hätte Interesse daran...",
+        "NAME_ERROR": "Oops, anscheinend fehlt Ihr Name.",
+        "EMAIL_ERROR": "Hoppla, Ihre E-Mail wird benötigt.",
+        "WDYW_ERROR": "Was kann ich für Sie entwickeln?",
+        "NAME_TOUCHED_ERROR": "Dieses Feld benötigt mindestens zwei Buchstaben.",
+        "EMAIL_TOUCHED_ERROR": "Bitte eine gültige E-Mail-Adresse eingeben.",
+        "WDYW_TOUCHED_ERROR": "Ihre Nachricht muss mindestens zehn Buchstaben lang sein.",
+        "PRIVACY_TEXT_FIRST": "Ich habe die ",
+        "PRIVACY_TEXT_SECOND": "gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
+        "PRIVACY_TEXT_LINK": "Datenschutzerklärung ",
+        "SEND": "SENDEN"
     }
 }
