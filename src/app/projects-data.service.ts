@@ -84,7 +84,9 @@ export class ProjectsDataService {
           technologieName: "MaterialDesign",
           technologieIcon:  this.materialDesign,
         },
-      ]
+      ],
+      gitLink: "https://github.com/Dusty404/Join.git",
+      liveTestLink : ""
     },
     {
       title: {
@@ -117,7 +119,9 @@ export class ProjectsDataService {
           technologieName: "JavaScript",
           technologieIcon:  this.js,
         },
-      ]
+      ],
+      gitLink: "https://github.com/Dusty404/El_Pollo_Loco.git",
+      liveTestLink : ""
     },
     {
       title: {
@@ -154,7 +158,9 @@ export class ProjectsDataService {
           technologieName: "Rest-API",
           technologieIcon:  this.api,
         }
-      ]
+      ],
+      gitLink: "https://github.com/Dusty404/Pokedex.git",
+      liveTestLink : ""
     },
   ]
 }
