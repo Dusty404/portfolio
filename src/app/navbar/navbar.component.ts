@@ -3,11 +3,14 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule],
+  imports: [CommonModule, FormsModule, TranslateModule, MatSelectModule, MatFormFieldModule, MatButtonToggleModule,],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -22,11 +25,14 @@ export class NavbarComponent {
   color = "white"
   openMenu: boolean = false;
 
-  constructor(private translate: TranslateService) { }
+  constructor(private translateService: TranslateService) { }
 
-  switchLanguage(lang: string) {
-    this.translate.use(lang);
-  }
+  currentLang = this.translateService.currentLang || 'de';
+
+switchLanguage(lang: string) {
+  this.translateService.use(lang);
+  this.currentLang = lang;
+}
 
   showMenu() {
     if (!this.openMenu) {

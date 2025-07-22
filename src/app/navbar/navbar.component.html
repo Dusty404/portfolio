@@ -37,18 +37,23 @@
             translate}}</a>
     </div>
     <div class="language">
-        <button (click)="switchLanguage('de')">DE</button>
-        <button (click)="switchLanguage('en')">EN</button>
+        <mat-button-toggle-group [value]="currentLang" (change)="switchLanguage($event.value)" class="language-toggle">
+            <mat-button-toggle value="de">DE</mat-button-toggle>
+            <mat-button-toggle value="en">EN</mat-button-toggle>
+        </mat-button-toggle-group>
     </div>
 </div>
 
 
 <div class="mobileNavbar">
     <div class="logoAndLanguageMobile">
-        <img class="logo" src="../../assets/img/test-pattern-152459_640.png">
+        <img class="logo" src="../../assets/img/header/logo_blue.png">
         <div class="languageMobile">
-            <button (click)="switchLanguage('de')">DE</button>
-            <button (click)="switchLanguage('en')">EN</button>
+            <mat-button-toggle-group [value]="currentLang" (change)="switchLanguage($event.value)"
+                class="language-toggle">
+                <mat-button-toggle value="de">DE</mat-button-toggle>
+                <mat-button-toggle value="en">EN</mat-button-toggle>
+            </mat-button-toggle-group>
         </div>
     </div>
     <div>

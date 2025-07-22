@@ -7,6 +7,7 @@ import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 const scrollConfig = {
   scrollPositionRestoration: 'top' as const,
@@ -36,6 +37,6 @@ bootstrapApplication(AppComponent, {
           deps: [HttpClient]
         }
       })
-    )
+    ), provideAnimationsAsync()
   ]
 }).catch((err) => console.error(err));
