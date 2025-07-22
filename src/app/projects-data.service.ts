@@ -48,7 +48,7 @@ export class ProjectsDataService {
         de: "JOIN",
         en: "JOIN"
       },
-      imgSrc: "../../assets/img/test-pattern-152459_640.png",
+      imgSrc: "../../assets/img/projects-section/join.png",
       discription: {
         de: "Auf dem Kanban-System basierender Aufgabenmanager. Erstellen und organisieren Sie Aufgaben per Drag-and-Drop, weisen Sie Benutzern und Kategorien zu.",
         en: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
