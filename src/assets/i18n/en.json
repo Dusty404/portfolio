@@ -20,7 +20,7 @@
     },
     "SKILL_SET": {
         "STACK": "My stack",
-        "INTRODUCTION": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies."
+        "INTRODUCTION": "Skilled in JavaScript, TypeScript, and Angular, I enjoy building dynamic front-end applications and continuously expanding my knowledge by exploring new technologies."
     },
     "SKILL_LOGO": {
         "CLICK": "Click to",
@@ -33,5 +33,35 @@
         "DETAILS": "Project details",
         "JOIN_DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
         "WELCOME": "Explore my projects - interactive, responsive, and focused on clean, efficient code."
+    },
+    "PROJECT_VIEW": {
+        "GO_BACK": "Go Back",
+        "NEXT_PROJECT": "Next project",
+        "DESCRIPTION": "Description",
+        "IMPLEMENTATION": "Implementation",
+        "DURATION": "Duration"
+    },
+    "CONTACT_ME": {
+        "CONTACT_ME": "Contact Me",
+        "READY": "Ready to work together?",
+        "MOTIVATION": "I'm always open to new opportunities and would love to connect with teams looking for a motivated front-end developer. I'm confident in my ability to contribute meaningfully through my technical skills, reliability, and enthusiasm for continuous learning."
+    },
+    "CONTACT_FORM": {
+        "NAME": "What is your name?",
+        "EMAIL": "What is your email?",
+        "WDYW": "How can I help you?",
+        "NAME_PLACEHOLDER": "Enter your name here",
+        "EMAIL_PLACEHOLDER": "yourmail@mail.com",
+        "WDYW_PLACEHOLDER": "Hi Justin, I'm interested in...",
+        "NAME_ERROR": "Oops, it looks like your name is missing.",
+        "EMAIL_ERROR": "Oops, your email is required.",
+        "WDYW_ERROR": "What can I develop for you?",
+        "NAME_TOUCHED_ERROR": "This field requires at least two letters.",
+        "EMAIL_TOUCHED_ERROR": "Please enter a valid email address.",
+        "WDYW_TOUCHED_ERROR": "Your message must be at least ten letters long.",
+        "PRIVACY_TEXT_FIRST": "I have read the ",
+        "PRIVACY_TEXT_SECOND": "and agree to the processing of my data as outlined.",
+        "PRIVACY_TEXT_LINK": "privacy policy ",
+        "SEND": "SEND"
     }
 }

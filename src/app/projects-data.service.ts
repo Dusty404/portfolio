@@ -8,13 +8,11 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class ProjectsDataService {
-  currentLang: 'de' | 'en' = 'de'; // Standard
+  currentLang: 'de' | 'en' = 'de';
 
   constructor(private translate: TranslateService) {
-    // Beim Start festlegen
     const lang = (this.translate.currentLang || 'de') as 'de' | 'en';
 
-    // Änderungen überwachen
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.currentLang = event.lang as 'de' | 'en';
     });
@@ -54,8 +52,8 @@ export class ProjectsDataService {
         en: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
       },
       implementationDetails: {
-        de: "test",
-        en: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way."
+        de: "In diesem Projekt lag der Schwerpunkt auf teamorientierter Zusammenarbeit. Über GitHub wurde mit mehreren Teammitgliedern parallel an unterschiedlichen Bereichen der Anwendung gearbeitet. Mein Verantwortungsbereich umfasste die Gestaltung und Umsetzung des Kontaktbereichs sowie die Integration des Firebase-Backends",
+        en: "This project focused on collaborative teamwork. Together with several team members, we worked simultaneously on different parts of the application using GitHub. I was responsible for designing and implementing the contact section, as well as integrating the Firebase backend."
       },
       duration: {
         de: "5 Wochen",
@@ -83,14 +81,12 @@ export class ProjectsDataService {
           technologieIcon:  this.firebase,
         },
         {
-          technologieName: "Angular",
-          technologieIcon:  this.angular,
-        },
-        {
           technologieName: "MaterialDesign",
           technologieIcon:  this.materialDesign,
         },
-      ]
+      ],
+      gitLink: "https://github.com/Dusty404/Join.git",
+      liveTestLink : ""
     },
     {
       title: {
@@ -103,8 +99,8 @@ export class ProjectsDataService {
         en: "Platformer featuring running, jumping, and throwing mechanics, developed using an object-oriented programming approach. The player controls Pepe to collect items such as coins and tabasco salsa in order to face an enemy - the crazy hen.",
       },
       implementationDetails: {
-        de: "Bei diesem Projekt lag der Schwerpunkt auf dem Einsatz von JavaScript-Klassen. Das gesamte Spiel - von der Objektstruktur über die Spiellogik bis hin zu den Animationen - entstand in einem klar strukturierten, objektorientierten Workflow, den ich eigenständig geplant und umgesetzt habe.",
-        en: "This project focused on the use of JavaScript classes. The entire game - from the object structure and game logic to the animations - was developed following a clearly structured, object-oriented workflow that I independently planned and implemented."
+        de: "Bei diesem Projekt lag der Schwerpunkt auf dem Einsatz von JavaScript-Klassen. Das gesamte Spiel - von der Objektstruktur über die Spiellogik bis hin zu den Animationen - entstand in einem klar strukturierten, objektorientierten Workflow.",
+        en: "This project focused on the use of JavaScript classes. The entire game - from the object structure and game logic to the animations - was developed following a clearly structured, object-oriented workflow."
       },
       duration: {
         de: "3 Wochen",
@@ -123,12 +119,14 @@ export class ProjectsDataService {
           technologieName: "JavaScript",
           technologieIcon:  this.js,
         },
-      ]
+      ],
+      gitLink: "https://github.com/Dusty404/El_Pollo_Loco.git",
+      liveTestLink : ""
     },
     {
       title: {
         de: "Pokedex",
-        en: "pokedex"
+        en: "Pokedex"
       },
       imgSrc: "../../assets/img/projects-section/pokedex.png",
       discription: {
@@ -160,7 +158,9 @@ export class ProjectsDataService {
           technologieName: "Rest-API",
           technologieIcon:  this.api,
         }
-      ]
+      ],
+      gitLink: "https://github.com/Dusty404/Pokedex.git",
+      liveTestLink : ""
     },
   ]
 }

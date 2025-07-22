@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
 import { ProjectViewComponent } from './projects/project-view/project-view.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 

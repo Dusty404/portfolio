@@ -2,12 +2,12 @@
     <app-navbar></app-navbar>
     <div class="content">
         <div class="projectMenu">
-            <div class="goBackButton" [routerLink]="['/projects']">
+            <div class="goBackButton" [routerLink]="['/projects']" [fragment]="'projects'">
                 <img src="../../../assets/img/projects-section/back-arrow.png">
-                <p>Go Back</p>
+                <p>{{ "PROJECT_VIEW.GO_BACK" | translate }}</p>
             </div>
             <div class="nextButton" (click)="goToNextProject()">
-                <p>Next Project</p>
+                <p>{{"PROJECT_VIEW.NEXT_PROJECT" | translate}}</p>
                 <img src="../../../assets/img/projects-section/nextButton.png">
             </div>
         </div>
@@ -25,19 +25,19 @@
 
                     </div>
                     <div class="textBox">
-                        <p>Description</p>
+                        <p>{{"PROJECT_VIEW.DESCRIPTION" | translate}}</p>
                         <span>
                             {{projects[projectIndex].discription}}
                         </span>
                     </div>
                     <div class="textBox">
-                        <p>Implementation Details</p>
+                        <p>{{"PROJECT_VIEW.IMPLEMENTATION" | translate}}</p>
                         <span>
                             {{projects[projectIndex].implementationDetails}}
                         </span>
                     </div>
                     <div class="durationBox">
-                        <span class="durTitle">Duration:</span>
+                        <span class="durTitle">{{"PROJECT_VIEW.DURATION" | translate}}:</span>
                         <span class="durValue">{{projects[projectIndex].duration}}</span>
                     </div>
 
@@ -54,12 +54,16 @@
             <div class="projectImg">
                 <img src="../../../{{projects[projectIndex].imgSrc}}">
                 <div class="projectButtons">
-                    <div class="button button1">
-                        <span>GitHub</span>
-                    </div>
+                    <a href="{{projectsData.projectsArray[projectIndex].gitLink}}">
+                        <div class="button button1">
+                            <span>GitHub</span>
+                        </div>
+                    </a>
+                    <a href="{{projectsData.projectsArray[projectIndex].liveTestLink}}">
                     <div class="button">
                         <span>Live Test</span>
                     </div>
+                    </a>
                 </div>
 
             </div>
