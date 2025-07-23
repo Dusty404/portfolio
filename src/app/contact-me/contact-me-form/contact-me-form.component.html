@@ -1,5 +1,5 @@
 <div class="formContainer">
-    <form #form="ngForm" (ngSubmit)="sendEmail(contactForm)" autocomplete="off" #contactForm="ngForm">
+    <form #form="ngForm" (ngSubmit)="onSubmit(contactForm)" autocomplete="off" #contactForm="ngForm">
         <div [ngClass]="{'borderOff' : hoverMid, 'border' : !hoverMid}">
             <label [ngClass]="{'invalidValue': nameInput.invalid && nameInput.touched || nameInput.invalid && clickedSend}" for="name">{{ "CONTACT_FORM.NAME" | translate}}</label>
             <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.name" id="name"
@@ -18,7 +18,7 @@
         <div class="border" (mouseenter)="hoverBot=true" (mouseleave)="hoverBot=false">
             <label [ngClass]="{'invalidValue': messageInput.invalid && messageInput.touched || messageInput.invalid && clickedSend}" for="wdyw">{{ "CONTACT_FORM.WDYW" | translate}}</label>
             <input [ngClass]="{'invalidValuePlaceholder': !messageValid}" #messageInput="ngModel" [(ngModel)]="data.message" id="wdyw"
-                [placeholder]="placeholderMessage" type="text" name="message" class="textInput" pattern="[a-zA-Z0-9._%+\-]{10,}" required>
+                [placeholder]="placeholderMessage" type="text" name="message" minlength="10" class="textInput" required>
                 <span *ngIf="messageInput.invalid && messageInput.touched" class="invalidValue">{{ "CONTACT_FORM.WDYW_TOUCHED_ERROR" | translate}}</span>
         </div>
         <section>
@@ -32,4 +32,8 @@
 
         <button class="letsTalkButton" type="submit" [ngClass]="{'letsTalkAktive' : nameInput.valid && emailInput.valid && messageInput.valid && data.isChecked}">{{"CONTACT_FORM.SEND" | translate}}</button>
     </form>
+</div>
+<div *ngIf="emailSent" class="popup">
+  <p>Deine Nachricht wurde erfolgreich gesendet!</p>
+  <button (click)="closePopup()">OK</button>
 </div>

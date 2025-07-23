@@ -16,7 +16,7 @@
         "WHO": "Who's Justin",
         "ABOUT": "About me",
         "TALK": "Let's Talk",
-        "TEXT": "BEISPIELTEXT Hey there, I'm Karl. Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills? Do you learn from each challenge as you search for the most efficient or elegant solution? <br><br> Let's collaborate and build something remarkable together!"
+        "TEXT": "Hey there, I'm Justin. \nI've always been fascinated by the sight of code – this seemingly random sequence of words, numbers, and symbols that only a few understand. During my time in the military, I started exploring C++ on my own and was amazed by how a few lines of code could bring something to life from nothing. Today, I know that programming offers endless possibilities. It's a continuous journey of learning and discovery. That’s why I’ve made it my goal to learn as much as I can about coding – and to apply that knowledge in real projects. \nLet’s build something amazing together!"
     },
     "SKILL_SET": {
         "STACK": "My stack",

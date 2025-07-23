@@ -36,6 +36,7 @@ export class ContactMeFormComponent {
   nameInput: string = '';
   emailInput: string = '';
   messageInput: string = '';
+  emailSent: boolean = false;
 
   data = {
     name: "",
@@ -61,25 +62,6 @@ export class ContactMeFormComponent {
       this.placeholderEmail = translations['CONTACT_FORM.EMAIL_PLACEHOLDER'];
       this.placeholderMessage = translations['CONTACT_FORM.WDYW_PLACEHOLDER'];
     });
-  }
-
-  sendEmail(ngForm: NgForm) {
-    this.clickedSend = true;
-    if (ngForm.valid && ngForm.submitted) {
-      console.log(this.data)
-      this.nameValid = true;
-      this.emailValid = true;
-      this.messageValid = true;
-      this.clickedSend = false;
-      ngForm.resetForm({
-        name: '',
-        email: '',
-        message: '',
-        isChecked: false
-      });
-    } else {
-      this.checkInputs()
-    }
   }
 
   checkInputs() {
@@ -115,7 +97,7 @@ export class ContactMeFormComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://justin-koll.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -126,12 +108,14 @@ export class ContactMeFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    this.clickedSend = true;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.data))
         .subscribe({
           next: (response) => {
-
+            this.emailSent = true;
             ngForm.resetForm();
+            this.resetTrigger();
           },
           error: (error) => {
             console.error(error);
@@ -141,6 +125,20 @@ export class ContactMeFormComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();
+      this.resetTrigger();
+    } else {
+      this.checkInputs();
     }
+  }
+
+  closePopup() {
+    this.emailSent = false;
+  }
+
+  resetTrigger() {
+    this.nameValid = true;
+    this.emailValid = true;
+    this.messageValid = true;
+    this.clickedSend = false;
   }
 }
