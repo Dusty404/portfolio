@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RouterModule } from '@angular/router';
@@ -15,6 +16,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class ContactMeFormComponent {
 
   constructor(private translate: TranslateService) { }
+
+  http = inject(HttpClient);
 
   switchLanguage(lang: string) {
     this.translate.use(lang);
@@ -109,9 +112,6 @@ export class ContactMeFormComponent {
     });
   }
 
-
-  /**
-
   mailTest = true;
 
   post = {
@@ -127,7 +127,7 @@ export class ContactMeFormComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http.post(this.post.endPoint, this.post.body(this.data))
         .subscribe({
           next: (response) => {
 
@@ -143,5 +143,4 @@ export class ContactMeFormComponent {
       ngForm.resetForm();
     }
   }
-    */
 }
