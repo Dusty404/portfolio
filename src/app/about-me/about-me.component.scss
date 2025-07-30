@@ -288,6 +288,14 @@ a {
     .paperSnipped div p {
         font-size: 16px;
     }
+
+    .title {
+        gap: 0px;
+
+        & h1 {
+            font-size: 48px;
+        }
+    }
 }
 
 @media (max-width: 376px) {
@@ -303,14 +311,6 @@ a {
         gap: 40px;
         width: 100%;
         padding: 0 16px;
-    }
-
-    .title {
-        gap: 0px;
-
-        & h1 {
-            font-size: 48px;
-        }
     }
 
     .rippedPaper {

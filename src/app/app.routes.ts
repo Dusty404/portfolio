@@ -3,6 +3,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { ProjectViewComponent } from './projects/project-view/project-view.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { ContactMeComponent } from './contact-me/contact-me.component';
 
 export const routes: Routes = [
     { path: '', component: MainContentComponent },
@@ -11,5 +12,5 @@ export const routes: Routes = [
     { path: 'project/:id', component: ProjectViewComponent },
     { path: 'privacyPolicy', component: PrivacyPolicyComponent },
     { path: 'legalNotice', component: LegalNoticeComponent },
-    { path: 'privacyPolicy/:id', component: PrivacyPolicyComponent },
+    { path: 'contactMe', component: MainContentComponent },
 ];

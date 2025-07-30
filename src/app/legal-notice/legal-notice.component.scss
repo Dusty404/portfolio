@@ -1,10 +1,9 @@
 .body {
     color: white;
-    background-color: black;
+    background-color: white;
     background-image: url(../../assets/img/background/background_header.png);
     background-repeat: no-repeat;
     background-size: 150vh;
-    padding: 80px;
     text-align: justify;
     max-width: 1440px;
     height: 100vh;
@@ -15,6 +14,9 @@
     gap: 24px;
     display: flex;
     flex-direction: column;
+    & div {
+        padding: 80px;
+    }
 
     & h2 {
         font-size: 20px;
@@ -32,6 +34,32 @@
         &:hover {
             text-decoration: underline;
             text-decoration-thickness: 2px ;
+        }
+    }
+}
+
+.goBackButton {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    padding: 16px !important;
+
+    & img {
+        height: 24px;
+        width: 24px;
+    }
+
+    & p {
+        font-family: Bricolage Grotesque;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 120%;
+        text-align: justify;
+        margin: 0;
+
+        &:hover {
+            color: coral;
+            cursor: pointer;
         }
     }
 }

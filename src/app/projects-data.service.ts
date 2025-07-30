@@ -86,7 +86,7 @@ export class ProjectsDataService {
         },
       ],
       gitLink: "https://github.com/Dusty404/Join.git",
-      liveTestLink : ""
+      liveTestLink : "http://join.justin-koll.de/"
     },
     {
       title: {
@@ -121,7 +121,7 @@ export class ProjectsDataService {
         },
       ],
       gitLink: "https://github.com/Dusty404/El_Pollo_Loco.git",
-      liveTestLink : ""
+      liveTestLink : "http://el-pollo-loco.justin-koll.de/"
     },
     {
       title: {
@@ -160,7 +160,7 @@ export class ProjectsDataService {
         }
       ],
       gitLink: "https://github.com/Dusty404/Pokedex.git",
-      liveTestLink : ""
+      liveTestLink : "http://pokedex.justin-koll.de/"
     },
   ]
 }

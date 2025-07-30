@@ -42,3 +42,34 @@
     margin-bottom: 40px;
     text-decoration: underline;
 }
+
+.goBackButton {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+
+    & img {
+        height: 24px;
+        width: 24px;
+    }
+
+    & p {
+        font-family: Bricolage Grotesque;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 120%;
+        text-align: justify;
+        margin: 0;
+
+        &:hover {
+            color: coral;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .body {
+        padding: 8px;
+    }
+}
