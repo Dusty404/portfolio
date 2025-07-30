@@ -4,7 +4,7 @@
             <label [ngClass]="{'invalidValue': nameInput.invalid && nameInput.touched || nameInput.invalid && clickedSend}" for="name">{{ "CONTACT_FORM.NAME" | translate}}</label>
             <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.name" id="name"
                 [placeholder]="placeholderName" type="name" name="name" #nameInput="ngModel" class="textInput"
-                pattern="[a-zA-Z]{2,}" required>
+                pattern="\b[a-zA-ZäöüÄÖÜß]{2,}\b\s+\b[a-zA-ZäöüÄÖÜß]{2,}\b" required>
             <span *ngIf="nameInput.invalid && nameInput.touched" class="invalidValue">{{ "CONTACT_FORM.NAME_TOUCHED_ERROR" | translate}}</span>
         </div>
         <div class="border" (mouseenter)="hoverMid=true" (mouseleave)="hoverMid=false"
@@ -34,6 +34,6 @@
     </form>
 </div>
 <div *ngIf="emailSent" class="popup">
-  <p>Deine Nachricht wurde erfolgreich gesendet!</p>
+  <p>{{"CONTACT_FORM.FORM_SENDED_CONFIRM" | translate}}</p>
   <button (click)="closePopup()">OK</button>
 </div>

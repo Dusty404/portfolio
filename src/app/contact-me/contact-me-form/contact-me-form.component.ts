@@ -94,7 +94,6 @@ export class ContactMeFormComponent {
     });
   }
 
-  mailTest = true;
 
   post = {
     endPoint: 'https://justin-koll.de/sendMail.php',
@@ -109,7 +108,7 @@ export class ContactMeFormComponent {
 
   onSubmit(ngForm: NgForm) {
     this.clickedSend = true;
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.data))
         .subscribe({
           next: (response) => {
@@ -122,10 +121,6 @@ export class ContactMeFormComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
-      this.resetTrigger();
     } else {
       this.checkInputs();
     }

@@ -56,12 +56,13 @@
         "NAME_ERROR": "Oops, anscheinend fehlt Ihr Name.",
         "EMAIL_ERROR": "Hoppla, Ihre E-Mail wird benötigt.",
         "WDYW_ERROR": "Was kann ich für Sie entwickeln?",
-        "NAME_TOUCHED_ERROR": "Dieses Feld benötigt mindestens zwei Buchstaben.",
+        "NAME_TOUCHED_ERROR": "Dieses Feld benötigt Ihren Vor- und Zunamen mit mindestens 2 Buchstaben.",
         "EMAIL_TOUCHED_ERROR": "Bitte eine gültige E-Mail-Adresse eingeben.",
         "WDYW_TOUCHED_ERROR": "Ihre Nachricht muss mindestens zehn Buchstaben lang sein.",
         "PRIVACY_TEXT_FIRST": "Ich habe die ",
         "PRIVACY_TEXT_SECOND": "gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
         "PRIVACY_TEXT_LINK": "Datenschutzerklärung ",
-        "SEND": "SENDEN"
+        "SEND": "SENDEN",
+        "FORM_SENDED_CONFIRM": "Ihre Nachricht wurde erfolgreich gesendet!"
     }
 }
