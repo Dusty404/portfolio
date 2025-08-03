@@ -63,6 +63,7 @@
         "PRIVACY_TEXT_SECOND": "gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
         "PRIVACY_TEXT_LINK": "Datenschutzerklärung ",
         "SEND": "SENDEN",
-        "FORM_SENDED_CONFIRM": "Ihre Nachricht wurde erfolgreich gesendet!"
+        "FORM_SENDED_CONFIRM": "Ihre Nachricht wurde erfolgreich gesendet!",
+        "PRIVACY_POLICY": "Bitte akzeptieren Sie die Datenschutzerklärung."
     }
 }

@@ -511,6 +511,12 @@ a {
     }
 }
 
+@media (max-width: 1320px) {
+    .content {
+        padding: 0px 16px;
+    }
+}
+
 @media (max-width: 966px) {
     .content {
         padding: 0 32px;
@@ -547,6 +553,17 @@ a {
     }
 }
 
+@media (max-height: 800px) {
+
+    .titleContainer {
+        gap: 8px;
+    }
+
+    .content {
+        gap: 60px;
+    }
+}
+
 @media (max-width: 750px) {
     .titleFirstLine p {
         font-size: 90px;
@@ -554,10 +571,6 @@ a {
 
     .titleSecondLine p {
         font-size: 90px;
-    }
-
-    .content {
-        padding: 0 72px;
     }
 
     .polaroidFrame {
@@ -576,18 +589,6 @@ a {
         right: 17px;
         height: 111px;
         width: 111px;
-    }
-}
-
-@media (max-width: 730px) {
-    .content {
-        padding: 0 50px;
-    }
-}
-
-@media (max-width:690px) {
-    .content {
-        padding: 0 30px;
     }
 }
 
@@ -666,7 +667,6 @@ a {
         gap: 100px;
         justify-content: start;
         align-items: center;
-        padding: 0 16px;
     }
 }
 
@@ -688,16 +688,5 @@ a {
 
     .content {
         gap: 100px;
-    }
-}
-
-@media (max-height: 800px) {
-
-    .titleContainer {
-        gap: 8px;
-    }
-
-    .content {
-        gap: 60px;
     }
 }

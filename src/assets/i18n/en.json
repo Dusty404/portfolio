@@ -63,6 +63,7 @@
         "PRIVACY_TEXT_SECOND": "and agree to the processing of my data as outlined.",
         "PRIVACY_TEXT_LINK": "privacy policy ",
         "SEND": "SEND",
-        "FORM_SENDED_CONFIRM": " Your message was sent successfully!"
+        "FORM_SENDED_CONFIRM": " Your message was sent successfully!",
+        "PRIVACY_POLICY": "Please accept the privacy policy."
     }
 }
