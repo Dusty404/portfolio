@@ -163,3 +163,14 @@
         width: 56px;
     }
 }
+
+@media (max-width: 335px) {
+    .stickerContent {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+}
+
+        

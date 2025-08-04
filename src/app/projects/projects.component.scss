@@ -594,13 +594,11 @@ a {
     }
 
     .checkDetailsSticker {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     .movingLaptop {
-        height: 200px;
-        width: 340px;
         right: unset;
     }
 
@@ -629,7 +627,7 @@ a {
     }
 
     .projectsContainer {
-        grid-template-columns: 340px;
+        grid-template-columns: 100%;
         justify-content: center;
         padding-bottom: 56px
     }

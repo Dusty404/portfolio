@@ -690,3 +690,9 @@ a {
         gap: 100px;
     }
 }
+
+@media (max-width: 360px) {
+    .titleFirstLine p, .titleSecondLine p{
+        font-size: 45px;
+    }
+}

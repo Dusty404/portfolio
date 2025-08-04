@@ -225,3 +225,15 @@ app-contact-me-form {
         width: 152px;
     }
 }
+
+@media (max-width: 375px) {
+    .titleText h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 350px) {
+    .arrow {
+        display: none;
+    }
+}

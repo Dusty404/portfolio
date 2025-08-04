@@ -145,8 +145,8 @@ app-skill-logo {
 
 @media (max-width: 950px) {
     app-skill-logo {
-    grid-template-columns: repeat(5, 100px);
-    grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(5, 100px);
+        grid-template-rows: repeat(3, 100px);
     }
 }
 
@@ -218,5 +218,25 @@ app-skill-logo {
     app-skill-logo {
         grid-template-columns: repeat(3, 80px);
         gap: 30px;
+    }
+}
+
+@media (max-width: 335px) {
+    .paperSnipped {
+
+        & img {
+            height: 180px;
+        }
+
+        & span {
+            padding: 16px;
+            text-align: justify;
+        }
+
+    }
+
+    app-skill-logo {
+        grid-template-columns: repeat(2, 80px);
+        gap: 30px 60px;
     }
 }
