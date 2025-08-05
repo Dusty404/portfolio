@@ -11,7 +11,7 @@
     padding: 144px 120px 56px 120px;
     display: grid;
     justify-content: space-between;
-    gap: 0 88px;
+    gap: 0 24px;
     position: relative;
 }
 
@@ -29,6 +29,7 @@ span {
     max-width: 560px;
     width: 100%;
     gap: 32px;
+    justify-content: center;
 
     & h1 {
         font-family: Bricolage Grotesque;
@@ -130,6 +131,13 @@ app-contact-me-form {
 @media (max-width: 1070px) {
     .nameSticker {
         right: 15px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .titleText h1 {
+        font-size: 48px;
     }
 }
 

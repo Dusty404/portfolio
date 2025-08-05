@@ -265,14 +265,14 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0 50px;
+        padding: 0 8px;
     }
 
     .links {
         grid-template-rows: auto auto;
         grid-template-columns: repeat(3, auto);
         grid-gap: 50px;
-        padding: 0 50px;
+        padding: 0 8px;
 
         & a {
             grid-row-start: 2;
@@ -309,12 +309,8 @@
     }
 }
 
-@media (max-width:395px) {
-    .logoAndName {
-        padding: 0 20px;
-    }
-
+@media (max-width:325px) {
     .links {
-        padding: 0 20px;
+        grid-template-columns: repeat(3, 50px);
     }
 }

@@ -25,7 +25,7 @@ form {
         display: flex;
         flex-direction: column;
         gap: 8px;
-        padding: 16px;
+        padding: 16px 0;
 
         &:hover {
             border-color: blue;
@@ -206,17 +206,25 @@ section {
   }
 }
 
+@media (max-width: 900px) {
+    .textInput {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 880px) {
+    .textInput {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 820px) {
     .formContainer {
         max-width: unset;
     }
 
-    form {
-        padding-top: 0;
-    }
 }
 @media (max-width:376px) {
-
 
     .letsTalkButton {
         height: 40px;
@@ -238,5 +246,9 @@ section {
 
     form div {
         padding: 16px 0;
+    }
+
+    .textInput {
+        font-size: 15px;
     }
 }
