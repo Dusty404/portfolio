@@ -248,7 +248,7 @@ a {
 @media (max-width: 750px) {
     .wrapper {
         flex-direction: column-reverse;
-        padding: 64px 0;
+        padding: 64px 8px;
     }
 
     .rippedPaper {
@@ -261,10 +261,6 @@ a {
 
     .positionOrange {
         bottom: 60px;
-    }
-
-    .aboutMeTextArea {
-        padding: 0 16px;
     }
 
     .aboutMeTextArea, .textSection {

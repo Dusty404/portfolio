@@ -3,7 +3,6 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { ProjectViewComponent } from './projects/project-view/project-view.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
-import { ContactMeComponent } from './contact-me/contact-me.component';
 
 export const routes: Routes = [
     { path: '', component: MainContentComponent },
