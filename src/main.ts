@@ -20,7 +20,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(
-      routes, withHashLocation(),
+      routes,
       withEnabledBlockingInitialNavigation(),
       withInMemoryScrolling({
         scrollPositionRestoration: 'top',

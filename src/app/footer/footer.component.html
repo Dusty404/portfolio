@@ -1,6 +1,6 @@
 <div class="content">
     <div class="logoAndName">
-        <a href="#nav">
+        <a [routerLink]="['/']" [fragment]="'nav'">
            <img class="logo"  src="../../assets/img/header/logo_blue.png"> 
         </a>
         <span>© Justin Koll 2025</span>
@@ -12,7 +12,7 @@
                 <img src="../../assets/img/header/3.png">
             </div>
             <span (mouseover)="hover=true" (mouseout)="hover=false" href="" #title>
-                Legal Notice
+                {{"FOOTER.LEGAL_NOTICE" | translate}}
             </span>
         </a>
         <a href="https://github.com/Dusty404">

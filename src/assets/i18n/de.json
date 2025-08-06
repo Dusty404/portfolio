@@ -65,5 +65,8 @@
         "SEND": "SENDEN",
         "FORM_SENDED_CONFIRM": "Ihre Nachricht wurde erfolgreich gesendet!",
         "PRIVACY_POLICY": "Bitte akzeptieren Sie die Datenschutzerklärung."
+    },
+    "FOOTER": {
+        "LEGAL_NOTICE": "Impressum"
     }
 }

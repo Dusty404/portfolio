@@ -65,5 +65,8 @@
         "SEND": "SEND",
         "FORM_SENDED_CONFIRM": " Your message was sent successfully!",
         "PRIVACY_POLICY": "Please accept the privacy policy."
+    },
+    "FOOTER": {
+        "LEGAL_NOTICE": "Legal Notice"
     }
 }
