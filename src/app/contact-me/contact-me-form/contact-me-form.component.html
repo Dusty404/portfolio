@@ -17,7 +17,7 @@
         <div class="border" (mouseenter)="hoverBot=true" (mouseleave)="hoverBot=false">
             <label [ngClass]="{'invalidValue': messageInput.invalid && messageInput.touched || messageInput.invalid && clickedSend}" for="wdyw">{{ "CONTACT_FORM.WDYW" | translate}}</label>
             <input [ngClass]="{'invalidValuePlaceholder': !messageValid}" #messageInput="ngModel" [(ngModel)]="data.message" id="wdyw"
-                [placeholder]="placeholderMessage" type="text" name="message" minlength="10" class="textInput" required>
+                [placeholder]="placeholderMessage" type="text" name="message" class="textInput" required>
         </div>
         <section>
             <mat-checkbox class="ppLabel" id="privacyPolicy" name="privacyPolicy" #privacyPolicy="ngModel"
