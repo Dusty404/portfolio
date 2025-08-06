@@ -4,7 +4,8 @@
             <label [ngClass]="{'invalidValue': nameInput.invalid && nameInput.touched || nameInput.invalid && clickedSend}" for="name">{{ "CONTACT_FORM.NAME" | translate}}</label>
             <input [ngClass]="{'invalidValuePlaceholder': !nameValid}" [(ngModel)]="data.name" id="name"
                 [placeholder]="placeholderName" type="name" name="name" #nameInput="ngModel" class="textInput"
-                pattern="[a-zA-ZäöüÄÖÜß]{2,}" required>
+                pattern="^[A-Za-zÄÖÜäöüß ]{2,}$"
+  minlength="2" required>
         </div>
         <div class="border" (mouseenter)="hoverMid=true" (mouseleave)="hoverMid=false"
             [ngClass]="{'borderOff' : hoverBot, 'border' : !hoverBot}">

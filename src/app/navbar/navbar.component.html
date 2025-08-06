@@ -65,13 +65,13 @@
     </div>
     <div class="mobileNavbarMenu" [style.top]="openMenu ? '0' : (!openMenu ? '-100vh' : null)">
         <div class="navMobile">
-            <a href="#aboutMe" (click)="showMenu()">{{"NAV.ABOUT_ME" |
+            <a [routerLink]="['']" [fragment]="'aboutMe'" (click)="showMenu()">{{"NAV.ABOUT_ME" |
                 translate}}</a>
-            <a href="#skills" (click)="showMenu()">{{"NAV.SKILLS" |
+            <a [routerLink]="['']" [fragment]="'skills'">{{"NAV.SKILLS" |
                 translate}}</a>
-            <a href="#projects" (click)="showMenu()">{{"NAV.PROJECTS" |
+            <a [routerLink]="['']" [fragment]="'projects'">{{"NAV.PROJECTS" |
                 translate}}</a>
-            <a href="#contact" (click)="showMenu()">{{"NAV.CONTACT" |
+            <a [routerLink]="['']" [fragment]="'contact'">{{"NAV.CONTACT" |
                 translate}}</a>
         </div>
         <div class="socialsMobile">

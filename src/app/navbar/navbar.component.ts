@@ -6,11 +6,12 @@ import { TranslateService } from '@ngx-translate/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, MatSelectModule, MatFormFieldModule, MatButtonToggleModule,],
+  imports: [CommonModule, FormsModule, TranslateModule, MatSelectModule, MatFormFieldModule, MatButtonToggleModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
