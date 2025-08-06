@@ -121,7 +121,7 @@ export class ProjectsDataService {
         },
       ],
       gitLink: "https://github.com/Dusty404/El_Pollo_Loco.git",
-      liveTestLink : "http://el-pollo-loco.justin-koll.de/"
+      liveTestLink : "http://elpolloloco.justin-koll.de/"
     },
     {
       title: {

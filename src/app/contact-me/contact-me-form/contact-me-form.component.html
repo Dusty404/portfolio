@@ -21,7 +21,7 @@
         </div>
         <section>
             <mat-checkbox class="ppLabel" id="privacyPolicy" name="privacyPolicy" #privacyPolicy="ngModel"
-                [(ngModel)]="data.isChecked" required>{{"CONTACT_FORM.PRIVACY_TEXT_FIRST" | translate}}<a [routerLink]="['/privacyPolicy']" [fragment]="'privacyPolicy'">{{"CONTACT_FORM.PRIVACY_TEXT_LINK" | translate}}</a>{{"CONTACT_FORM.PRIVACY_TEXT_SECOND" | translate}}</mat-checkbox>
+                [(ngModel)]="data.isChecked" required>{{"CONTACT_FORM.PRIVACY_TEXT_FIRST" | translate}}<a [routerLink]="['/privacyPolicy']">{{"CONTACT_FORM.PRIVACY_TEXT_LINK" | translate}}</a>{{"CONTACT_FORM.PRIVACY_TEXT_SECOND" | translate}}</mat-checkbox>
             <div class="privacyPolicyContainer">
                 <span *ngIf="privacyPolicy.invalid && form.submitted || privacyPolicy.invalid && privacyPolicy.touched"
                     class="privacyPolicyWarning">{{"CONTACT_FORM.PRIVACY_POLICY" | translate}}</span>
