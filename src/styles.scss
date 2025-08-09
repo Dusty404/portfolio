@@ -6,7 +6,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: none;
-  background-color: black;
   scroll-behavior: smooth;
 }
 
@@ -31,18 +30,18 @@ body {
 }
 
 app-project-view {
-  max-width: 1440px;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 
 app-navbar {
   display: flex;
-  max-width: 1440px;
-  width: 100%;
+  width: 100vw;
+  align-self: center;
 }
 
 app-main-content {
@@ -61,14 +60,12 @@ app-footer {
 
 app-privacy-policy {
   display: flex;
-  max-width: 1440px;
   width: 100%;
   flex-direction: column;
 }
 
 app-legal-notice {
   display: flex;
-  max-width: 1440px;
   width: 100%;
   flex-direction: column;
 }

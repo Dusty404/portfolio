@@ -1,6 +1,7 @@
 <div class="content">
-    <div class="body">
-        <img class="nameSticker" src="../../assets/img/contact-me/round_logo.png">
+    <div class="wrapper">
+        <div class="body">
+            <img class="nameSticker" src="../../assets/img/contact-me/round_logo.png">
             <div class="titleText">
                 <p>{{"CONTACT_ME.CONTACT_ME" | translate}}</p>
                 <h1>
@@ -11,12 +12,13 @@
             <span class="text">
                 {{"CONTACT_ME.MOTIVATION" | translate}}
             </span>
-        <div class="arrowContainer">
-            <div class="arrowShrinkContainer">
-                <img class="arrow" src="../../assets/img/contact-me/contact-arrow.png">
+            <div class="arrowContainer">
+                <div class="arrowShrinkContainer">
+                    <img class="arrow" src="../../assets/img/contact-me/contact-arrow.png">
+                </div>
             </div>
+            <app-contact-me-form></app-contact-me-form>
         </div>
-        <app-contact-me-form></app-contact-me-form>
     </div>
     <app-footer></app-footer>
 </div>

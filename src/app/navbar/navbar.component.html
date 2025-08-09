@@ -1,4 +1,5 @@
 <nav class="content">
+    <div class="wrapper">
     <img class="logo" src="../../assets/img/header/logo_blue.png">
 
     <div class="transitionheight">
@@ -6,7 +7,7 @@
             [class.hoverEffectHight]="aboutMeHover">
             <img src="../../assets/img/header/1.png">
         </div>
-        <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" [routerLink]="['/']" [fragment]="'aboutMe'">{{"NAV.ABOUT_ME" |
+        <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" [routerLink]="['']" [fragment]="'aboutMe'">{{"NAV.ABOUT_ME" |
             translate}}</a>
     </div>
 
@@ -15,16 +16,16 @@
             <img src="../../assets/img/header/2.png">
         </div>
         <a [ngStyle]="{width:'80px'}" (mouseover)="skillsHover=true" (mouseout)="skillsHover=false"
-            [routerLink]="['/']" [fragment]="'skills'">{{"NAV.SKILLS" |
+            [routerLink]="['']" [fragment]="'skills'">{{"NAV.SKILLS" |
             translate}}</a>
     </div>
 
     <div class="display">
-        <div class="hoverImg transitionWidth" [class.hoverEffectWidth]="projectsHover">
+        <div class="hoverImg projectsHeight transitionWidth" [class.hoverEffectWidth]="projectsHover">
             <img src="../../assets/img/header/4.png">
         </div>
         <a [ngStyle]="{width:'90px'}" (mouseover)="projectsHover=true" (mouseout)="projectsHover=false"
-            [routerLink]="['/']" [fragment]="'projects'">{{"NAV.PROJECTS" |
+            [routerLink]="['']" [fragment]="'projects'">{{"NAV.PROJECTS" |
             translate}}</a>
     </div>
 
@@ -33,7 +34,7 @@
             <img src="../../assets/img/header/3.png">
         </div>
         <a [ngStyle]="{width:'90px'}" (mouseover)="contactHover=true" (mouseout)="contactHover=false"
-            [routerLink]="['/']" [fragment]="'contact'">{{"NAV.CONTACT" |
+            [routerLink]="['']" [fragment]="'contact'">{{"NAV.CONTACT" |
             translate}}</a>
     </div>
     <div class="language">
@@ -41,6 +42,7 @@
             <mat-button-toggle value="de">DE</mat-button-toggle>
             <mat-button-toggle value="en">EN</mat-button-toggle>
         </mat-button-toggle-group>
+    </div>
     </div>
 </nav>
 

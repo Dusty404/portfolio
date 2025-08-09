@@ -1,10 +1,12 @@
 .content {
-    max-width: 1440px;
-    width: 100%;
+    width: 100vw;
     background-image: url(../../assets/img/contact-me/contact-me-background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .body {
@@ -13,6 +15,11 @@
     justify-content: space-between;
     gap: 0 24px;
     position: relative;
+    max-width: 1440px;
+}
+
+.wrapper {
+    max-width: 1440px;
 }
 
 p,

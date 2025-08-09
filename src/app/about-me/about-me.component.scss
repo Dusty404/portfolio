@@ -1,15 +1,17 @@
 .body {
     display: flex;
     background-color: white;
-    width: 100%;
+    width: 100vw;
     gap: 32px;
     align-items: center;
+    justify-content: center;
 }
 
 .wrapper {
     display: flex;
     padding: 64px 120px;
-    max-width: 100%;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .rippedPaper {

@@ -6,10 +6,10 @@
     gap: 40px;
     display: flex;
     flex-direction: column;
-    max-width: 1440px;
     width: 100%;
     overflow-y: auto;
     scrollbar-width: none;
+    align-items: center;
 }
 
 .content {
@@ -17,6 +17,8 @@
     flex-direction: column;
     gap: 40px;
     padding: 0 50px;
+    max-width: 1440px;
+    justify-content: center;
 }
 
 .project {
@@ -30,6 +32,10 @@
     display: flex;
     gap: 8px;
     width: fit-content;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
 
     & img {
         height: 24px;
