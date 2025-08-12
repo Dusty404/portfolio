@@ -68,5 +68,9 @@
     },
     "FOOTER": {
         "LEGAL_NOTICE": "Impressum"
+    },
+    "IMPRINT": {
+        "IMPRINT": "Impressum",
+        "EMAIL": "E-Mail-Adresse:"
     }
 }

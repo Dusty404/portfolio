@@ -121,6 +121,7 @@ export class ContactMeFormComponent {
           },
           complete: () => console.info('send post complete'),
         });
+        this.setPlaceholders();
     } else {
       this.checkInputs();
     }

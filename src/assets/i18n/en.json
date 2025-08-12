@@ -68,5 +68,9 @@
     },
     "FOOTER": {
         "LEGAL_NOTICE": "Legal Notice"
+    },
+    "IMPRINT": {
+        "IMPRINT": "Imprint",
+        "EMAIL": "E-mail-adress:"
     }
 }

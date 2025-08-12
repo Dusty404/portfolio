@@ -4,7 +4,7 @@
     justify-content: flex-end;
     align-items: center;
     text-align: center;
-    gap: 4px;
+    gap: 12px;
     transition: all 300ms;
 
     & img {
@@ -21,7 +21,7 @@
         color: white;
         font-family: Bricolage Grotesque;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     &:hover {
@@ -140,7 +140,7 @@
     }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 745px) {
     .stickerContent {
         grid-column-start: 2;
         grid-column-end: 3;

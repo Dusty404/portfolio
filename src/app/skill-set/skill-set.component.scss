@@ -100,7 +100,7 @@
     & img {
         position: absolute;
         width: 100%;
-        height: 144px;
+        height: 200px;
         z-index: 0;
     }
 
@@ -108,6 +108,8 @@
         position: absolute;
         z-index: 1;
         padding: 32px;
+        font-family: Bricolage Grotesque;
+        font-size: 20px;
     }
 }
 
@@ -160,12 +162,11 @@ app-skill-logo {
 }
 
 @media (max-width: 745px) {
+
     .paperSnipped span {
         padding: 32px 16px;
     }
-}
 
-@media (max-width: 680px) {
     .skillSetContainer {
         flex-direction: column;
     }
@@ -191,6 +192,7 @@ app-skill-logo {
 
     .content {
         padding: 0px 16px 160px;
+        gap: 40px;
     }
 
     .titleContainer {
@@ -198,6 +200,7 @@ app-skill-logo {
         flex-direction: column;
         align-items: end;
         padding-top: 16px;
+        gap: 40px;
     }
 
     .title {
@@ -210,8 +213,14 @@ app-skill-logo {
         }
     }
 
-    .paperSnipped img {
-        width: 95%;
+    .paperSnipped {
+        height: 250px;
+
+        & img {
+            width: 95%;
+            height: 250px;
+        }
+
     }
 
     .skillSetContainer {
@@ -228,7 +237,7 @@ app-skill-logo {
     .paperSnipped {
 
         & img {
-            height: 180px;
+            height: 280px;
         }
 
         & span {

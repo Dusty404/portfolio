@@ -1,6 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { provideRouter, withInMemoryScrolling, withHashLocation, withEnabledBlockingInitialNavigation } from '@angular/router';
+import { provideRouter, withInMemoryScrolling, withEnabledBlockingInitialNavigation } from '@angular/router';
 import { routes } from './app/app.routes';
 import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -8,24 +8,23 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
-const scrollConfig = {
-  scrollPositionRestoration: 'top' as const,
-  anchorScrolling: 'enabled' as const
-};
-
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
 }
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(
       routes,
-      withEnabledBlockingInitialNavigation(),
       withInMemoryScrolling({
-        scrollPositionRestoration: 'top',
+        scrollPositionRestoration: 'enabled',
         anchorScrolling: 'enabled'
-      })
+      }),
+      withEnabledBlockingInitialNavigation()
     ),
     importProvidersFrom(
       HttpClientModule,

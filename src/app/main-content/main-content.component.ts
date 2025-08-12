@@ -25,15 +25,15 @@ export class MainContentComponent implements AfterViewInit {
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
         const fragment = this.route.snapshot.fragment;
-        if (fragment) {
+      if (fragment) {
           setTimeout(() => {
-            const el = document.getElementById(fragment);
+          const el = document.getElementById(fragment);
             if (el) {
               el.scrollIntoView({ behavior: 'smooth' });
               this.location.replaceState(this.router.url.split('#')[0]);
             }
           }, 100);
-        }
-      });
+      }
+    });
   }
 }
