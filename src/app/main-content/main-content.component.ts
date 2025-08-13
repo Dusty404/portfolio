@@ -24,14 +24,10 @@ export class MainContentComponent implements AfterViewInit {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        const fragment = this.route.snapshot.fragment;
+        const fragment = this.router.parseUrl(this.router.url).fragment;
       if (fragment) {
           setTimeout(() => {
           const el = document.getElementById(fragment);
-            if (el) {
-              el.scrollIntoView({ behavior: 'smooth' });
-              this.location.replaceState(this.router.url.split('#')[0]);
-            }
           }, 100);
       }
     });

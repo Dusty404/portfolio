@@ -1,3 +1,7 @@
+html, body {
+    scroll-behavior: auto !important;
+}
+
 .body {
     color: white;
     background-color: black;
@@ -19,16 +23,6 @@
         font-size: 20px;
         text-decoration: underline;
     }
-
-    & a {
-        color: skyblue;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-        }
-    }
 }
 
 .content {
@@ -43,6 +37,15 @@
     padding: 40px;
     max-width: 1140px;
     justify-self: center;
+    & a {
+        color: skyblue;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+    }
 }
 
 .title {
@@ -57,6 +60,7 @@
 
 .goBackButton {
     display: flex;
+    align-items: center;
     gap: 8px;
     width: fit-content;
 
@@ -72,10 +76,12 @@
         line-height: 120%;
         text-align: justify;
         margin: 0;
+        color: white;
 
         &:hover {
             color: coral;
             cursor: pointer;
+            text-decoration: none;
         }
     }
 }

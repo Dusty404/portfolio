@@ -2,6 +2,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { provideRouter, withInMemoryScrolling, withEnabledBlockingInitialNavigation } from '@angular/router';
 import { routes } from './app/app.routes';
+import { Router } from '@angular/router';
 import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -12,19 +13,15 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
-
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(
       routes,
+      withEnabledBlockingInitialNavigation(),
       withInMemoryScrolling({
-        scrollPositionRestoration: 'enabled',
+        scrollPositionRestoration: 'top',
         anchorScrolling: 'enabled'
-      }),
-      withEnabledBlockingInitialNavigation()
+      })
     ),
     importProvidersFrom(
       HttpClientModule,
@@ -35,6 +32,12 @@ bootstrapApplication(AppComponent, {
           deps: [HttpClient]
         }
       })
-    ), provideAnimationsAsync()
+    ),
+    provideAnimationsAsync()
   ]
-}).catch((err) => console.error(err));
+})
+.then(ref => {
+  const router = ref.injector.get(Router);
+  (router as any).onSameUrlNavigation = 'reload';
+})
+.catch(err => console.error(err));

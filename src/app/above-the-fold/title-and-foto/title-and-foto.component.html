@@ -35,7 +35,7 @@
             <p class="uperCaseLetter">{{letter}}</p>
             }
          </div>
-         <a [routerLink]="['']" [fragment]="'contact'">
+         <a href="#contact">
             <div class="getInTouchButton">
                <span>{{"ABOVE_THE_FOLD.GET_IN_TOUCH" | translate}}</span>
             </div>
@@ -55,7 +55,7 @@
             <div class="socialsBackgroundcolor" [class.Backgroundcolor]="githubHover"></div>
          </div>
       </a>
-      <a [routerLink]="['']" [fragment]="'contact'">
+      <a href="#contact">
          <div class="socials" (mouseover)="emailHover=true" (mouseleave)="emailHover=false">
             <div class="socials email"></div>
             <div class="socialsBackgroundcolor" [class.Backgroundcolor]="emailHover"></div>

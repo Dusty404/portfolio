@@ -1,48 +1,49 @@
 <nav class="content">
     <div class="wrapper">
-    <img class="logo" src="../../assets/img/header/logo_blue.png">
+        <img class="logo" src="../../assets/img/header/logo_blue.png">
 
-    <div class="transitionheight">
-        <div [ngStyle]="{width: '110px', transition: 'height 300ms ease-in'}" class="hoverImg"
-            [class.hoverEffectHight]="aboutMeHover">
-            <img src="../../assets/img/header/1.png">
+        <div class="transitionheight">
+            <div [ngStyle]="{width: '110px', transition: 'height 300ms ease-in'}" class="hoverImg"
+                [class.hoverEffectHight]="aboutMeHover">
+                <img src="../../assets/img/header/1.png">
+            </div>
+            <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" href="#aboutMe">{{"NAV.ABOUT_ME" |
+                translate}}</a>
         </div>
-        <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" [routerLink]="['']" [fragment]="'aboutMe'">{{"NAV.ABOUT_ME" |
-            translate}}</a>
-    </div>
 
-    <div class="display">
-        <div class="hoverImg transitionWidth " [class.hoverEffectWidth]="skillsHover">
-            <img src="../../assets/img/header/2.png">
+        <div class="display">
+            <div class="hoverImg transitionWidth " [class.hoverEffectWidth]="skillsHover">
+                <img src="../../assets/img/header/2.png">
+            </div>
+            <a [ngStyle]="{width:'80px'}" (mouseover)="skillsHover=true" (mouseout)="skillsHover=false"
+                href="#skills">{{"NAV.SKILLS" |
+                translate}}</a>
         </div>
-        <a [ngStyle]="{width:'80px'}" (mouseover)="skillsHover=true" (mouseout)="skillsHover=false"
-            [routerLink]="['']" [fragment]="'skills'">{{"NAV.SKILLS" |
-            translate}}</a>
-    </div>
 
-    <div class="display">
-        <div class="hoverImg projectsHeight transitionWidth" [class.hoverEffectWidth]="projectsHover">
-            <img src="../../assets/img/header/4.png">
+        <div class="display">
+            <div class="hoverImg projectsHeight transitionWidth" [class.hoverEffectWidth]="projectsHover">
+                <img src="../../assets/img/header/4.png">
+            </div>
+            <a [ngStyle]="{width:'90px'}" (mouseover)="projectsHover=true" (mouseout)="projectsHover=false"
+                href="#projects">{{"NAV.PROJECTS" |
+                translate}}</a>
         </div>
-        <a [ngStyle]="{width:'90px'}" (mouseover)="projectsHover=true" (mouseout)="projectsHover=false"
-            [routerLink]="['']" [fragment]="'projects'">{{"NAV.PROJECTS" |
-            translate}}</a>
-    </div>
 
-    <div class="display">
-        <div class="hoverImg transitionWidth" [class.hoverEffectWidth]="contactHover">
-            <img src="../../assets/img/header/3.png">
+        <div class="display">
+            <div class="hoverImg transitionWidth" [class.hoverEffectWidth]="contactHover">
+                <img src="../../assets/img/header/3.png">
+            </div>
+            <a [ngStyle]="{width:'90px'}" (mouseover)="contactHover=true" (mouseout)="contactHover=false"
+                href="#contact">{{"NAV.CONTACT" |
+                translate}}</a>
         </div>
-        <a [ngStyle]="{width:'90px'}" (mouseover)="contactHover=true" (mouseout)="contactHover=false"
-            [routerLink]="['']" [fragment]="'contact'">{{"NAV.CONTACT" |
-            translate}}</a>
-    </div>
-    <div class="language">
-        <mat-button-toggle-group [value]="currentLang" (change)="switchLanguage($event.value)" class="language-toggle">
-            <mat-button-toggle value="de">DE</mat-button-toggle>
-            <mat-button-toggle value="en">EN</mat-button-toggle>
-        </mat-button-toggle-group>
-    </div>
+        <div class="language">
+            <mat-button-toggle-group [value]="currentLang" (change)="switchLanguage($event.value)"
+                class="language-toggle">
+                <mat-button-toggle value="de">DE</mat-button-toggle>
+                <mat-button-toggle value="en">EN</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
     </div>
 </nav>
 
@@ -67,13 +68,13 @@
     </div>
     <div class="mobileNavbarMenu" [style.top]="openMenu ? '0' : (!openMenu ? '-100vh' : null)">
         <div class="navMobile">
-            <a [routerLink]="['/']" [fragment]="'aboutMe'" (click)="showMenu()">{{"NAV.ABOUT_ME" |
+            <a href="#aboutMe" (click)="showMenu()">{{"NAV.ABOUT_ME" |
                 translate}}</a>
-            <a [routerLink]="['/']" [fragment]="'skills'" (click)="showMenu()">{{"NAV.SKILLS" |
+            <a href="#skills" (click)="showMenu()">{{"NAV.SKILLS" |
                 translate}}</a>
-            <a [routerLink]="['/']" [fragment]="'projects'" (click)="showMenu()">{{"NAV.PROJECTS" |
+            <a href="#projects" (click)="showMenu()">{{"NAV.PROJECTS" |
                 translate}}</a>
-            <a [routerLink]="['/']" [fragment]="'contact'" (click)="showMenu()">{{"NAV.CONTACT" |
+            <a href="#contact" (click)="showMenu()">{{"NAV.CONTACT" |
                 translate}}</a>
         </div>
         <div class="socialsMobile">
