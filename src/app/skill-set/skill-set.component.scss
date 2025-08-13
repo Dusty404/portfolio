@@ -17,6 +17,7 @@
     gap: 48px;
     padding: 144px 120px;
     max-width: 1440px;
+    width: 100%;
 }
 
 .title {
@@ -86,6 +87,7 @@
     align-items: center;
     justify-content: start;
     gap: 48px;
+    padding-left: 150px;
 }
 
 .paperSnipped {
@@ -118,6 +120,7 @@
     justify-content: end;
     align-items: center;
     gap: 56px;
+    padding-right: 150px;
 }
 
 app-skill-logo {
@@ -127,6 +130,26 @@ app-skill-logo {
     justify-content: end;
     align-items: center;
     gap: 40px;
+}
+
+@media (max-width: 1500px) {
+    .skillSetContainer {
+        padding-right: 60px;
+    }
+
+    .titleContainer {
+        padding-left: 60px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .skillSetContainer {
+        padding-right: 0;
+    }
+
+    .titleContainer {
+        padding-left: 0;
+    }
 }
 
 @media (max-width: 1400px) {

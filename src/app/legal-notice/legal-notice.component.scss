@@ -32,14 +32,15 @@
         color: white;
         padding-left: 120px;
     }
+}
 
-    & a {
-        color: skyblue;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-            text-decoration-thickness: 2px ;
-        }
+.email {
+    color: skyblue;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
     }
 }
 
@@ -48,6 +49,7 @@
     gap: 8px;
     width: fit-content;
     padding: 16px 120px;
+    align-items: center;
 
     & img {
         height: 24px;

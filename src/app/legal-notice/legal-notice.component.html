@@ -2,13 +2,13 @@
 <div class="body">
     <app-navbar></app-navbar>
     <div class="content">
-        <div class="goBackButton" [routerLink]="['']" [fragment]="'contact'">
+        <a class="goBackButton" href="/#contact">
                 <img src="../../../assets/img/projects-section/back-arrow.png">
                 <p>{{ "PROJECT_VIEW.GO_BACK" | translate }}</p>
-            </div>
+            </a>
     <h2 id="m3">{{ "IMPRINT.IMPRINT" | translate }}</h2>
     <p>Justin Koll<br>Traminerweg 9<br>68309 Mannheim</p>
-    <p>{{ "IMPRINT.EMAIL" | translate }} <a href="mailto:Justin.koll@icloud.com">Justin.koll&#64;icloud.com</a></p>
+    <p>{{ "IMPRINT.EMAIL" | translate }} <a class="email" href="mailto:contact@justin-koll.de">Justin.koll&#64;icloud.com</a></p>
     </div>
     <app-footer></app-footer>
 </div>
