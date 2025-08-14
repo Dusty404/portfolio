@@ -445,9 +445,11 @@ h1 {
 
 .polaroidFrame {
     position: absolute;
-    bottom: -50px;
-    right: 0px;
+    bottom: -32px;
+    right: 35px;
     z-index: 1;
+    height: 200px;
+    rotate: 8deg;
 }
 
 .polaroidInnerPicture {
@@ -521,25 +523,15 @@ a {
     .content {
         padding: 0 32px;
     }
+}
 
+@media (max-width: 870px) {
     .polaroidFrame {
-        height: 200px;
-    }
-
-    .polaroidInnerPicture {
-        bottom: 0px;
-        right: 20px;
-        height: 129px;
-        width: 130px;
+        right: 0;
     }
 
     .fotoTitle {
-        right: 50px;
-        bottom: -32px;
-
-        & span {
-            font-size: 20px;
-        }
+        right: 48px;
     }
 }
 
@@ -550,6 +542,16 @@ a {
 
     .titleSecondLine p {
         font-size: 110px;
+    }
+
+    .polaroidFrame {
+        height: 175px;
+        right: 30px;
+    }
+
+    .fotoTitle {
+        right: 60px;
+        bottom: -28px;
     }
 }
 
@@ -578,9 +580,11 @@ a {
     }
 
     .fotoTitle {
+        right: 70px;
+        bottom: -26px;
 
         & span {
-            font-size: 17px;
+            font-size: 20px;
         }
     }
 
@@ -589,6 +593,16 @@ a {
         right: 17px;
         height: 111px;
         width: 111px;
+    }
+}
+
+@media (max-width: 670px) {
+    .polaroidFrame {
+        right: 10px;
+    }
+
+    .fotoTitle {
+        right: 48px;
     }
 }
 

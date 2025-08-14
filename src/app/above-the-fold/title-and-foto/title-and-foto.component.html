@@ -20,8 +20,8 @@
 
          <div class="polaroid" [ngClass]="{ 'polaroidFilterIn': photoHover, 'polaroidFilterOut': !photoHover }">
             <img class="polaroidFrame" (mouseenter)="changePhotoTextMouseIn(); photoHover=true"
-               (mouseleave)="changePhotoTextMouseOut(); photoHover=false" src="../../../assets/img/polaroid-Frame.png">
-            <img class="polaroidInnerPicture" src="../../../assets/img/Justin.jpg">
+               (mouseleave)="changePhotoTextMouseOut(); photoHover=false" src="../../../assets/img/justin.png">
+            <!-- <img class="polaroidInnerPicture" src="../../../assets/img/Justin.jpg"> -->
             <div class="fotoTitle" (mouseenter)="changePhotoTextMouseIn(); photoHover=true">
                <span
                   [ngClass]="{ 'fotoTitleBounceAnimation': photoHover, 'fotoTitleBounceAnimationReverse': !photoHover }">{{fotoTitle}}</span>
@@ -64,8 +64,8 @@
    </div>
    <div class="polaroidMobileContainer">
       <div class="polaroidMobile">
-         <img class="polaroidFrame" src="../../../assets/img/polaroid-Frame.png">
-         <img class="polaroidInnerPicture" src="../../../assets/img/Justin.jpg">
+         <img class="polaroidFrame" src="../../../assets/img/justin.png">
+         <!-- <img class="polaroidInnerPicture" src="../../../assets/img/Justin.jpg"> -->
          <div class="fotoTitle">
             <span>Justin :D</span>
          </div>

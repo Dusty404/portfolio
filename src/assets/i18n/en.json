@@ -72,5 +72,8 @@
     "IMPRINT": {
         "IMPRINT": "Imprint",
         "EMAIL": "E-mail-address:"
+    },
+    "PRIVACYPOLICY": {
+        "PRIVACYPOLICY": "Privacy policy"
     }
 }

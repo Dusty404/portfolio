@@ -10,16 +10,17 @@
 }
 
 .body {
-    padding: 144px 120px 56px 120px;
+    padding: 144px 0 56px 0;
     display: grid;
     justify-content: space-between;
-    gap: 0 24px;
+    gap: 0 60px;
     position: relative;
     max-width: 1440px;
 }
 
 .wrapper {
     max-width: 1440px;
+    padding: 0 55px;
 }
 
 p,
@@ -37,6 +38,7 @@ span {
     width: 100%;
     gap: 32px;
     justify-content: center;
+    letter-spacing: 0;
 
     & h1 {
         font-family: Bricolage Grotesque;
@@ -123,15 +125,21 @@ app-contact-me-form {
     grid-row-end: 3;
 }
 
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 1400px) {
     .body {
-        padding: 144px 80px 56px;
+        padding: 144px 0 56px;
     }
 }
 
 @media (max-width: 1320px) {
     .body {
-        padding: 144px 40px 56px;
+        padding: 144px 0 56px;
     }
 }
 
@@ -150,8 +158,12 @@ app-contact-me-form {
 
 @media (max-width: 820px) {
     .body {
-        padding: 110px 16px 0;
+        padding: 110px 0 0;
         gap: 42px;
+    }
+
+    .wrapper {
+        padding: 0 16px;
     }
 
     .nameSticker {
