@@ -71,3 +71,10 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .content h2, .content p , .content a{
+
+    padding-left: 20px;
+}
+}
