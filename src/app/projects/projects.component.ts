@@ -7,11 +7,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [FormsModule, CommonModule, RouterModule, TranslateModule],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+    selector: 'app-projects',
+    imports: [FormsModule, CommonModule, RouterModule, TranslateModule],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent implements OnInit {
 

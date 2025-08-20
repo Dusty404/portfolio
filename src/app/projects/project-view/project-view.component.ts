@@ -7,11 +7,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-project-view',
-  standalone: true,
-  imports: [NavbarComponent, CommonModule, RouterModule, TranslateModule],
-  templateUrl: './project-view.component.html',
-  styleUrl: './project-view.component.scss'
+    selector: 'app-project-view',
+    imports: [NavbarComponent, CommonModule, RouterModule, TranslateModule],
+    templateUrl: './project-view.component.html',
+    styleUrl: './project-view.component.scss'
 })
 export class ProjectViewComponent implements OnInit {
 

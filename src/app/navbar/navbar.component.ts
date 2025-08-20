@@ -9,11 +9,10 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, MatSelectModule, MatFormFieldModule, MatButtonToggleModule, RouterModule],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+    selector: 'app-navbar',
+    imports: [CommonModule, FormsModule, TranslateModule, MatSelectModule, MatFormFieldModule, MatButtonToggleModule, RouterModule],
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.scss'
 })
 
 export class NavbarComponent {

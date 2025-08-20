@@ -4,11 +4,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-skill-logo',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './skill-logo.component.html',
-  styleUrl: './skill-logo.component.scss'
+    selector: 'app-skill-logo',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './skill-logo.component.html',
+    styleUrl: './skill-logo.component.scss'
 })
 export class SkillLogoComponent {
 

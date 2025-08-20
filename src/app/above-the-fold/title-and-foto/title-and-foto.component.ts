@@ -6,11 +6,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-title-and-foto',
-  standalone: true,
-  imports: [FormsModule, CommonModule, TranslateModule, RouterModule],
-  templateUrl: './title-and-foto.component.html',
-  styleUrl: './title-and-foto.component.scss',
+    selector: 'app-title-and-foto',
+    imports: [FormsModule, CommonModule, TranslateModule, RouterModule],
+    templateUrl: './title-and-foto.component.html',
+    styleUrl: './title-and-foto.component.scss'
 })
 export class TitleAndFotoComponent {
   textHover: boolean = false;

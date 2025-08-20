@@ -7,11 +7,11 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-contact-me-form',
-  standalone: true,
-  imports: [CommonModule, FormsModule, MatCheckboxModule, RouterModule, TranslateModule],
-  templateUrl: './contact-me-form.component.html',
-  styleUrl: './contact-me-form.component.scss'
+    selector: 'app-contact-me-form',
+    standalone: true,
+    imports: [CommonModule, FormsModule, MatCheckboxModule, RouterModule, TranslateModule],
+    templateUrl: './contact-me-form.component.html',
+    styleUrl: './contact-me-form.component.scss'
 })
 export class ContactMeFormComponent {
 

@@ -9,11 +9,10 @@ import { filter } from 'rxjs/operators';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-main-content',
-  standalone: true,
-  imports: [AboveTheFoldComponent, ContactMeComponent, ProjectsComponent, SkillSetComponent, AboutMeComponent, RouterModule],
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
+    selector: 'app-main-content',
+    imports: [AboveTheFoldComponent, ContactMeComponent, ProjectsComponent, SkillSetComponent, AboutMeComponent, RouterModule],
+    templateUrl: './main-content.component.html',
+    styleUrl: './main-content.component.scss'
 })
 
 export class MainContentComponent implements AfterViewInit {
