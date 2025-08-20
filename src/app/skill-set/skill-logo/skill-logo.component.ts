@@ -5,6 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-skill-logo',
+    standalone: true,
     imports: [CommonModule, TranslateModule],
     templateUrl: './skill-logo.component.html',
     styleUrl: './skill-logo.component.scss'

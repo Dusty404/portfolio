@@ -10,6 +10,7 @@ import { Location } from '@angular/common';
 
 @Component({
     selector: 'app-main-content',
+    standalone: true,
     imports: [AboveTheFoldComponent, ContactMeComponent, ProjectsComponent, SkillSetComponent, AboutMeComponent, RouterModule],
     templateUrl: './main-content.component.html',
     styleUrl: './main-content.component.scss'

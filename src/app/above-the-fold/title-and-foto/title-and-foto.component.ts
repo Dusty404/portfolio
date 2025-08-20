@@ -7,6 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-title-and-foto',
+    standalone: true,
     imports: [FormsModule, CommonModule, TranslateModule, RouterModule],
     templateUrl: './title-and-foto.component.html',
     styleUrl: './title-and-foto.component.scss'
