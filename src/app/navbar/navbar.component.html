@@ -68,13 +68,13 @@
     </div>
     <div class="mobileNavbarMenu" [style.top]="openMenu ? '0' : (!openMenu ? '-100vh' : null)">
         <div class="navMobile">
-            <a [routerLink]="['']" [fragment]="'aboutMe'" (click)="showMenu()">{{"NAV.ABOUT_ME" |
+            <a [routerLink]="['/']" [fragment]="'aboutMe'" (click)="showMenu()">{{"NAV.ABOUT_ME" |
                 translate}}</a>
-            <a [routerLink]="['']" [fragment]="'skills'">{{"NAV.SKILLS" |
+            <a [routerLink]="['/']" [fragment]="'skills'" (click)="showMenu()">{{"NAV.SKILLS" |
                 translate}}</a>
-            <a [routerLink]="['']" [fragment]="'projects'" (click)="showMenu()">{{"NAV.PROJECTS" |
+            <a [routerLink]="['/']" [fragment]="'projects'" (click)="showMenu()">{{"NAV.PROJECTS" |
                 translate}}</a>
-            <a [routerLink]="['']" [fragment]="'contact'" (click)="showMenu()">{{"NAV.CONTACT" |
+            <a [routerLink]="['/']" [fragment]="'contact'" (click)="showMenu()">{{"NAV.CONTACT" |
                 translate}}</a>
         </div>
         <div class="socialsMobile">
@@ -88,7 +88,7 @@
                     <div class="socials github"></div>
                 </div>
             </a>
-            <a href="#contact">
+            <a [routerLink]="['/']" [fragment]="'contact'">
                 <div class="socials">
                     <div class="socials email" (click)="showMenu()"></div>
                 </div>

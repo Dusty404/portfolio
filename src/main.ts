@@ -21,7 +21,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes, withInMemoryScrolling(scrollConfig)),
-    provideHttpClient(withFetch()), // 👈 statt HttpClientModule
+    provideHttpClient(withFetch()),
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {

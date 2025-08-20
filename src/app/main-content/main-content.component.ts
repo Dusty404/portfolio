@@ -30,7 +30,6 @@ export class MainContentComponent implements AfterViewInit {
             const el = document.getElementById(fragment);
             if (el) {
               el.scrollIntoView({ behavior: 'smooth' });
-              this.location.replaceState(this.router.url.split('#')[0]);
             }
           }, 100);
         }
