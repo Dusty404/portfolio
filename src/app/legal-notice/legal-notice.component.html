@@ -2,7 +2,7 @@
 <div class="body">
     <app-navbar></app-navbar>
     <div class="content">
-        <a class="goBackButton" href="/#contact">
+        <a class="goBackButton" [routerLink]="['/']" [fragment]="'contact'">
                 <img src="../../../assets/img/projects-section/back-arrow.png">
                 <p>{{ "PROJECT_VIEW.GO_BACK" | translate }}</p>
             </a>

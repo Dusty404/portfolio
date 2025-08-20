@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { NavbarComponent } from "../navbar/navbar.component";
@@ -12,6 +12,9 @@ import { FooterComponent } from "../footer/footer.component";
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
-export class PrivacyPolicyComponent {
-
+export class PrivacyPolicyComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+    // kurz warten bis View gerendert ist, dann ganz nach oben
+    setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0);
+  }
 }

@@ -18,18 +18,23 @@ import { Location } from '@angular/common';
 
 export class MainContentComponent implements AfterViewInit {
 
-  constructor(private route: ActivatedRoute, private ngZone: NgZone, private router: Router, private location: Location) { }
+    constructor(private route: ActivatedRoute, private ngZone: NgZone, private router: Router, private location: Location) { }
 
   ngAfterViewInit(): void {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        const fragment = this.router.parseUrl(this.router.url).fragment;
-      if (fragment) {
+        const fragment = this.route.snapshot.fragment;
+        if (fragment) {
           setTimeout(() => {
-          const el = document.getElementById(fragment);
+            const el = document.getElementById(fragment);
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth' });
+              this.location.replaceState(this.router.url.split('#')[0]);
+            }
           }, 100);
-      }
-    });
+        }
+      });
   }
+
 }

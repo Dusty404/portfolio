@@ -7,7 +7,7 @@
                 [class.hoverEffectHight]="aboutMeHover">
                 <img src="../../assets/img/header/1.png">
             </div>
-            <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" href="#aboutMe">{{"NAV.ABOUT_ME" |
+            <a (mouseover)="aboutMeHover=true" (mouseout)="aboutMeHover=false" routerLink="/" fragment="aboutMe">{{"NAV.ABOUT_ME" |
                 translate}}</a>
         </div>
 
@@ -16,7 +16,7 @@
                 <img src="../../assets/img/header/2.png">
             </div>
             <a [ngStyle]="{width:'80px'}" (mouseover)="skillsHover=true" (mouseout)="skillsHover=false"
-                href="#skills">{{"NAV.SKILLS" |
+                [routerLink]="['/']" [fragment]="'skills'">{{"NAV.SKILLS" |
                 translate}}</a>
         </div>
 
@@ -25,7 +25,7 @@
                 <img src="../../assets/img/header/4.png">
             </div>
             <a [ngStyle]="{width:'90px'}" (mouseover)="projectsHover=true" (mouseout)="projectsHover=false"
-                href="#projects">{{"NAV.PROJECTS" |
+                [routerLink]="['/']" [fragment]="'projects'">{{"NAV.PROJECTS" |
                 translate}}</a>
         </div>
 
@@ -34,7 +34,7 @@
                 <img src="../../assets/img/header/3.png">
             </div>
             <a [ngStyle]="{width:'90px'}" (mouseover)="contactHover=true" (mouseout)="contactHover=false"
-                href="#contact">{{"NAV.CONTACT" |
+                [routerLink]="['/']" [fragment]="'contact'">{{"NAV.CONTACT" |
                 translate}}</a>
         </div>
         <div class="language">
@@ -68,13 +68,13 @@
     </div>
     <div class="mobileNavbarMenu" [style.top]="openMenu ? '0' : (!openMenu ? '-100vh' : null)">
         <div class="navMobile">
-            <a href="#aboutMe" (click)="showMenu()">{{"NAV.ABOUT_ME" |
+            <a [routerLink]="['']" [fragment]="'aboutMe'" (click)="showMenu()">{{"NAV.ABOUT_ME" |
                 translate}}</a>
-            <a href="#skills" (click)="showMenu()">{{"NAV.SKILLS" |
+            <a [routerLink]="['']" [fragment]="'skills'">{{"NAV.SKILLS" |
                 translate}}</a>
-            <a href="#projects" (click)="showMenu()">{{"NAV.PROJECTS" |
+            <a [routerLink]="['']" [fragment]="'projects'" (click)="showMenu()">{{"NAV.PROJECTS" |
                 translate}}</a>
-            <a href="#contact" (click)="showMenu()">{{"NAV.CONTACT" |
+            <a [routerLink]="['']" [fragment]="'contact'" (click)="showMenu()">{{"NAV.CONTACT" |
                 translate}}</a>
         </div>
         <div class="socialsMobile">
