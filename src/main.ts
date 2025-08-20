@@ -1,6 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { provideRouter, withInMemoryScrolling /*, withHashLocation*/, /* withEnabledBlockingInitialNavigation */ } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app/app.routes';
 import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -9,8 +9,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 const scrollConfig = {
-  scrollPositionRestoration: 'top' as const,   // immer oben starten
-  anchorScrolling: 'enabled' as const          // Anker (Fragmente) erlauben
+  scrollPositionRestoration: 'top' as const,
+  anchorScrolling: 'enabled' as const
 };
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -21,9 +21,11 @@ bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(
       routes,
-      // withHashLocation(),  // ← entfernen
-      withInMemoryScrolling(scrollConfig)
-    ),
+  withInMemoryScrolling({
+    scrollPositionRestoration: 'top',
+    anchorScrolling: 'enabled',
+  })
+),
     importProvidersFrom(
       HttpClientModule,
       TranslateModule.forRoot({

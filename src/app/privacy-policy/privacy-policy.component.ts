@@ -14,7 +14,6 @@ import { FooterComponent } from "../footer/footer.component";
 })
 export class PrivacyPolicyComponent implements AfterViewInit {
   ngAfterViewInit(): void {
-    // kurz warten bis View gerendert ist, dann ganz nach oben
     setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0);
   }
 }
