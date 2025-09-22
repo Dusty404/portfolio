@@ -2,12 +2,12 @@ html,
 body {
   height: 100%;
   width: 100vw;
-  width: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
   scrollbar-width: none;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
+
+[id] { scroll-margin-top: 72px; } 
 
 a,
 a:visited {
@@ -126,11 +126,6 @@ app-legal-notice {
   app-project-view {
     height: unset;
   }
-}
-
-html,
-body {
-  height: 100%;
 }
 
 body {

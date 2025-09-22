@@ -1,6 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { provideRouter, withInMemoryScrolling, withRouterConfig } from '@angular/router';
 import { routes } from './app/app.routes';
 import { importProvidersFrom } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -20,9 +20,14 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes, withInMemoryScrolling(scrollConfig)),
+    provideRouter(
+      routes,
+      withInMemoryScrolling(scrollConfig),
+      withRouterConfig({ onSameUrlNavigation: 'reload' }),
+    ),
     provideHttpClient(withFetch()),
     importProvidersFrom(
+      
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
@@ -31,6 +36,6 @@ bootstrapApplication(AppComponent, {
         },
       })
     ),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
   ],
 }).catch((err) => console.error(err));
