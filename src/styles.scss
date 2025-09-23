@@ -61,13 +61,6 @@ app-footer {
   max-width: 1440px;
   width: 100%;
   flex-direction: column;
-  padding: 0 70px 0 55px;
-}
-
-@media (max-width: 820px) {
-  app-footer {
-    padding: 0 16px;
-  }
 }
 
 app-privacy-policy {
