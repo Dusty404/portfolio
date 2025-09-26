@@ -9,7 +9,11 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './policy-content.component.scss'
 })
 export class PolicyContentComponent {
-ngAfterViewInit(): void {
-    setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }), 0);
+  constructor() {
+   try {
+    if(window.scrollY == 0) {
+      return;
+    }
+   } catch (error) {}
   }
 }
