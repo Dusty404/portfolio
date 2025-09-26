@@ -3,15 +3,13 @@ import { AppComponent } from './app/app.component';
 import { provideRouter, withInMemoryScrolling, withRouterConfig } from '@angular/router';
 import { routes } from './app/app.routes';
 import { importProvidersFrom } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideHttpClient, withFetch } from '@angular/common/http';
 
 const scrollConfig = {
-  scrollPositionRestoration: 'top' as const,
-  anchorScrolling: 'enabled' as const
+  scrollPositionRestoration: 'top' as const, 
 };
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -20,14 +18,14 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 bootstrapApplication(AppComponent, {
   providers: [
+    provideHttpClient(withFetch()), 
+    
     provideRouter(
       routes,
-      withInMemoryScrolling(scrollConfig),
-      withRouterConfig({ onSameUrlNavigation: 'reload' }),
+      withInMemoryScrolling(scrollConfig), 
+      withRouterConfig({ onSameUrlNavigation: 'reload' }), 
     ),
-    provideHttpClient(withFetch()),
     importProvidersFrom(
-      
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
